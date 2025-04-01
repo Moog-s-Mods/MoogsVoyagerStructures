@@ -8,8 +8,8 @@
 
 
   "biomes": "#mvs:has_structure/overworld_biomes",
-  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "cannot_spawn_in_liquid": true,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

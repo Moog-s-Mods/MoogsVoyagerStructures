@@ -6,6 +6,7 @@
   "liquid_settings": "ignore_waterlogging",
 
   "biomes": "#mvs:has_structure/overworld_biomes",
+  "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {

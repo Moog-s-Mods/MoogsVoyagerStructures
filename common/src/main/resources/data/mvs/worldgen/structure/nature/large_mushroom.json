@@ -7,8 +7,8 @@
     "size": 1,
 
   "biomes": "#mvs:has_structure/mushroom_island_biomes",
-  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "cannot_spawn_in_liquid": true,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

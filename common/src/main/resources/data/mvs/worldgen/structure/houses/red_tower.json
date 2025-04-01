@@ -3,9 +3,10 @@
     "start_pool": "mvs:houses/red_tower/red_tower_start_pool",
     "size": 1,
     "project_start_to_heightmap": "WORLD_SURFACE_WG",
-    "terrain_height_radius_check": 1,
-    "allowed_terrain_height_range": 3,
+    "terrain_height_radius_check": 2,
+    "allowed_terrain_height_range": 2,
     "biomes": "#mvs:has_structure/taiga_biomes",
+    "cannot_spawn_in_liquid": true,
     "step": "surface_structures",
     "terrain_adaptation": "beard_thin",
     "start_height": {

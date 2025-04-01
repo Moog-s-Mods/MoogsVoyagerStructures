@@ -3,6 +3,7 @@
   "start_pool": "mvs:well/wells/snowy_well/start_pool",
   "size": 1,
   "biomes": "#mvs:has_structure/snowy_biomes",
+  "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "liquid_settings": "ignore_waterlogging",
 

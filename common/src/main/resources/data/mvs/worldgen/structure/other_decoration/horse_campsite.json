@@ -7,8 +7,8 @@
   "size": 1,
 
   "biomes": "#mvs:has_structure/overworld_biomes",
-  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "cannot_spawn_in_liquid": true,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "terrain_height_radius_check": 3,
   "allowed_terrain_height_range": 4,
 

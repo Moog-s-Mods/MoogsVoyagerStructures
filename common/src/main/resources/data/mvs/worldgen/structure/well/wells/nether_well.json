@@ -3,6 +3,7 @@
   "start_pool": "mvs:well/wells/nether_well/start_pool",
   "size": 1,
   "biomes": "#mvs:has_structure/nether_biomes",
+  "cannot_spawn_in_liquid": true,
   "land_search_direction": "HIGHEST_LAND",
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "liquid_settings": "ignore_waterlogging",

@@ -5,6 +5,7 @@
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
   "biomes": "#mvs:has_structure/acacia_biomes",
+  "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
