@@ -62,7 +62,6 @@ components.java {
     }
 }
 
-
 File changeLog = rootProject.file("CHANGELOG.md")
 String changelogtext = changeLog.exists() ? changeLog.text : ""
 
@@ -84,11 +83,11 @@ publishMods {
     curseforge {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
         projectId = "656977"
+        serverRequired = true
         minecraftVersionRange {
             start = "1.21"
             end = "1.21.1"
         }
-        serverRequired = true
     }
 
 }
