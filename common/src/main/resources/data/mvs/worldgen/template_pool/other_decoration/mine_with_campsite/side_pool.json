@@ -8,7 +8,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:houses/mine_with_campsite_lower",
+        "location": "mvs:other_decoration/mine_with_campsite_lower",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
