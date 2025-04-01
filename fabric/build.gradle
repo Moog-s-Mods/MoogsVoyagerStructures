@@ -1,5 +1,6 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "me.modmuss50.mod-publish-plugin" version "0.8.4"
 }
 
 architectury {
@@ -64,16 +65,31 @@ components.java {
     }
 }
 
-publishing {
-    publications {
-        mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
+File changeLog = rootProject.file("CHANGELOG.md")
+String changelogtext = changeLog.exists() ? changeLog.text : ""
+
+publishMods {
+    file = remapJar.archiveFile
+    type = STABLE
+    modLoaders.add("fabric")
+    changelog = changelogtext
+
+    modrinth {
+        accessToken = providers.environmentVariable("MODRINTH_API_KEY")
+        projectId = "OQAgZMH1"
+        minecraftVersionRange {
+            start = "1.21"
+            end = "1.21.1"
         }
     }
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
+    curseforge {
+        accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
+        projectId = "656977"
+        serverRequired = true
+        minecraftVersionRange {
+            start = "1.21"
+            end = "1.21.1"
+        }
     }
 }
