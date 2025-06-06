@@ -69,6 +69,9 @@ publishMods {
     file = remapJar.archiveFile
     changelog = changelogtext
     type = STABLE
+
+    displayName = "MVS ${project.version} [NEOFORGE]"
+
     modLoaders.add("neoforge")
 
     modrinth {
@@ -83,5 +86,4 @@ publishMods {
         minecraftVersions.add("1.21.5")
         serverRequired = true
     }
-
 }
