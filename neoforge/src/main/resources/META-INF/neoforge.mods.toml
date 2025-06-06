@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[46,)"
+loaderVersion="[4,)"
 issueTrackerURL="https://github.com/FinnSetchell/MoogsVoyagerStructures/issues" #optional
 license="https://github.com/FinnSetchell/MoogsVoyagerStructures/blob/1.20-MultiLoader/LICENSE"
 
@@ -28,7 +28,7 @@ license="https://github.com/FinnSetchell/MoogsVoyagerStructures/blob/1.20-MultiL
 [[dependencies.mvs]]
     modId="minecraft"
     mandatory = true
-    versionRange="[1.25,)"
+    versionRange="[1.21.5,)"
     ordering = "NONE"
     side = "BOTH"
 
