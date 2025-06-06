@@ -5,7 +5,7 @@
   "values": [
     "minecraft:desert",
     {
-      "id": "#forge:is_desert",
+      "id": "#c:is_desert",
       "required": false
     },
     {

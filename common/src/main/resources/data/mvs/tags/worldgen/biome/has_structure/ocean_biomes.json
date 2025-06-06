@@ -6,7 +6,7 @@
     "minecraft:ocean",
 	"minecraft:deep_ocean",
     {
-      "id": "#forge:is_water/overworld",
+      "id": "#c:is_water/overworld",
       "required": false
     }
   ]
