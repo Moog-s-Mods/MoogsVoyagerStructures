@@ -207,7 +207,7 @@ public final class GeneralUtils {
     }
 
     public static String getStringMicroOptimised(CompoundTag tag, String key) {
-        return tag.get(key) instanceof StringTag stringTag ? stringTag.getAsString() : "";
+        return tag.get(key) instanceof StringTag stringTag ? stringTag.toString() : "";
     }
     //////////////////////////////////////////////
 
