@@ -5,7 +5,7 @@
 - 
 
 ### Changed
-- updated to 1.21.5
+- Updated for 1.21.6
 
 ### Fixed
 - 
