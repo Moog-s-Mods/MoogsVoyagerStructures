@@ -5,7 +5,7 @@
 - 
 
 ### Changed
-- Updated for 1.21.6
+- Updated for 1.21.7
 
 ### Fixed
-- repaired medium igloo 2 nbt
+- 
