@@ -1,0 +1,14 @@
+{
+    "structures":  [
+                       {
+                           "structure":  "mvs:nature/stone_rock",
+                           "weight":  1
+                       }
+                   ],
+    "placement":  {
+                      "type":  "moogs_structures:advanced_random_spread",
+                      "salt":  485549328,
+                      "spacing":  18,
+                      "separation":  13
+                  }
+}
