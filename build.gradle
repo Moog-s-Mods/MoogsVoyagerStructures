@@ -5,7 +5,7 @@ plugins {
 
 group = "com.finndog"
 
-def modName = (project.findProperty('modName') ?: 'MoogsVoyagerStructures') as String
+def modName = (project.findProperty('modName') ?: project.name) as String
 def mcVersion = (project.findProperty('minecraftVersion') ?: '1.20') as String
 version = (project.findProperty('modVersion') ?: '1.0.0') as String
 
@@ -41,7 +41,9 @@ publishMods {
     version = project.version.toString()
     // Release type (defaults to STABLE if not provided)
     type = STABLE
-    displayName = "MVS ${version}-${mcVersion} [UNIVERSAL]"
+    def displayPrefix = (project.findProperty('publishDisplayPrefix') ?: 'MVS') as String
+    def displaySuffix = (project.findProperty('publishDisplaySuffix') ?: '[UNIVERSAL]') as String
+    displayName = "${displayPrefix} ${version}-${mcVersion} ${displaySuffix}"
 
 
     modLoaders.add("fabric")
@@ -56,20 +58,20 @@ publishMods {
 
     modrinth {
         accessToken = providers.environmentVariable('MODRINTH_API_KEY')
-        projectId = 'OQAgZMH1'
+        projectId = (project.findProperty('modrinthProjectId') ?: '')
         minecraftVersionRange {
-            start = '1.20'
-            end = '1.20.6'
+            start = (project.findProperty('publishMcStart') ?: mcVersion)
+            end = (project.findProperty('publishMcEnd') ?: mcVersion)
         }
     }
 
     curseforge {
         accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
-        projectId = '656977'
+        projectId = (project.findProperty('curseforgeProjectId') ?: '')
         serverRequired = true
         minecraftVersionRange {
-            start = '1.20'
-            end = '1.20.6'
+            start = (project.findProperty('publishMcStart') ?: mcVersion)
+            end = (project.findProperty('publishMcEnd') ?: mcVersion)
         }
     }
 }
