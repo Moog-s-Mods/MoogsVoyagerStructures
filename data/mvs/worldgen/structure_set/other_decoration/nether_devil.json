@@ -1,0 +1,14 @@
+{
+    "structures":  [
+                       {
+                           "structure":  "mvs:other_decoration/nether_devil",
+                           "weight":  1
+                       }
+                   ],
+    "placement":  {
+                      "type":  "moogs_structures:advanced_random_spread",
+                      "salt":  513238798,
+                      "spacing":  64,
+                      "separation":  16
+                  }
+}

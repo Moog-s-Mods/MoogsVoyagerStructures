@@ -1,0 +1,16 @@
+{
+  "name": "mvs:floating_islands",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+        "location": "mvs:nature/floating_islands",
+        "processors": "mvs:blue_to_water",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "structures":  [
+                       {
+                           "structure":  "mvs:other_decoration/windmill",
+                           "weight":  1
+                       }
+                   ],
+    "placement":  {
+                      "type":  "moogs_structures:advanced_random_spread",
+                      "salt":  774638947,
+                      "spacing":  26,
+                      "separation":  14
+                  }
+}
