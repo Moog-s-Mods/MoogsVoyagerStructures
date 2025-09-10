@@ -1,0 +1,14 @@
+{
+    "structures":  [
+                       {
+                           "structure":  "mvs:other_decoration/villager_statue",
+                           "weight":  1
+                       }
+                   ],
+    "placement":  {
+                      "type":  "moogs_structures:advanced_random_spread",
+                      "salt":  766987854,
+                      "spacing":  56,
+                      "separation":  40
+                  }
+}
