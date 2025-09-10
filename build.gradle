@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'me.modmuss50.mod-publish-plugin' version '0.8.4'
+}
+
+group = "com.finndog"
+
+def modName = (project.findProperty('modName') ?: 'MoogsVoyagerStructures') as String
+def mcVersion = (project.findProperty('minecraftVersion') ?: '1.20') as String
+version = (project.findProperty('modVersion') ?: '1.0.0') as String
+
+repositories {
+    mavenCentral()
+}
+
+tasks.processResources {
+    def meta = [
+        'version': version,
+        'mod_name': modName,
+        'mc_version': mcVersion,
+    ]
+    filesMatching('fabric.mod.json') { expand(meta) }
+    filesMatching('quilt.mod.json') { expand(meta) }
+    filesMatching('META-INF/*.toml') { expand(meta) }
+    filesMatching('pack.mcmeta') { expand(meta) }
+}
+
+tasks.named('jar') {
+    archiveFileName = "${modName}-${mcVersion}-${project.version}.jar"
+}
+
+// Auto publishing configuration
+def changeLogFile = rootProject.file('CHANGELOG.md')
+def changelogText = changeLogFile.exists() ? changeLogFile.getText('UTF-8') : ''
+
+publishMods {
+    file = tasks.named('jar').flatMap { it.archiveFile }
+    changelog = changelogText
+    
+    // Release metadata
+    version = project.version.toString()
+    // Release type (defaults to STABLE if not provided)
+    type = STABLE
+    displayName = "MVS ${version}-${mcVersion} [UNIVERSAL]"
+
+
+    modLoaders.add("fabric")
+    modLoaders.add("quilt")
+    modLoaders.add("forge")
+    modLoaders.add("neoforge")
+
+    maxRetries = 3
+
+    // When dry run is enabled the release assets will be saved to the build directory for testing.
+    dryRun = true
+
+    modrinth {
+        accessToken = providers.environmentVariable('MODRINTH_API_KEY')
+        projectId = 'OQAgZMH1'
+        minecraftVersionRange {
+            start = '1.20'
+            end = '1.20.6'
+        }
+    }
+
+    curseforge {
+        accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
+        projectId = '656977'
+        serverRequired = true
+        minecraftVersionRange {
+            start = '1.20'
+            end = '1.20.6'
+        }
+    }
+}
+
+// Ensure the jar is built before publishing
+tasks.named('publishMods').configure {
+    dependsOn tasks.named('jar')
+}
+

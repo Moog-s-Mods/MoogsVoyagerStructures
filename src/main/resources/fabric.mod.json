@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "mvs",
-    "version": "1.0.0",
+    "version": "${version}",
     "name": "Moog's Voyager Structures",
     "description": "Moogs Voyager Structures brings life, fun and variety to your Minecraft world! Explore awesome new structures made with vanilla blocks and entities, and discover loot, enemies, and villagers along the way. This mod is compatible with any modpack and keeps the vanilla feel of the game!",
     "authors": [
