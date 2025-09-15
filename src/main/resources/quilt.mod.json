@@ -16,7 +16,7 @@
                 "issues": "https://github.com/FinnSetchell/MoogsVoyagerStructures/issues"
             },
             "icon": "assets/mvs/icon.png",
-            "license": "GNU Lesser General Public License v3.0"
+            "license": "LGPL-3.0-only"
         },
         "intermediate_mappings": "net.fabricmc:intermediary",
         "depends": [
