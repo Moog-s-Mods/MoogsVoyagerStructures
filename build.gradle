@@ -1,65 +1,82 @@
 plugins {
-    id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.6-SNAPSHOT" apply false
+    id 'java'
+    id 'me.modmuss50.mod-publish-plugin' version '0.8.4'
 }
 
-architectury {
-    minecraft = rootProject.minecraft_version
+group = "com.finndog"
+
+def modName = (project.findProperty('modName') ?: project.name) as String
+def mcVersion = (project.findProperty('minecraftVersion') ?: '1.20') as String
+version = (project.findProperty('modVersion') ?: '1.0.0') as String
+
+repositories {
+    mavenCentral()
 }
 
-subprojects {
-    apply plugin: "dev.architectury.loom"
-
-    loom {
-        silentMojangMappingsLicense()
-    }
-
-    dependencies {
-        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        // The following line declares the mojmap mappings, you may use other mappings as well
-        mappings loom.officialMojangMappings()
-        // The following line declares the yarn mappings you may select this one as well.
-        // mappings "net.fabricmc:yarn:1.19.4+build.2:v2"
-    }
+tasks.processResources {
+    def meta = [
+            'version': version,
+            'mod_name': modName,
+            'mc_version': mcVersion,
+    ]
+    filesMatching('fabric.mod.json') { expand(meta) }
+    filesMatching('quilt.mod.json') { expand(meta) }
+    filesMatching('META-INF/*.toml') { expand(meta) }
+    filesMatching('pack.mcmeta') { expand(meta) }
 }
 
-allprojects {
-    apply plugin: "java"
-    apply plugin: "architectury-plugin"
-    apply plugin: "maven-publish"
+tasks.named('jar') {
+    archiveFileName = "${modName}-${mcVersion}-${project.version}.jar"
+}
 
-    archivesBaseName = rootProject.archives_base_name
-    version = rootProject.mod_version
-    group = rootProject.maven_group
+// Auto publishing configuration
+def changeLogFile = rootProject.file('CHANGELOG.md')
+def changelogText = changeLogFile.exists() ? changeLogFile.getText('UTF-8') : ''
 
-    repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+publishMods {
+    file = tasks.named('jar').flatMap { it.archiveFile }
+    changelog = changelogText
 
-        maven { url "https://maven.neoforged.net/releases/" }
-        maven {
-            url = 'https://maven.cafeteria.dev/releases'
-            content {
-                includeGroup 'dev.cafeteria'
-            }
+    // Release metadata
+    version = project.version.toString()
+    // Release type (defaults to STABLE if not provided)
+    type = STABLE
+    def displayPrefix = (project.findProperty('publishDisplayPrefix') ?: 'MVS') as String
+    def displaySuffix = (project.findProperty('publishDisplaySuffix') ?: '[UNIVERSAL]') as String
+    displayName = "${displayPrefix} ${version}-${mcVersion} ${displaySuffix}"
+
+
+    modLoaders.add("fabric")
+    modLoaders.add("quilt")
+    modLoaders.add("forge")
+    modLoaders.add("neoforge")
+
+    maxRetries = 3
+
+    // When dry run is enabled the release assets will be saved to the build directory for testing.
+    dryRun = true
+
+    modrinth {
+        accessToken = providers.environmentVariable('MODRINTH_API_KEY')
+        projectId = (project.findProperty('modrinthProjectId') ?: '')
+        minecraftVersionRange {
+            start = (project.findProperty('publishMcStart') ?: mcVersion)
+            end = (project.findProperty('publishMcEnd') ?: mcVersion)
         }
-        maven { url "https://nexus.resourcefulbees.com/repository/telepathicgrunt/" }
-        maven { url "https://maven.architectury.dev/" }
-        maven { url "https://maven.shedaniel.me" }
-        maven { url "https://jitpack.io" }
-        maven { url "https://www.cursemaven.com" }
-        maven { url "https://api.modrinth.com/maven/" }
     }
 
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-        options.release = 21
+    curseforge {
+        accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
+        projectId = (project.findProperty('curseforgeProjectId') ?: '')
+        serverRequired = true
+        minecraftVersionRange {
+            start = (project.findProperty('publishMcStart') ?: mcVersion)
+            end = (project.findProperty('publishMcEnd') ?: mcVersion)
+        }
     }
+}
 
-    java {
-        withSourcesJar()
-    }
+// Ensure the jar is built before publishing
+tasks.named('publishMods').configure {
+    dependsOn tasks.named('jar')
 }

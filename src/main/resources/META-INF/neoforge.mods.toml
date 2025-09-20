@@ -1,0 +1,14 @@
+
+modLoader = 'javafml'
+loaderVersion = '[1,)'
+license = 'GNU Lesser General Public License v3.0'
+showAsResourcePack = false
+mods = [
+	{ modId = 'mvs', version = '${version}', displayName = "Moog's Voyager Structures", description = 'Moogs Voyager Structures brings life, fun and variety to your Minecraft world! Explore awesome new structures made with vanilla blocks and entities, and discover loot, enemies, and villagers along the way. This mod is compatible with any modpack and keeps the vanilla feel of the game!', logoFile = 'assets/mvs/icon.png', logoBlur = false, credits = 'Thanks to Olver, the main builder as well as TelepathicGrunt for their structure mod template and rs', authors = 'FinnDog', displayURL = 'https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures' },
+]
+[[dependencies.mvs]]
+modId = "moogs_structures"
+mandatory = true
+versionRange = "[1.0,)"
+ordering = "NONE"
+side = "BOTH"

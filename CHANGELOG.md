@@ -1,16 +1,2 @@
 # Changelog
-
-
-
-
-
-
-### Added
-
-
-
-### Changed
-- added cannot spawn in liquid to most structures
-- made red tower spawn on flatter terrain
-
-### Fixed
+-converted to a datapack version which requires Moogs Structure Lib (moogs_structures)

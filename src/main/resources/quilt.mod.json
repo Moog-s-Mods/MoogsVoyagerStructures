@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "com.finndog",
+    "id": "mvs",
+    "version": "${version}",
+    "metadata": {
+      "name": "Moog's Voyager Structures",
+      "description": "Moogs Voyager Structures brings life, fun and variety to your Minecraft world! Explore awesome new structures made with vanilla blocks and entities, and discover loot, enemies, and villagers along the way. This mod is compatible with any modpack and keeps the vanilla feel of the game!",
+      "contributors": {
+        "FinnDog": "Owner"
+      },
+      "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
+        "sources": "https://github.com/FinnSetchell/MoogsVoyagerStructures",
+        "issues": "https://github.com/FinnSetchell/MoogsVoyagerStructures/issues"
+      },
+      "icon": "assets/mvs/icon.png",
+      "license": "LGPL-3.0-only"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_resource_loader",
+        "versions": "*",
+        "unless": "fabric-resource-loader-v0"
+      },
+      {
+        "id": "moogs_structures",
+        "versions": "*"
+      }
+    ]
+  }
+}
