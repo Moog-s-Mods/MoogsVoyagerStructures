@@ -5,6 +5,7 @@ build/
 out/
 classes/
 gradle/wrapper
+DEVELOPMENT_NOTES.md
 
 #Do not gradle.properties and gradle-wrapper.jar as they are necessary for ./gradlew
 !gradle/wrapper/gradle-wrapper.jar
