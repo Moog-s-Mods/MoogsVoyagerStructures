@@ -13,6 +13,6 @@ public class PlatformHooksImpl {
 
     @Contract(pure = true)
     public static boolean isDevEnvironment() {
-        return !FMLEnvironment.production;
+        return !FMLEnvironment.isProduction();
     }
 }
