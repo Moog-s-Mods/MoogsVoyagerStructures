@@ -42,7 +42,7 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    archiveClassifier.set(null)
+    archiveClassifier.set("neoforge")
     atAccessWideners.add("mvs.accesswidener") // this is a path inside the mod jar
 }
 
