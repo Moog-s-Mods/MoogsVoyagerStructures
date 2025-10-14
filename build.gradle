@@ -76,7 +76,6 @@ publishMods {
             end = (project.findProperty('publishMcEnd') ?: mcVersion)
         }
         requires {
-            id = "1oUDhxuy"
             slug = "moogs-structure-lib"
         }
     }
