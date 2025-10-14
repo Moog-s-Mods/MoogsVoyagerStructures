@@ -4,3 +4,5 @@
 build/
 gradlew
 gradlew.bat
+NAMESPACE_GUIDE.md
+/bin/

@@ -104,15 +104,6 @@
         "processors": "mvs:cathedral"
       }
     },
-//    {
-//      "weight": 8,
-//      "element": {
-//        "element_type": "minecraft:single_pool_element",
-//        "projection": "rigid",
-//        "location": "mvs:cathedral/special/dead_end_1",
-//        "processors": "mvs:cathedral"
-//      }
-//    },
     {
       "weight": 6,
       "element": {
