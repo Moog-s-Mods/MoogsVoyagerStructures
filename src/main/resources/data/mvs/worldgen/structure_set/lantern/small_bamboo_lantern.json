@@ -1,14 +1,14 @@
 {
-    "structures":  [
-                       {
-                           "structure":  "mvs:lantern/small_bamboo_lantern",
-                           "weight":  1
-                       }
-                   ],
-    "placement":  {
-                      "type":  "moogs_structures:advanced_random_spread",
-                      "salt":  884392014,
-                      "spacing":  24,
-                      "separation":  12
-                  }
+    "structures": [
+        {
+            "structure": "mvs:lantern/small_bamboo_lantern",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "moogs_structures:advanced_random_spread",
+        "salt": 884392014,
+        "spacing": 24,
+        "separation": 12
+    }
 }

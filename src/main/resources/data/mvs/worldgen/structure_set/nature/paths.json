@@ -1,14 +1,14 @@
 {
-    "structures":  [
-                       {
-                           "structure":  "mvs:nature/paths",
-                           "weight":  1
-                       }
-                   ],
-    "placement":  {
-                      "type":  "moogs_structures:advanced_random_spread",
-                      "salt":  274893027,
-                      "spacing":  35,
-                      "separation":  12
-                  }
+    "structures": [
+        {
+            "structure": "mvs:nature/paths",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "moogs_structures:advanced_random_spread",
+        "salt": 274893027,
+        "spacing": 35,
+        "separation": 12
+    }
 }

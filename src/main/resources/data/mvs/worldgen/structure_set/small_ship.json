@@ -1,14 +1,14 @@
 {
-    "structures":  [
-                       {
-                           "structure":  "mvs:small_ship",
-                           "weight":  1
-                       }
-                   ],
-    "placement":  {
-                      "type":  "moogs_structures:advanced_random_spread",
-                      "salt":  465693214,
-                      "spacing":  34,
-                      "separation":  28
-                  }
+    "structures": [
+        {
+            "structure": "mvs:small_ship",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "moogs_structures:advanced_random_spread",
+        "salt": 465693214,
+        "spacing": 34,
+        "separation": 28
+    }
 }

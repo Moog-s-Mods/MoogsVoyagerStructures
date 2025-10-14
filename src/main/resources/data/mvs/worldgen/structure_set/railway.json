@@ -1,14 +1,14 @@
 {
-    "structures":  [
-                       {
-                           "structure":  "mvs:railway",
-                           "weight":  1
-                       }
-                   ],
-    "placement":  {
-                      "type":  "moogs_structures:advanced_random_spread",
-                      "salt":  414069697,
-                      "spacing":  46,
-                      "separation":  27
-                  }
+    "structures": [
+        {
+            "structure": "mvs:railway",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "moogs_structures:advanced_random_spread",
+        "salt": 414069697,
+        "spacing": 46,
+        "separation": 27
+    }
 }

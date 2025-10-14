@@ -1,14 +1,14 @@
 {
-    "structures":  [
-                       {
-                           "structure":  "mvs:houses/desert_house",
-                           "weight":  1
-                       }
-                   ],
-    "placement":  {
-                      "type":  "moogs_structures:advanced_random_spread",
-                      "salt":  832598745,
-                      "spacing":  48,
-                      "separation":  22
-                  }
+    "structures": [
+        {
+            "structure": "mvs:houses/desert_house",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "moogs_structures:advanced_random_spread",
+        "salt": 832598745,
+        "spacing": 48,
+        "separation": 22
+    }
 }
