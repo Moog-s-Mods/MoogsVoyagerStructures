@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:lamp_chest",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 643656895,
+    "spacing": 45,
+    "separation": 14
+  }
+}

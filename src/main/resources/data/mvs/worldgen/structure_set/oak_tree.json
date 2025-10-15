@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:oak_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 509676834,
+    "spacing": 18,
+    "separation": 13
+  }
+}

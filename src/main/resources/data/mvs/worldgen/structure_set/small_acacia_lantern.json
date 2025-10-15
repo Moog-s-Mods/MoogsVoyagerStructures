@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:small_acacia_lantern",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 100928383,
+    "spacing": 24,
+    "separation": 12
+  }
+}

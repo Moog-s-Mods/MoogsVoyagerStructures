@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:statue_ruins",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 696985421,
+    "spacing": 38,
+    "separation": 30
+  }
+}

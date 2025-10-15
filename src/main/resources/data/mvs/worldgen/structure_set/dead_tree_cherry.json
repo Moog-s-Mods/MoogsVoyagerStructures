@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:dead_tree_cherry",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 994872654,
+    "spacing": 28,
+    "separation": 24
+  }
+}

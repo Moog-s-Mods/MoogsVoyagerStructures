@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:red_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 158353092,
+    "spacing": 76,
+    "separation": 14
+  }
+}
