@@ -1,14 +1,14 @@
 {
-    "structures": [
-        {
-            "structure": "mvs:other_decoration/bench",
-            "weight": 1
-        }
-    ],
-    "placement": {
-        "type": "moogs_structures:advanced_random_spread",
-        "salt": 192844750,
-        "spacing": 18,
-        "separation": 14
+  "structures": [
+    {
+      "structure": "mvs:other_decoration/bench",
+      "weight": 1
     }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 192844750,
+    "spacing": 18,
+    "separation": 14
+  }
 }

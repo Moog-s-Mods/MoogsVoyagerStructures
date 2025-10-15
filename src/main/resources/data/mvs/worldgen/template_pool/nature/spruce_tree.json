@@ -1,15 +1,11 @@
 {
   "name": "mvs:spruce_tree",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
       "weight": 1,
       "element": {
-
         "location": "mvs:nature/medium_spruce_tree",
-
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -18,7 +14,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "mvs:nature/small_spruce_tree",
         "processors": "minecraft:empty",
         "projection": "rigid",

@@ -1,20 +1,13 @@
 {
   "name": "mvs:ruined_beacon/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:ruins/ruined_beacon",
-
         "processors": "mvs:tuff_to_iron",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

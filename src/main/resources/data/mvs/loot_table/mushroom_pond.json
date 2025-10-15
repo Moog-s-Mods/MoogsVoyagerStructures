@@ -1,60 +1,59 @@
 {
-    "type": "minecraft:chest",
-    "pools": [
-      {
-        "rolls": {
-          "min": 1,
-          "max": 8
-        },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 10,
-            "name": "minecraft:red_mushroom"
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 7,
-            "name": "minecraft:brown_mushroom"
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 6,
-            "name": "minecraft:red_tulip"
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 4,
-            "name": "minecraft:white_tulip"
-          },
-          {
-            "type": "minecraft:item",
-            "weight": 3,
-            "name": "minecraft:sea_pickle"
-          }
-        ]
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 8
       },
-      {
-        "rolls": {
-          "min": 0,
-          "max": 2
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "minecraft:red_mushroom"
         },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:raw_gold",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "min": 0,
-                  "max": 2
-                }
+        {
+          "type": "minecraft:item",
+          "weight": 7,
+          "name": "minecraft:brown_mushroom"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "minecraft:red_tulip"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "name": "minecraft:white_tulip"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:sea_pickle"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 2
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

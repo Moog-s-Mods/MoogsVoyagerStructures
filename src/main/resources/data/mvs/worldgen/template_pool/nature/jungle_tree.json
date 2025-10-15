@@ -1,6 +1,5 @@
 {
   "name": "mvs:jungle_tree",
-
   "fallback": "minecraft:empty",
   "elements": [
     {

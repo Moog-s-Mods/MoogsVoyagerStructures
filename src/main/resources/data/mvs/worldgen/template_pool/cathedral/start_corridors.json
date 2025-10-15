@@ -27,9 +27,9 @@
         "projection": "rigid",
         "location": "mvs:cathedral/start_corridors/corridor_3",
         "processors": "mvs:cathedral"
-        }
-      },
-      {
+      }
+    },
+    {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",

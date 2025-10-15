@@ -1,34 +1,22 @@
 {
   "name": "mvs:acacia",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:dead_tree/acacia",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:dead_tree/acacia_trunk",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

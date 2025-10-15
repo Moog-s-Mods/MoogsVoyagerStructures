@@ -20,7 +20,6 @@
         "processors": "minecraft:empty"
       }
     },
-
     {
       "weight": 7,
       "element": {
@@ -255,7 +254,6 @@
         "processors": "minecraft:empty"
       }
     },
-
     {
       "weight": 2,
       "element": {

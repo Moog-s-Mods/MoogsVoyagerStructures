@@ -5,7 +5,6 @@
     {
       "weight": 1,
       "element": {
-
         "location": "mvs:nature/floating_islands",
         "processors": "mvs:blue_to_water",
         "projection": "rigid",

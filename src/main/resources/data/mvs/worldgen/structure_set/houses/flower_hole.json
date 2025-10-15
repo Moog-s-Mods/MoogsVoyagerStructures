@@ -1,14 +1,14 @@
 {
-    "structures": [
-        {
-            "structure": "mvs:houses/flower_hole",
-            "weight": 1
-        }
-    ],
-    "placement": {
-        "type": "moogs_structures:advanced_random_spread",
-        "salt": 865741203,
-        "spacing": 46,
-        "separation": 28
+  "structures": [
+    {
+      "structure": "mvs:houses/flower_hole",
+      "weight": 1
     }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 865741203,
+    "spacing": 46,
+    "separation": 28
+  }
 }

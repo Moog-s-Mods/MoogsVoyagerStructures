@@ -1,7 +1,7 @@
 {
-    "processors":  [
-                       {
-                           "processor_type":  "moogs_structures:waterlogging_fix_processor"
-                       }
-                   ]
+  "processors": [
+    {
+      "processor_type": "moogs_structures:waterlogging_fix_processor"
+    }
+  ]
 }

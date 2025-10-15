@@ -1,14 +1,14 @@
 {
-    "structures": [
-        {
-            "structure": "mvs:other_decoration/horse_campsite",
-            "weight": 1
-        }
-    ],
-    "placement": {
-        "type": "moogs_structures:advanced_random_spread",
-        "salt": 299909574,
-        "spacing": 19,
-        "separation": 17
+  "structures": [
+    {
+      "structure": "mvs:other_decoration/horse_campsite",
+      "weight": 1
     }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 299909574,
+    "spacing": 19,
+    "separation": 17
+  }
 }

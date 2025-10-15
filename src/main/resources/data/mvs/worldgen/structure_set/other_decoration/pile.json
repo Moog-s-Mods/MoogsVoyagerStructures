@@ -1,14 +1,14 @@
 {
-    "structures": [
-        {
-            "structure": "mvs:other_decoration/pile",
-            "weight": 1
-        }
-    ],
-    "placement": {
-        "type": "moogs_structures:advanced_random_spread",
-        "salt": 377640917,
-        "spacing": 13,
-        "separation": 7
+  "structures": [
+    {
+      "structure": "mvs:other_decoration/pile",
+      "weight": 1
     }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 377640917,
+    "spacing": 13,
+    "separation": 7
+  }
 }

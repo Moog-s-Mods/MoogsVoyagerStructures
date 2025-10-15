@@ -1,14 +1,14 @@
 {
-    "structures": [
-        {
-            "structure": "mvs:other_decoration/snowy_dog_hut",
-            "weight": 1
-        }
-    ],
-    "placement": {
-        "type": "moogs_structures:advanced_random_spread",
-        "salt": 599873625,
-        "spacing": 28,
-        "separation": 24
+  "structures": [
+    {
+      "structure": "mvs:other_decoration/snowy_dog_hut",
+      "weight": 1
     }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 599873625,
+    "spacing": 28,
+    "separation": 24
+  }
 }

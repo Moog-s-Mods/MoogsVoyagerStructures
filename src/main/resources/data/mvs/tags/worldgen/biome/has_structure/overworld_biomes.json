@@ -1,6 +1,5 @@
 {
   "replace": false,
-
   "_comment": " This biome tag can specify the biome directly. Or specify another biome tag by starting with # ",
   "values": [
     "#minecraft:is_jungle",
@@ -37,16 +36,16 @@
     {
       "id": "biomesoplenty:seasonal_forest",
       "required": false
-    },    
-	  {
+    },
+    {
       "id": "biomesoplenty:orchard",
       "required": false
     },
-	  {
+    {
       "id": "biomesoplenty:seasonal_pumpkin_patch",
       "required": false
     },
-	  {
+    {
       "id": "biomesoplenty:dead_forest",
       "required": false
     },

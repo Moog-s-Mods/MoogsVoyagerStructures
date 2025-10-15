@@ -1,20 +1,13 @@
 {
   "name": "mvs:snowy_dog_hut.json",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/snowy_dog_hut",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }
