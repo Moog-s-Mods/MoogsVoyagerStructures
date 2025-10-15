@@ -1,0 +1,19 @@
+{
+  "structures":[
+    {
+      "structure": "mvs:other_decoration/haystack",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "type": "moogs_structures:advanced_random_spread",
+
+    "salt": 287746539,
+
+    "spacing": 16,
+
+    "separation": 7
+  }
+}
+

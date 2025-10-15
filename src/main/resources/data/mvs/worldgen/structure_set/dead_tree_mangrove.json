@@ -1,0 +1,19 @@
+{
+  "structures":[
+    {
+      "structure": "mvs:dead_tree/mangrove",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "type": "moogs_structures:advanced_random_spread",
+
+    "salt": 846333749,
+
+    "spacing": 28,
+
+    "separation": 24
+  }
+}
+

@@ -1,0 +1,19 @@
+{
+  "structures":[
+    {
+      "structure": "mvs:dead_tree/dark_oak",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "type": "moogs_structures:advanced_random_spread",
+
+    "salt": 22201927364,
+
+    "spacing": 28,
+
+    "separation": 24
+  }
+}
+
