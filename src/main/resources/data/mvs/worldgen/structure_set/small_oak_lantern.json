@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:lantern/small_oak_lantern",
+      "structure": "mvs:small_oak_lantern",
       "weight": 1
     }
   ],

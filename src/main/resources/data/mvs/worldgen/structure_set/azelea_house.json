@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/azelea_house",
+      "structure": "mvs:azelea_house",
       "weight": 1
     }
   ],

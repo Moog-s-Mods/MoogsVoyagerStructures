@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/deepslate_house",
+      "structure": "mvs:deepslate_house",
       "weight": 1
     }
   ],

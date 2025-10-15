@@ -1,51 +1,51 @@
 {
   "structures":[
     {
-      "structure": "mvs:well/well",
+      "structure": "mvs:small_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/small_copper_well",
+      "structure": "mvs:small_copper_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/small_well",
+      "structure": "mvs:small_tower_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/acacia_well",
+      "structure": "mvs:well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/birch_well",
+      "structure": "mvs:rare_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/dark_oak_well",
+      "structure": "mvs:rocky_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/desert_well",
+      "structure": "mvs:oak_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/jungle_well",
+      "structure": "mvs:birch_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/oak_well",
+      "structure": "mvs:dark_oak_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/rocky_well",
+      "structure": "mvs:spruce_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/snowy_well",
+      "structure": "mvs:jungle_well",
       "weight": 1
     },
     {
-      "structure": "mvs:well/wells/spruce_well",
+      "structure": "mvs:acacia_well",
       "weight": 1
     }
   ],

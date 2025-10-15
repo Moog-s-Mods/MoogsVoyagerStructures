@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:well/wells/mushroom_well",
+      "structure": "mvs:mushroom_well",
       "weight": 1
     }
   ],

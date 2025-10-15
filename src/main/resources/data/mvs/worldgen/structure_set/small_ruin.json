@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:ruins/small_ruin",
+      "structure": "mvs:small_ruin",
       "weight": 1
     }
   ],

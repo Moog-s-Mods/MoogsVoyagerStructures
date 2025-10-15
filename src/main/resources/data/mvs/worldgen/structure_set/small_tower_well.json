@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:well/small_tower_well",
+      "structure": "mvs:small_tower_well",
       "weight": 1
     }
   ],

@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:carts/cart",
+      "structure": "mvs:cart",
       "weight": 1
     }
   ],

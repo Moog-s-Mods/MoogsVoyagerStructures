@@ -5,4 +5,4 @@
 - removed uses of super exclusion zone
 - Fix: Rotating jigsaw structures not aligning correctly
 5.0.1
-- Flattened structure set files
+- Flattened structure and structure set files

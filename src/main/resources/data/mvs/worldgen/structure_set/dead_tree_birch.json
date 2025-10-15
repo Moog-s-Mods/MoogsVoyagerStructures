@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:dead_tree/birch",
+      "structure": "mvs:dead_tree_birch",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 24
   }
 }
-

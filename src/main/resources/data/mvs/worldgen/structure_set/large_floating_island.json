@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/large_floating_island",
+      "structure": "mvs:large_floating_island",
       "weight": 1
     }
   ],

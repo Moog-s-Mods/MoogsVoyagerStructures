@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:log_pile/oak_log_pile",
+      "structure": "mvs:oak_log_pile",
       "weight": 1
     }
   ],

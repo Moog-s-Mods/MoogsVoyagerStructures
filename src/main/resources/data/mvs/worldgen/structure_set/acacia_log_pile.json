@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:log_pile/acacia_log_pile",
+      "structure": "mvs:acacia_log_pile",
       "weight": 1
     }
   ],

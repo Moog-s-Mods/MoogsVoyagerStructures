@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:well/rare_well",
+      "structure": "mvs:rare_well",
       "weight": 1
     }
   ],

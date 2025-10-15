@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:ruins/log_ruin",
+      "structure": "mvs:log_ruin",
       "weight": 1
     }
   ],

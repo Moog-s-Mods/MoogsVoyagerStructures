@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/small_igloo",
+      "structure": "mvs:small_igloo",
       "weight": 1
     }
   ],

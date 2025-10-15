@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:log_pile/jungle_log_pile",
+      "structure": "mvs:jungle_log_pile",
       "weight": 1
     }
   ],

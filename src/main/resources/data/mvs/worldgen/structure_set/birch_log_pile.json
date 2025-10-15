@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:log_pile/birch_log_pile",
+      "structure": "mvs:birch_log_pile",
       "weight": 1
     }
   ],

@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:nature/big_oak_tree",
+      "structure": "mvs:big_oak_tree",
       "weight": 1
     }
   ],
@@ -21,4 +21,3 @@
     "separation": 26
   }
 }
-

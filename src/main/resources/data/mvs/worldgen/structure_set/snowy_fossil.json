@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:other_decoration/snowy_fossil",
+      "structure": "mvs:snowy_fossil",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 13
   }
 }
-

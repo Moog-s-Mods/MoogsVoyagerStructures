@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:well/wells/end_well",
+      "structure": "mvs:end_well",
       "weight": 1
     }
   ],

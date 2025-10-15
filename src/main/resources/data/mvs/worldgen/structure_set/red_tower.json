@@ -1,7 +1,7 @@
 {
     "structures": [
         {
-            "structure": "mvs:houses/red_tower",
+            "structure": "mvs:red_tower",
             "weight": 1
         }
     ],

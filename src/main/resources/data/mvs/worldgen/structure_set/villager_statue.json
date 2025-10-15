@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:other_decoration/villager_statue",
+      "structure": "mvs:villager_statue",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 40
   }
 }
-

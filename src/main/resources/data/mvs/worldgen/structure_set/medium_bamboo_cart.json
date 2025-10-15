@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:carts/medium_bamboo_cart",
+      "structure": "mvs:medium_bamboo_cart",
       "weight": 1
     }
   ],

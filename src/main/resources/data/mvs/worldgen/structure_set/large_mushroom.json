@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:nature/large_mushroom",
+      "structure": "mvs:large_mushroom",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 36
   }
 }
-

@@ -1,0 +1,20 @@
+{
+
+  "type": "moogs_structures:moogs_structures_generic_jigsaw_structure",
+
+  "start_pool": "mvs:log_pile/oak_log_pile/start_pool",
+
+  "size": 1,
+
+  "biomes": "#mvs:has_structure/oak_biomes",
+  "cannot_spawn_in_liquid": true,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "start_height": {
+    "absolute": 0
+  },
+
+  "spawn_overrides": {}
+}

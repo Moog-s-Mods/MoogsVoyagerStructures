@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:nature/mushroom_pond",
+      "structure": "mvs:mushroom_pond",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 12
   }
 }
-

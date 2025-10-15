@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/desert_house",
+      "structure": "mvs:desert_house",
       "weight": 1
     }
   ],

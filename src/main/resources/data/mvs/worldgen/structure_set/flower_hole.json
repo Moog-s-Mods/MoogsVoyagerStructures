@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/flower_hole",
+      "structure": "mvs:flower_hole",
       "weight": 1
     }
   ],

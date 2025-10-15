@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:ruins/tree_monument",
+      "structure": "mvs:tree_monument",
       "weight": 1
     }
   ],

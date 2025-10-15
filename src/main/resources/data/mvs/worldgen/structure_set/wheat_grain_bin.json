@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:other_decoration/wheat_grain_bin",
+      "structure": "mvs:wheat_grain_bin",
       "weight": 1
     }
   ],
@@ -16,4 +16,3 @@
     "separation": 14
   }
 }
-

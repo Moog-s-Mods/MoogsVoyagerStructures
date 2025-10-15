@@ -1,19 +1,19 @@
 {
   "structures":[
     {
-      "structure": "mvs:stall/red_stall",
+      "structure": "mvs:red_stall",
       "weight": 1
     },
     {
-      "structure": "mvs:stall/pink_stall",
+      "structure": "mvs:orange_stall",
       "weight": 1
     },
     {
-      "structure": "mvs:stall/orange_stall",
+      "structure": "mvs:pink_stall",
       "weight": 1
     },
     {
-      "structure": "mvs:stall/blue_stall",
+      "structure": "mvs:blue_stall",
       "weight": 1
     }
   ],

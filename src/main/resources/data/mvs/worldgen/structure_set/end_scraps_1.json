@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "mvs:other_decoration/end_scraps/end_scraps_1",
+      "structure": "mvs:end_scraps_1",
       "weight": 1
     }
   ],
@@ -12,4 +12,3 @@
     "separation": 15
   }
 }
-

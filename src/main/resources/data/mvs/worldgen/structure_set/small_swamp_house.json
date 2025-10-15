@@ -1,7 +1,7 @@
 {
   "structures":[
     {
-      "structure": "mvs:houses/small_swamp_house",
+      "structure": "mvs:small_swamp_house",
       "weight": 1
     }
   ],
