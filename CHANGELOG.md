@@ -1,2 +1,2 @@
 # Changelog
-- fixed sign issue
+- fixed loot tables
