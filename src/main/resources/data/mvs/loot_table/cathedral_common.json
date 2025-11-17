@@ -93,20 +93,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:chain",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 8
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:dirt",
           "functions": [
