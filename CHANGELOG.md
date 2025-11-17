@@ -1,8 +1,4 @@
 # Changelog
-5.0.0
-- Converted to a datapack version which requires Moogs Structure Lib (moogs_structures)
-- Removed all comments from JSON's
-- removed uses of super exclusion zone
-- Fix: Rotating jigsaw structures not aligning correctly
-5.0.1
-- Flattened structure and structure set files
+5.0.2
+- Removed empty map and chains from loot tables to avoid issues with name changes across 1.21 versions
+- Added back villager jigsaw blocks to all structures that should have them
