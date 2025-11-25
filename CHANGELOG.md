@@ -1,2 +1,9 @@
-# Changelog
-- fixed loot tables
+## MVS - Moog's Voyager Structures
+1.20 v5.0.22
+
+**Changelog:**
+- Fixed the warped house spawn
+- Fixed the missing loot tables in the ocean tower
+- Added structure voids to the 2 acacia tree
+
+![alt text](https://i.imgur.com/XKKB1Ua.png)
