@@ -51,10 +51,9 @@ publishMods {
 
     // Release metadata
     version = project.version.toString()
-    // Release type (defaults to STABLE if not provided)
     type = STABLE
-    def displayPrefix = (project.findProperty('publishDisplayPrefix') ?: 'MTR') as String
-    def displaySuffix = (project.findProperty('publishDisplaySuffix') ?: '[UNIVERSAL]') as String
+    def displayPrefix = project.findProperty('publishDisplayPrefix')
+    def displaySuffix = project.findProperty('publishDisplaySuffix')
     displayName = "${displayPrefix} ${project.version}-${mcVersion} ${displaySuffix}"
 
 
@@ -71,9 +70,10 @@ publishMods {
     modrinth {
         accessToken = providers.environmentVariable('MODRINTH_API_KEY')
         projectId = (project.findProperty('modrinthProjectId') ?: '')
+        announcementTitle = "<:modrinth:1132291566019563550> Download on Modrinth"
         minecraftVersionRange {
-            start = (project.findProperty('publishMcStart') ?: mcVersion)
-            end = (project.findProperty('publishMcEnd') ?: mcVersion)
+            start = project.findProperty('publishMcStart')
+            end = project.findProperty('publishMcEnd')
         }
         requires {
             slug = "moogs-structure-lib"
@@ -83,12 +83,47 @@ publishMods {
     curseforge {
         accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
         projectId = (project.findProperty('curseforgeProjectId') ?: '')
+        projectSlug = (project.findProperty('curseforgeProjectSlug') ?: '')
+        announcementTitle = "<:curseforge:1132291568305459250> Download on CurseForge"
         serverRequired = true
         minecraftVersionRange {
-            start = (project.findProperty('publishMcStart') ?: mcVersion)
-            end = (project.findProperty('publishMcEnd') ?: mcVersion)
+            start = project.findProperty('publishMcStart')
+            end = project.findProperty('publishMcEnd')
         }
         requires("moogs-structure-lib")
+    }
+
+    discord {
+        webhookUrl = providers.environmentVariable('DISCORD_WEBHOOK')
+        dryRunWebhookUrl = providers.environmentVariable('DISCORD_WEBHOOK_DRY_RUN').orElse('')
+        username = "Moog's Mods"
+
+        content = changelog.map { text ->
+            def changelogBody = text.replaceFirst(/(?i)^#\s*Changelog\s*\n?/, '')
+                    .replaceFirst(/^\d+\.\d+\.\d+\s*\n?/, '')
+                    .trim()
+
+            def prefix = project.findProperty('publishDisplayPrefix')
+            def suffix = project.findProperty('publishDisplaySuffix')
+            def mcStart = project.findProperty('publishMcStart')
+            def mcEnd = project.findProperty('publishMcEnd')
+            def versionRange = mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd"
+
+            """## 🎉 **${modName} ${project.version}** has been released!
+            
+**${prefix} ${project.version}-${mcVersion} ${suffix}**
+Versions - ${versionRange}
+
+### 📝 **Changelog:**
+${changelogBody}
+"""
+        }
+
+        style {
+            look = "MODERN"
+            link = "EMBED"
+            color = (project.findProperty('discordEmbedColor') ?: '#9033af')
+        }
     }
 }
 
