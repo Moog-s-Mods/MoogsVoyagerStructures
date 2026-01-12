@@ -9,7 +9,10 @@
   "allowed_terrain_height_range": 2,
   "liquid_settings": "ignore_waterlogging",
   "dimension_padding": 10,
-
+  "y_allowance":
+  {
+      "min_y_allowed": 70
+  },
   "biomes": "#mvs:has_structure/taiga_biomes",
   "step": "underground_structures",
   "terrain_adaptation": "none",

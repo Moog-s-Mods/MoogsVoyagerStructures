@@ -6,13 +6,9 @@
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 466628370,
-
     "spacing": 23,
-
     "separation": 15
   }
 }
