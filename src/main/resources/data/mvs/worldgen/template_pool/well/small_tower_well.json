@@ -1,20 +1,17 @@
 {
   "name": "mvs:small_tower_well",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
-        "location": "mvs:well/small_tower_well",
-
+        "location": "mvs:1_21_4/small_tower_well",
+        "locations": {
+            "1.21-1.21.4": "mvs:1_21_4/small_tower_well",
+            "1.21.5-1.21.11": "mvs:1_21_11/small_tower_well"
+        },
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }
