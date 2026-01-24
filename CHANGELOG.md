@@ -2,4 +2,4 @@
 5.0.5
 
 # Update
-- The large warped tower is more rare
+- Made the large warped tower more rare
