@@ -11,10 +11,6 @@
 
     "salt": 690254035,
 
-    "super_exclusion_zone": {
-      "chunk_count": 1,
-      "other_set": "#mvs:common_avoid"
-    },
 
     "spacing": 38,
 
