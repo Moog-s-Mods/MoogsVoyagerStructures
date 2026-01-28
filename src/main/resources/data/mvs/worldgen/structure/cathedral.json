@@ -7,12 +7,15 @@
   "cannot_spawn_in_liquid": true,
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 5,
-  "biomes": "#mvs:has_structure/overworld_biomes",
+  "liquid_settings": "ignore_waterlogging",
+
+  "biomes": "#c:is_overworld",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": 0
   },
+
   "spawn_overrides": {
     "monster": {
       "bounding_box": "full",

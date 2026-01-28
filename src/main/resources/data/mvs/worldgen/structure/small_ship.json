@@ -3,9 +3,9 @@
   "start_pool": "mvs:other/small_ship/start_pool",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "cannot_spawn_in_liquid": false,
   "valid_biome_radius_check": 3,
-  "biomes": "#mvs:has_structure/ocean_biomes",
+  "biomes": "#c:is_ocean",
+  "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "none",
   "start_height": {
