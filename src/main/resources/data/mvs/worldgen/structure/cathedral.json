@@ -9,7 +9,7 @@
   "allowed_terrain_height_range": 5,
   "liquid_settings": "ignore_waterlogging",
 
-  "biomes": "#mvs:has_structure/overworld_biomes",
+  "biomes": "#c:is_overworld",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {

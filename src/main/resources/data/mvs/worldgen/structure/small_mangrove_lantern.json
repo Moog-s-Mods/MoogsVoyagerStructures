@@ -4,7 +4,7 @@
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
-  "biomes": "#mvs:has_structure/mangrove_biomes",
+  "biomes": "#c:primary_wood_type/mangrove",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

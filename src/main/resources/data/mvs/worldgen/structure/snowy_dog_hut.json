@@ -6,7 +6,7 @@
 
   "size": 1,
 
-  "biomes": "#mvs:has_structure/snowy_biomes",
+  "biomes": "#c:is_snowy",
   "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "terrain_height_radius_check": 2,

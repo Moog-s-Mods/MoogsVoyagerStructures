@@ -5,7 +5,7 @@
   "start_pool": "mvs:houses/small_swamp_house/start_pool",
 
   "size": 1,
-  "biomes": "#mvs:has_structure/swampy_biomes",
+  "biomes": "#c:is_swamp",
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
   "step": "surface_structures",

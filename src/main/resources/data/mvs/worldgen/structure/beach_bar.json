@@ -6,7 +6,7 @@
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 3,
 
-  "biomes": "#mvs:has_structure/beach_biomes",
+  "biomes": "#c:is_beach",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

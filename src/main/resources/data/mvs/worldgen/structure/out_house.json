@@ -6,7 +6,7 @@
   "cannot_spawn_in_liquid": true,
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 3,
-  "biomes": "#mvs:has_structure/swampy_biomes",
+  "biomes": "#c:is_swamp",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {

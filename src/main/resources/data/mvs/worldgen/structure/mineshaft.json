@@ -13,7 +13,7 @@
   {
       "min_y_allowed": 70
   },
-  "biomes": "#mvs:has_structure/taiga_biomes",
+  "biomes": "#c:is_taiga",
   "step": "underground_structures",
   "terrain_adaptation": "none",
   "start_height": {

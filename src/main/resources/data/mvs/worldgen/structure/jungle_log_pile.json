@@ -6,7 +6,7 @@
 
   "size": 1,
 
-  "biomes": "#mvs:has_structure/jungle_biomes",
+  "biomes": "#c:is_jungle",
   "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
