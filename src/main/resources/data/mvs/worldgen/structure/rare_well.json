@@ -6,7 +6,7 @@
   "cannot_spawn_in_liquid": true,
   "terrain_height_radius_check": 2,
   "allowed_terrain_height_range": 3,
-  "liquid_settings": "ignore_waterlogging",
+
 
   "biomes": "#c:is_overworld",
   "step": "surface_structures",

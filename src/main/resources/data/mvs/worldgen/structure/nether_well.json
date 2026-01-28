@@ -6,7 +6,7 @@
   "cannot_spawn_in_liquid": true,
   "land_search_direction": "HIGHEST_LAND",
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "liquid_settings": "ignore_waterlogging",
+
 
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
