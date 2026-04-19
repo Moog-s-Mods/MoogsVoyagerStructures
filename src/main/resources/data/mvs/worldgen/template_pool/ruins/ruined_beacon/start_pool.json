@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:ruins/ruined_beacon",
+        "location": "mvs:1_21_9/ruins/ruined_beacon",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:ruins/ruined_beacon"
+        },
 
         "processors": "mvs:tuff_to_iron",
 

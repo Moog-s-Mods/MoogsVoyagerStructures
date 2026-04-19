@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:other_decoration/desert_pump",
+        "location": "mvs:1_21_9/other_decoration/desert_pump",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:other_decoration/desert_pump"
+        },
 
         "processors": "minecraft:empty",
 

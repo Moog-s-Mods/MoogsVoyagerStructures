@@ -7,7 +7,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:cathedral/base/base",
+        "location": "mvs:1_21_9/cathedral/base/base",
+        "locations": {
+          "1.21-1.21.8": "mvs:cathedral/base/base"
+        },
         "processors": "minecraft:empty"
       }
     }

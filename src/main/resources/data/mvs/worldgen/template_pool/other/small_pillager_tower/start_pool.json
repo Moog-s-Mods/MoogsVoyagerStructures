@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:small_pillager_tower",
+        "location": "mvs:1_21_9/small_pillager_tower",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:small_pillager_tower"
+        },
 
         "processors": "minecraft:empty",
 

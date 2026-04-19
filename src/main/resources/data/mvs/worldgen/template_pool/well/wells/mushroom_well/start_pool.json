@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:well/wells/mushroom_well",
+        "location": "mvs:1_21_9/well/wells/mushroom_well",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:well/wells/mushroom_well"
+        },
 
         "processors": "minecraft:empty",
 

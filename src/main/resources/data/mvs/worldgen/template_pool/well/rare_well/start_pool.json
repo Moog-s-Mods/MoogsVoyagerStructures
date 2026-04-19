@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:well/rare_well/rare_well_upper",
+        "location": "mvs:1_21_9/well/rare_well/rare_well_upper",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:well/rare_well/rare_well_upper"
+        },
 
         "processors": "minecraft:empty",
 

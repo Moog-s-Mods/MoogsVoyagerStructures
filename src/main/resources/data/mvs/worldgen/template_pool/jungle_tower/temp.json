@@ -7,7 +7,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:jungle_tower/base",
+        "location": "mvs:1_21_9/jungle_tower/base",
+        "locations": {
+          "1.21-1.21.8": "mvs:jungle_tower/base"
+        },
         "processors": "minecraft:empty"
       }
     }

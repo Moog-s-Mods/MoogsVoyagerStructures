@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:gallows",
+        "location": "mvs:1_21_9/gallows",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:gallows"
+        },
 
         "processors": "minecraft:empty",
 

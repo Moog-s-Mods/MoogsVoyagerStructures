@@ -7,7 +7,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_1",
+        "location": "mvs:1_21_9/cathedral/start_corridors/corridor_1",
+        "locations": {
+          "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_1"
+        },
         "processors": "mvs:cathedral"
       }
     },
@@ -16,7 +19,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_2",
+        "location": "mvs:1_21_9/cathedral/start_corridors/corridor_2",
+        "locations": {
+          "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_2"
+        },
         "processors": "mvs:cathedral"
       }
     },
@@ -25,7 +31,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_3",
+        "location": "mvs:1_21_9/cathedral/start_corridors/corridor_3",
+        "locations": {
+          "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_3"
+        },
         "processors": "mvs:cathedral"
         }
       },
@@ -34,7 +43,10 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_4",
+        "location": "mvs:1_21_9/cathedral/start_corridors/corridor_4",
+        "locations": {
+          "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_4"
+        },
         "processors": "mvs:cathedral"
       }
     },

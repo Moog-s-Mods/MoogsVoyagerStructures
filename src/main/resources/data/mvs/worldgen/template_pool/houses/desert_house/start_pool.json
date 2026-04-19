@@ -9,7 +9,11 @@
       "weight": 1,
       "element": {
 
-        "location": "mvs:houses/desert_house",
+        "location": "mvs:1_21_9/houses/desert_house",
+
+        "locations": {
+          "1.21-1.21.8": "mvs:houses/desert_house"
+        },
 
         "processors": "minecraft:empty",
 
