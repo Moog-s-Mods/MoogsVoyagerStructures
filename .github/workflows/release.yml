@@ -52,6 +52,18 @@ jobs:
           " "$VERSION")
           printf "body<<DELIMITER\n%s\nDELIMITER\n" "$BODY" >> "$GITHUB_OUTPUT"
 
+      - name: Post Discord Banner
+        shell: bash
+        run: |
+          BANNER_URL=$(grep 'discordThumbnailUrl=' gradle.properties | cut -d'=' -f2)
+          ROLE_ID=$(grep 'discordRoleId=' gradle.properties | cut -d'=' -f2)
+          AVATAR_URL=$(grep 'discordAvatarUrl=' gradle.properties | cut -d'=' -f2)
+          curl -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{\"username\":\"Moog's Mods\",\"avatar_url\":\"$AVATAR_URL\",\"content\":\"<@&$ROLE_ID>\\n$BANNER_URL\",\"allowed_mentions\":{\"parse\":[],\"roles\":[\"$ROLE_ID\"]}}"
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+
       - name: Publish to CurseForge, Modrinth & Discord
         run: |
           chmod +x gradlew
