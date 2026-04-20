@@ -69,7 +69,7 @@ publishMods {
 
     modLoaders.add("fabric")
 //    modLoaders.add("quilt")
-//    modLoaders.add("forge")
+    modLoaders.add("forge")
     modLoaders.add("neoforge")
 
     maxRetries = 3
@@ -85,6 +85,9 @@ publishMods {
             start = project.findProperty('publishMcStart')
             end = project.findProperty('publishMcEnd')
         }
+        minecraftVersions.add("26.1")
+        minecraftVersions.add("26.1.1")
+        minecraftVersions.add("26.1.2")
         requires {
             slug = "moogs-structure-lib"
         }
@@ -100,6 +103,9 @@ publishMods {
             start = project.findProperty('publishMcStart')
             end = project.findProperty('publishMcEnd')
         }
+        minecraftVersions.add("26.1")
+        minecraftVersions.add("26.1.1")
+        minecraftVersions.add("26.1.2")
         requires("moogs-structure-lib")
     }
 

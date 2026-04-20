@@ -1,14 +1,17 @@
 # Changelog
 
-5.0.6
+---
 
-# Update
+## [5.0.6] - 2026-04-20
+
 ### Fixed
-- fixed chain renamed issues for 1.21.9+
-- repaired a few cathedral nbt's
-- repaired various structures
+- Fixed chain renamed issues for 1.21.9+
+- Fixed template pool elements using wrong type field (element_type)
+- Repaired a few cathedral NBTs
+- Repaired various structures
+- Fixed mod icon not displaying in Mod Menu
 
 ### Changed
-- compressed icon.png
-- fixed mod icon not displaying in Mod Menu
-- added description and links to mod metadata
+- Added description and links to mod metadata
+
+---

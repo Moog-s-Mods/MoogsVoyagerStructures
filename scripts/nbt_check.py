@@ -32,7 +32,8 @@ def main():
             print(f"  {path}")
             print(f"    {err}")
 
-    input("\nPress Enter to exit...")
+    if sys.stdin.isatty():
+        input("\nPress Enter to exit...")
 
 if __name__ == "__main__":
     main()
