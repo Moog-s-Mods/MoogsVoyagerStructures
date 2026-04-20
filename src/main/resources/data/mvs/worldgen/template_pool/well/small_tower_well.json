@@ -12,7 +12,7 @@
         },
         "processors": "minecraft:empty",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "moogs_structures:versioned_single_pool_element"
       }
     }
   ]
