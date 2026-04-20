@@ -138,7 +138,8 @@ ${changelogBody}
         style {
             look = "MODERN"
             link = "EMBED"
-            color = (project.findProperty('discordEmbedColor') ?: '#9033af')
+            color = (project.findProperty('discordEmbedColor') ?: '#0f2b52')
+            thumbnailUrl = project.findProperty('discordThumbnailUrl')
         }
     }
 }
