@@ -213,15 +213,6 @@
       }
     },
     {
-      "weight": 2,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:mineshaft/dead_end_1",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
