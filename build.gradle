@@ -13,6 +13,11 @@ def modDescription = project.findProperty('modDescription') as String
 def modHomepage = project.findProperty('modHomepage') as String
 def modSources = project.findProperty('modSources') as String
 def modIssues = project.findProperty('modIssues') as String
+def modDiscord = project.findProperty('modDiscord') as String
+def modKofi = project.findProperty('modKofi') as String
+def modCurseforge = project.findProperty('modCurseforge') as String
+def modModrinth = project.findProperty('modModrinth') as String
+def modReleases = project.findProperty('modReleases') as String
 def structureLibVersionRange = project.findProperty('structureLibVersionRange') as String
 
 repositories {
@@ -29,6 +34,11 @@ tasks.processResources {
             'mod_homepage': modHomepage,
             'mod_sources': modSources,
             'mod_issues': modIssues,
+            'mod_discord': modDiscord,
+            'mod_kofi': modKofi,
+            'mod_curseforge': modCurseforge,
+            'mod_modrinth': modModrinth,
+            'mod_releases': modReleases,
             'structure_lib_version_range': structureLibVersionRange,
     ]
     filesMatching('fabric.mod.json') { expand(meta) }

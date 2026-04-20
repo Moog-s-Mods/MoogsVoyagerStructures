@@ -1,22 +1,40 @@
 {
-  "schemaVersion": 1,
-  "id": "mvs",
-  "version": "${version}",
-  "name": "Moog's Voyager Structures",
-  "description": "Moogs Voyager Structures brings life, fun and variety to your Minecraft world! Explore awesome new structures made with vanilla blocks and entities, and discover loot, enemies, and villagers along the way. This mod is compatible with any modpack and keeps the vanilla feel of the game!",
-  "authors": [
-    "FinnDog"
-  ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
-    "sources": "https://github.com/FinnSetchell/MoogsVoyagerStructures",
-    "issues": "https://github.com/FinnSetchell/MoogsVoyagerStructures/issues"
-  },
-  "license": "GNU Lesser General Public License v3.0",
-  "icon": "assets/mvs/icon.png",
-  "environment": "*",
-  "depends": {
-    "fabric-resource-loader-v0": "*",
-    "moogs_structures": "*"
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${mod_description}",
+    "authors": [
+      "FinnDog"
+    ],
+    "contributors": [
+      "Phantax"
+    ],
+    "contact": {
+      "homepage": "${mod_homepage}",
+      "sources": "${mod_sources}",
+      "issues": "${mod_issues}",
+      "discord": "${mod_discord}",
+      "ko-fi": "${mod_kofi}",
+      "curseforge": "${mod_curseforge}",
+      "modrinth": "${mod_modrinth}"
+    },
+    "license": "GNU Lesser General Public License v3.0",
+    "icon": "assets/mvs/icon.png",
+    "environment": "*",
+    "depends": {
+      "fabric-resource-loader-v0": "*",
+      "moogs_structures": "*"
+    },
+    "custom": {
+      "modmenu": {
+        "links": {
+          "mvs.releases": "${mod_releases}",
+          "modmenu.discord": "${mod_discord}",
+          "mvs.kofi": "${mod_kofi}",
+          "mvs.curseforge": "${mod_curseforge}",
+          "mvs.modrinth": "${mod_modrinth}"
+        }
+      }
+    }
   }
-}
