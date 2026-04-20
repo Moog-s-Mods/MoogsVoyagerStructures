@@ -8,17 +8,31 @@
       "name": "${mod_name}",
       "description": "${mod_description}",
       "contributors": {
-        "FinnDog": "Owner"
+        "FinnDog": "Owner",
+        "Phantax": "Contributor"
       },
       "contact": {
         "homepage": "${mod_homepage}",
         "sources": "${mod_sources}",
-        "issues": "${mod_issues}"
+        "issues": "${mod_issues}",
+        "discord": "${mod_discord}",
+        "ko-fi": "${mod_kofi}",
+        "curseforge": "${mod_curseforge}",
+        "modrinth": "${mod_modrinth}"
       },
-      "icon": "icon.png",
+      "icon": "assets/mvs/icon.png",
       "license": "LGPL-3.0-only"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
+    "modmenu": {
+      "links": {
+        "mvs.releases": "${mod_releases}",
+        "modmenu.discord": "${mod_discord}",
+        "mvs.kofi": "${mod_kofi}",
+        "mvs.curseforge": "${mod_curseforge}",
+        "mvs.modrinth": "${mod_modrinth}"
+      }
+    },
     "depends": [
       {
         "id": "quilt_resource_loader",
