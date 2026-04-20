@@ -2,6 +2,16 @@
 
 ---
 
+## [5.0.7] - 2026-04-20
+
+### Fixed
+- Mineshaft now generates properly
+
+### Changed
+- Mineshaft is now half as rare
+
+---
+
 ## [5.0.6] - 2026-04-20
 
 ### Fixed
