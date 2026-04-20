@@ -1,18 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:beach_bar",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 435440687,
-
     "spacing": 48,
-
     "separation": 20
   }
 }

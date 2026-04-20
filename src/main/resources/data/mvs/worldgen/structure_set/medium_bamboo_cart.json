@@ -1,18 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:medium_bamboo_cart",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 873648576,
-
     "spacing": 12,
-
     "separation": 8
   }
 }

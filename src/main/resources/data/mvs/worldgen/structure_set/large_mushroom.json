@@ -1,18 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:large_mushroom",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 569543265,
-
     "spacing": 98,
-
     "separation": 36
   }
 }

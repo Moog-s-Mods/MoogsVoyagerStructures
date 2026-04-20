@@ -1,24 +1,16 @@
 {
   "name": "mvs:small_pillager_tower/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:1_21_9/small_pillager_tower",
-
         "locations": {
           "1.21-1.21.8": "mvs:small_pillager_tower"
         },
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "moogs_structures:versioned_single_pool_element"
       }
     }

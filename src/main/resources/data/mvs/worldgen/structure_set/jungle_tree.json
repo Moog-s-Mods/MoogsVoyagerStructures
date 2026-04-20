@@ -1,18 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:jungle_tree",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 987873484,
-
     "spacing": 18,
-
     "separation": 13
   }
 }

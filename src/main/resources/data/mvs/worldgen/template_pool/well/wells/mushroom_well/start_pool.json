@@ -1,24 +1,16 @@
 {
   "name": "mvs:mushroom_well/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:1_21_9/well/wells/mushroom_well",
-
         "locations": {
           "1.21-1.21.8": "mvs:well/wells/mushroom_well"
         },
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "moogs_structures:versioned_single_pool_element"
       }
     }

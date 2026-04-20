@@ -9,9 +9,8 @@
   "allowed_terrain_height_range": 2,
   "liquid_settings": "ignore_waterlogging",
   "dimension_padding": 10,
-  "y_allowance":
-  {
-      "min_y_allowed": 70
+  "y_allowance": {
+    "min_y_allowed": 70
   },
   "biomes": "#c:is_taiga",
   "step": "underground_structures",
@@ -19,6 +18,5 @@
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

@@ -1,34 +1,22 @@
 {
   "name": "mvs:jungle",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:dead_tree/jungle",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:dead_tree/jungle_trunk",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

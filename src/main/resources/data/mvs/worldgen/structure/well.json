@@ -4,7 +4,6 @@
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "liquid_settings": "ignore_waterlogging",
-
   "biomes": "#c:is_overworld",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
@@ -12,6 +11,5 @@
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

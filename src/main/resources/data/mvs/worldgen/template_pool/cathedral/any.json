@@ -77,9 +77,6 @@
         "processors": "mvs:cathedral"
       }
     },
-
-
-
     {
       "weight": 10,
       "element": {
@@ -149,7 +146,6 @@
         "processors": "mvs:cathedral"
       }
     },
-
     {
       "weight": 17,
       "element": {
@@ -183,7 +179,6 @@
         "processors": "mvs:cathedral"
       }
     },
-
     {
       "weight": 11,
       "element": {

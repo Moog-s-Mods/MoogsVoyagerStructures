@@ -1,20 +1,14 @@
 {
-
   "type": "moogs_structures:moogs_structures_generic_jigsaw_structure",
-
   "start_pool": "mvs:nature/small_oak_pond/start_pool",
-
   "size": 1,
-
   "biomes": "#c:is_overworld",
   "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

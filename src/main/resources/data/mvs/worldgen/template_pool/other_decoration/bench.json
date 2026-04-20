@@ -1,76 +1,49 @@
 {
   "name": "mvs:bench",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/large_bench",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/medium_bench",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/small_bench_1",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/small_bench_2",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/small_bench_3",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

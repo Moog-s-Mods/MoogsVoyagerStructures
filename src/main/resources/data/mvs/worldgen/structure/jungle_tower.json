@@ -7,13 +7,11 @@
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 7,
   "valid_biome_radius_check": 3,
-
   "biomes": "#c:is_jungle",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

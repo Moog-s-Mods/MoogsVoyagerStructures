@@ -1,19 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:small_swamp_house",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 622547878,
-
-
     "spacing": 78,
-
     "separation": 20
   }
 }

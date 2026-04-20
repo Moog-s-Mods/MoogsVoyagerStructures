@@ -1,20 +1,13 @@
 {
   "name": "mvs:mushroom_pond/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:nature/mushroom_pond/mushroom_pond_upper",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

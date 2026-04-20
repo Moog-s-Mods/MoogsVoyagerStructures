@@ -1,20 +1,13 @@
 {
   "name": "mvs:fox_hut/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:other_decoration/fox_hut",
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

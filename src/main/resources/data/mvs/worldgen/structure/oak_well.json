@@ -6,12 +6,10 @@
   "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "liquid_settings": "ignore_waterlogging",
-
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

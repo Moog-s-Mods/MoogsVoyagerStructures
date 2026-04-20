@@ -1,24 +1,16 @@
 {
   "name": "mvs:desert_pump/start_pool",
-
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
         "location": "mvs:1_21_9/other_decoration/desert_pump",
-
         "locations": {
           "1.21-1.21.8": "mvs:other_decoration/desert_pump"
         },
-
         "processors": "minecraft:empty",
-
         "projection": "rigid",
-
         "element_type": "minecraft:single_pool_element"
       }
     }

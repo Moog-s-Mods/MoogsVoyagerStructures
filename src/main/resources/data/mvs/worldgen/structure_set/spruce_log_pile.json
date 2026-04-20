@@ -1,18 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:spruce_log_pile",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 389653201,
-
     "spacing": 26,
-
     "separation": 16
   }
 }

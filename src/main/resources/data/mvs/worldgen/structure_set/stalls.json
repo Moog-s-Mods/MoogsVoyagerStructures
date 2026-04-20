@@ -1,5 +1,5 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:red_stall",
       "weight": 1
@@ -18,13 +18,9 @@
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 298643200,
-
     "spacing": 32,
-
     "separation": 16
   }
 }
