@@ -3,7 +3,7 @@
   "start_pool": "mvs:lantern/small_dark_oak_lantern",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "biomes": "#c:is_dark_forest",
+  "biomes": "#mvs:is_dark_forest",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

@@ -2,6 +2,13 @@
 
 ---
 
+## [5.0.8] - 2026-04-20
+
+### Fixed
+- Cherry, crimson, mangrove, and dark oak biome tags now resolve correctly on 1.21.3-1.21.4
+
+---
+
 ## [5.0.7] - 2026-04-20
 
 ### Fixed

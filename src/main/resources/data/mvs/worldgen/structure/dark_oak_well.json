@@ -2,7 +2,7 @@
   "type": "moogs_structures:moogs_structures_generic_jigsaw_structure",
   "start_pool": "mvs:well/wells/dark_oak_well/start_pool",
   "size": 1,
-  "biomes": "#c:is_dark_forest",
+  "biomes": "#mvs:is_dark_forest",
   "cannot_spawn_in_liquid": true,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "liquid_settings": "ignore_waterlogging",
