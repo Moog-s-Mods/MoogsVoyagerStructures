@@ -5,7 +5,7 @@
     {
       "weight": 8,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_1",
         "locations": {
@@ -17,7 +17,7 @@
     {
       "weight": 12,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_2",
         "locations": {
@@ -29,7 +29,7 @@
     {
       "weight": 3,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_3",
         "locations": {
@@ -41,7 +41,7 @@
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_4",
         "locations": {
