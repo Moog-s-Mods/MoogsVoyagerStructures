@@ -1,8 +1,14 @@
 # Changelog
-5.0.5
+
+5.0.6
 
 # Update
-- Migrated all structure biome tags to use convention tags (#c:) instead of custom mvs tags
-  - Structures now automatically support biomes from mods that follow convention tag standards (BWG, BOP, Regions Unexplored, etc.)
-- Removed unused custom biome tag files
-- Removed common_avoid exclusion zones from structure sets
+### Fixed
+- fixed chain renamed issues for 1.21.9+
+- repaired a few cathedral nbt's
+- repaired various structures
+
+### Changed
+- compressed icon.png
+- fixed mod icon not displaying in Mod Menu
+- added description and links to mod metadata
