@@ -7,9 +7,8 @@
   "cannot_spawn_in_liquid": true,
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 2,
-  "y_allowance":
-  {
-      "min_y_allowed": 70
+  "y_allowance": {
+    "min_y_allowed": 70
   },
   "biomes": "#c:is_taiga",
   "step": "underground_structures",

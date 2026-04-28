@@ -3,7 +3,6 @@
   "start_pool": "mvs:lantern/small_bamboo_lantern",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-
   "biomes": "#c:is_jungle",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
@@ -11,6 +10,5 @@
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {}
 }

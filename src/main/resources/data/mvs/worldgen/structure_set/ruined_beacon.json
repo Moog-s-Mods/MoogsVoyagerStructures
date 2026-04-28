@@ -1,19 +1,14 @@
 {
-  "structures":[
+  "structures": [
     {
       "structure": "mvs:ruined_beacon",
       "weight": 1
     }
   ],
   "placement": {
-
     "type": "moogs_structures:advanced_random_spread",
-
     "salt": 699587454,
-
-
     "spacing": 75,
-
     "separation": 60
   }
 }

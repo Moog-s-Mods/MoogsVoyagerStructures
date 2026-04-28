@@ -7,15 +7,12 @@
   "cannot_spawn_in_liquid": true,
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 5,
-
-
   "biomes": "#c:is_overworld",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": 0
   },
-
   "spawn_overrides": {
     "monster": {
       "bounding_box": "full",
