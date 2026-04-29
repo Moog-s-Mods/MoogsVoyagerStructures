@@ -28,10 +28,7 @@ def get_user_inputs():
         print("No replacements entered. Exiting.")
         sys.exit(0)
 
-    version = input("\nVersion folder name (e.g. 1_21_9): ").strip()
-    if not version:
-        print("Version cannot be empty. Exiting.")
-        sys.exit(0)
+    version = input("\nVersion folder name (leave blank to overwrite in-place): ").strip()
 
     return replacements, version
 
@@ -81,10 +78,10 @@ def main():
         sys.exit(1)
 
     replacements, version = get_user_inputs()
-    output_base = structure_dir / version
+    output_base = structure_dir / version if version else structure_dir
 
     print(f"\nScanning: {structure_dir}")
-    print(f"Output:   {output_base}\n")
+    print(f"Output:   {'(in-place)' if not version else output_base}\n")
 
     saved = []
     skipped = []
@@ -105,8 +102,9 @@ def main():
         replace_strings(nbtfile, replacements, changed)
 
         if changed[0]:
-            out_path = output_base / rel
-            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path = nbt_path if not version else output_base / rel
+            if version:
+                out_path.parent.mkdir(parents=True, exist_ok=True)
             nbtfile.save(str(out_path))
             saved.append(str(rel))
             print(f"  [SAVED]   {rel}")
