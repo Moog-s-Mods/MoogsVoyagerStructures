@@ -1,6 +1,6 @@
 {
   "name": "corridor",
-  "fallback": "minecraft:empty",
+  "fallback": "mvs:mineshaft/corridor_overflow",
   "elements": [
     {
       "weight": 9,
