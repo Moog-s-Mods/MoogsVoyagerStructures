@@ -176,28 +176,40 @@
     {
       "weight": 13,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "location": "mvs:1_20_5/mineshaft/intersection_8",
+        "locations": {
+          "1.20-1.20.4": "mvs:mineshaft/intersection_8",
+          "1.20.5-1.20.6": "mvs:1_20_5/mineshaft/intersection_8"
+        },
+        "processors": "minecraft:empty",
         "projection": "rigid",
-        "location": "mvs:mineshaft/intersection_8",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element"
       }
     },
     {
       "weight": 13,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "location": "mvs:1_20_5/mineshaft/intersection_9",
+        "locations": {
+          "1.20-1.20.4": "mvs:mineshaft/intersection_9",
+          "1.20.5-1.20.6": "mvs:1_20_5/mineshaft/intersection_9"
+        },
+        "processors": "minecraft:empty",
         "projection": "rigid",
-        "location": "mvs:mineshaft/intersection_9",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element"
       }
     },
     {
       "weight": 12,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "location": "mvs:1_20_5/mineshaft/intersection_10",
+        "locations": {
+          "1.20-1.20.4": "mvs:mineshaft/intersection_10",
+          "1.20.5-1.20.6": "mvs:1_20_5/mineshaft/intersection_10"
+        },
+        "processors": "minecraft:empty",
         "projection": "rigid",
-        "location": "mvs:mineshaft/intersection_10",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element"
       }
     },
     {

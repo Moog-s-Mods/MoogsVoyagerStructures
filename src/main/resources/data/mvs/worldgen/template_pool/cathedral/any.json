@@ -1,6 +1,6 @@
 {
   "name": "any",
-  "fallback": "mvs:cathedral/blocker/blocker_2",
+  "fallback": "mvs:cathedral/blocker",
   "elements": [
     {
       "weight": 3,
