@@ -3,7 +3,7 @@
   "start_pool": "mvs:dead_tree/mangrove",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "biomes": "#c:primary_wood_type/mangrove",
+  "biomes": "#mvs:primary_wood_type/mangrove",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
