@@ -1,0 +1,6 @@
+{
+  "values": [
+    "#minecraft:is_taiga",
+    { "id": "#c:taiga", "required": false }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "values": [
+    "#minecraft:is_taiga",
+    "#minecraft:is_jungle",
+    "#minecraft:is_savanna",
+    "#minecraft:is_forest",
+    "#minecraft:is_mountain",
+    "#minecraft:is_badlands",
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:desert",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp",
+    "minecraft:mushroom_fields",
+    "minecraft:snowy_plains",
+    "minecraft:ice_spikes",
+    "minecraft:windswept_hills",
+    "minecraft:windswept_forest",
+    "minecraft:windswept_gravelly_hills"
+  ]
+}

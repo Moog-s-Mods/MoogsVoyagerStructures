@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:sunflower_plains",
+    "minecraft:meadow",
+    "minecraft:flower_forest",
+    { "id": "#c:floral", "required": false }
+  ]
+}

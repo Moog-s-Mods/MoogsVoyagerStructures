@@ -8,7 +8,7 @@
   "terrain_height_radius_check": 1,
   "allowed_terrain_height_range": 4,
   "liquid_settings": "ignore_waterlogging",
-  "biomes": "#c:is_taiga",
+  "biomes": "#mvs:is_taiga",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {

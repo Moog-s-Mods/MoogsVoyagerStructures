@@ -4,7 +4,7 @@
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "valid_biome_radius_check": 3,
-  "biomes": "#c:is_ocean",
+  "biomes": "#mvs:is_ocean",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "none",

@@ -3,7 +3,7 @@
   "start_pool": "mvs:dead_tree/acacia",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "biomes": "#c:is_savanna",
+  "biomes": "#mvs:is_savanna",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

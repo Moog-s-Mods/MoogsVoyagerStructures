@@ -3,7 +3,7 @@
   "start_pool": "mvs:other_decoration/wheat_grain_bin",
   "size": 1,
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "biomes": "#c:is_overworld",
+  "biomes": "#mvs:is_overworld",
   "cannot_spawn_in_liquid": true,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",

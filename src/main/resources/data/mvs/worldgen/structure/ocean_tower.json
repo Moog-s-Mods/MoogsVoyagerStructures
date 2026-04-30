@@ -3,7 +3,7 @@
   "start_pool": "mvs:ocean_tower_start_pool",
   "size": 1,
   "project_start_to_heightmap": "OCEAN_FLOOR_WG",
-  "biomes": "#c:is_deep_ocean",
+  "biomes": "#mvs:is_deep_ocean",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "y_allowance": {

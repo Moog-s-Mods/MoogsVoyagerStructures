@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:plains",
+    "minecraft:snowy_plains",
+    "minecraft:meadow",
+    "minecraft:sunflower_plains",
+    { "id": "#c:plains", "required": false },
+    { "id": "#forge:is_plains", "required": false }
+  ]
+}
