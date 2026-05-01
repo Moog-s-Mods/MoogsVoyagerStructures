@@ -45,12 +45,14 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build
+        working-directory: project
         run: |
           chmod +x gradlew
           ./gradlew build
 
       - name: Extract Changelog
         id: changelog
+        working-directory: project
         shell: bash
         run: |
           VERSION="${GITHUB_REF_NAME%%-*}"
@@ -63,6 +65,7 @@ jobs:
           printf "body<<DELIMITER\n%s\nDELIMITER\n" "$BODY" >> "$GITHUB_OUTPUT"
 
       - name: Post Discord Banner
+        working-directory: project
         shell: bash
         run: |
           BANNER_URL=$(grep 'discordThumbnailUrl=' gradle.properties | cut -d'=' -f2)
@@ -75,6 +78,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Publish to CurseForge, Modrinth & Discord
+        working-directory: project
         run: |
           chmod +x gradlew
           ./gradlew publishMods
@@ -88,6 +92,6 @@ jobs:
         with:
           body: ${{ steps.changelog.outputs.body }}
           files: |
-            build/libs/*.jar
-            !build/libs/*-sources.jar
+            project/build/libs/*.jar
+            !project/build/libs/*-sources.jar
           fail_on_unmatched_files: false
