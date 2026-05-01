@@ -2,6 +2,14 @@
 
 ---
 
+## [5.0.9] - 2026-05-01
+
+### Changed
+- All empty and hardcoded containers now have loot tables assigned
+- Added new `pond` and `end_scraps` loot tables
+
+---
+
 ## [5.0.8] - 2026-04-20
 
 ### Fixed
