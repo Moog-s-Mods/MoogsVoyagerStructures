@@ -7,7 +7,8 @@
       "element": {
         "location": "mvs:1_21_9/well/wells/end_well",
         "locations": {
-          "1.21-1.21.8": "mvs:well/wells/end_well"
+          "1.21-1.21.8": "mvs:well/wells/end_well",
+          "1.21.9-1.21.11": "mvs:1_21_9/well/wells/end_well"
         },
         "processors": "minecraft:empty",
         "projection": "rigid",

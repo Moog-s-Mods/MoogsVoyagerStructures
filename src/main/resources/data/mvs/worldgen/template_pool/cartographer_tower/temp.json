@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
+        "location": "mvs:1_21_9/cartographer_tower/base",
+        "locations": {
+          "1.21-1.21.8": "mvs:cartographer_tower/base",
+          "1.21.9-1.21.11": "mvs:1_21_9/cartographer_tower/base"
+        },
+        "processors": "minecraft:empty",
         "projection": "rigid",
-        "location": "mvs:cartographer_tower/base",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element"
       }
     }
   ]

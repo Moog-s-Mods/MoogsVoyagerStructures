@@ -198,7 +198,8 @@
         "projection": "rigid",
         "location": "mvs:1_21_9/mineshaft/intersection_10",
         "locations": {
-          "1.21-1.21.8": "mvs:mineshaft/intersection_10"
+          "1.21-1.21.8": "mvs:mineshaft/intersection_10",
+          "1.21.9-1.21.11": "mvs:1_21_9/mineshaft/intersection_10"
         },
         "processors": "minecraft:empty"
       }

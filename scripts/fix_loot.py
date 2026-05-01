@@ -16,8 +16,8 @@ from pathlib import Path
 import nbtlib
 
 PROJECT_ROOT = Path(__file__).parent.parent
-STRUCTURES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "structures"
-LOOT_TABLES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "loot_tables"
+STRUCTURES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "structure"
+LOOT_TABLES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "loot_table"
 
 _CONTAINER_BLOCKS = {"minecraft:chest", "minecraft:trapped_chest", "minecraft:barrel"}
 
