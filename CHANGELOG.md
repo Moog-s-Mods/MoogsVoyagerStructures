@@ -4,6 +4,9 @@
 
 ## [5.0.9] - 2026-05-01
 
+### Fixed
+- `minecraft:iron_chain` replaced with `minecraft:chain` in pre-1.21.9 structure variants for azelea house, large floating island, large warped tower, big oak tree, small ship, and nether well
+
 ### Changed
 - All empty and hardcoded containers now have loot tables assigned
 - Added new `pond` and `end_scraps` loot tables

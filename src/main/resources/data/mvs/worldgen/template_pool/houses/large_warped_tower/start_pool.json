@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:houses/large_warped_tower",
-        "processors": "minecraft:empty",
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "location": "mvs:1_21_9/houses/large_warped_tower",
+        "locations": {
+          "1.21-1.21.8": "mvs:houses/large_warped_tower",
+          "1.21.9-1.21.11": "mvs:1_21_9/houses/large_warped_tower"
+        },
+        "processors": "minecraft:empty"
       }
     }
   ]
