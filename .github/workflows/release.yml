@@ -48,9 +48,13 @@ jobs:
 
       - name: Build
         working-directory: project
+        shell: bash
         run: |
+          set -eo pipefail
           chmod +x gradlew
           ./gradlew build
+          echo "---- build/libs contents ----"
+          ls -la build/libs/
 
       - name: Extract Changelog
         id: changelog
@@ -81,7 +85,9 @@ jobs:
 
       - name: Publish to CurseForge, Modrinth & Discord
         working-directory: project
+        shell: bash
         run: |
+          set -eo pipefail
           chmod +x gradlew
           ./gradlew publishMods
         env:
@@ -95,7 +101,7 @@ jobs:
           body: ${{ steps.changelog.outputs.body }}
           files: |
             project/build/libs/*.jar
-          fail_on_unmatched_files: false
+          fail_on_unmatched_files: true
 
       - name: Bump patch version for next release
         if: success()
@@ -116,4 +122,4 @@ jobs:
           NEW_VERSION="$NEW" RELEASE_DATE="$TODAY" python3 .github/scripts/post_release_bump.py
           git add gradle.properties CHANGELOG.md
           git commit -m "Post-release: bump ${OLD} → ${NEW} + stub CHANGELOG section"
-          git push origin "$BR
+          git push origin "$BRANCH"
