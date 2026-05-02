@@ -2,6 +2,13 @@
 
 ---
 
+## [5.0.6] - 2026-05-02
+
+### Fixed
+- Fixed crash when loading large warped tower or cathedral near spawn on Forge 1.20.1 - sign block entities in those structures were saved in a newer NBT format (DataVersion 4556) incompatible with 1.20.1's sign codec
+
+---
+
 ## [5.0.5] - 2026-05-01
 
 ### Fixed
