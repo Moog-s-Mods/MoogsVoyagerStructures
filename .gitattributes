@@ -1,0 +1,15 @@
+# Enforce LF line endings for files that need to run on Linux/macOS
+*.sh         text eol=lf
+*.py         text eol=lf
+gradlew      text eol=lf
+
+# Windows-only files keep CRLF
+*.bat        text eol=crlf
+*.cmd        text eol=crlf
+
+# Treat NBT and binary asset files as binary
+*.nbt        binary
+*.png        binary
+*.jar        binary
+*.jpg        binary
+*.zip        binary

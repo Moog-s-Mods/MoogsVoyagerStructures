@@ -237,15 +237,4 @@ fi
 # that process (while maintaining the separation between arguments), and wrap
 # the whole thing up as a single "set" statement.
 #
-# This will of course break if any of these variables contains a newline or
-# an unmatched quote.
-#
-
-eval "set -- $(
-        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
-        xargs -n1 |
-        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
-        tr '\n' ' '
-    )" '"$@"'
-
-exec "$JAVACMD" "$@"
+# This will of course break if any of these variables contains a newlin
