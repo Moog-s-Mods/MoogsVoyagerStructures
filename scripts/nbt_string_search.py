@@ -1,10 +1,17 @@
-import nbtlib as nbt
-from pathlib import Path
-import collections.abc
-import sys
-import re
+"""
+Search for a string inside any NBT file under the structures folder.
 
-# https://github.com/vberlier/nbtlib
+Uses a negative-lookahead so 'minecraft:chain' won't match 'minecraft:chainmail'.
+Run from project root: python scripts/nbt_string_search.py
+"""
+import collections.abc
+import re
+import sys
+
+import nbtlib as nbt
+
+from _paths import STRUCTURES_DIR
+
 
 def contains_string(node, pattern):
     if isinstance(node, collections.abc.Mapping):
@@ -29,12 +36,8 @@ def contains_string(node, pattern):
 
 
 def main():
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    structure_dir = project_root / "src" / "main" / "resources" / "data" / "mvs" / "structures"
-
-    if not structure_dir.exists():
-        print(f"ERROR: Structure directory not found:\n  {structure_dir}")
+    if not STRUCTURES_DIR.exists():
+        print(f"ERROR: Structure directory not found:\n  {STRUCTURES_DIR}")
         sys.exit(1)
 
     search = input("Search string: ").strip()
@@ -42,15 +45,14 @@ def main():
         print("No input. Exiting.")
         sys.exit(0)
 
-    # Same boundary rule as the replacer — won't match if followed by an identifier character
     pattern = re.compile(re.escape(search) + r'(?![a-zA-Z0-9_])')
 
     print(f"\nSearching for: '{search}'\n")
 
     matches = []
 
-    for nbt_path in sorted(structure_dir.rglob("*.nbt")):
-        rel = nbt_path.relative_to(structure_dir)
+    for nbt_path in sorted(STRUCTURES_DIR.rglob("*.nbt")):
+        rel = nbt_path.relative_to(STRUCTURES_DIR)
 
         if rel.parts[0][0].isdigit():
             continue
@@ -58,7 +60,7 @@ def main():
         try:
             nbtfile = nbt.load(str(nbt_path))
         except Exception as e:
-            print(f"  [ERROR] {rel} — {e}")
+            print(f"  [ERROR] {rel} -- {e}")
             continue
 
         if contains_string(nbtfile, pattern):

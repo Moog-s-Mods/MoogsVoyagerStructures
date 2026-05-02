@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: project
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout validator
         uses: actions/checkout@v4
@@ -93,5 +95,25 @@ jobs:
           body: ${{ steps.changelog.outputs.body }}
           files: |
             project/build/libs/*.jar
-            !project/build/libs/*-sources.jar
           fail_on_unmatched_files: false
+
+      - name: Bump patch version for next release
+        if: success()
+        working-directory: project
+        shell: bash
+        run: |
+          MC=$(grep '^minecraftVersion=' gradle.properties | cut -d= -f2)
+          BRANCH="${MC}-datapack"
+          TODAY=$(date -u +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$BRANCH"
+          git checkout "$BRANCH"
+          OLD=$(grep '^modVersion=' gradle.properties | cut -d= -f2)
+          IFS='.' read -r -a P <<< "$OLD"
+          NEW="${P[0]}.${P[1]}.$((P[2]+1))"
+          sed -i "s|^modVersion=.*$|modVersion=${NEW}|" gradle.properties
+          NEW_VERSION="$NEW" RELEASE_DATE="$TODAY" python3 .github/scripts/post_release_bump.py
+          git add gradle.properties CHANGELOG.md
+          git commit -m "Post-release: bump ${OLD} → ${NEW} + stub CHANGELOG section"
+          git push origin "$BR

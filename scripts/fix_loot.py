@@ -15,9 +15,8 @@ from pathlib import Path
 
 import nbtlib
 
-PROJECT_ROOT = Path(__file__).parent.parent
-STRUCTURES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "structures"
-LOOT_TABLES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "loot_tables"
+from _paths import MOD_ID, STRUCTURES_DIR, LOOT_TABLES_DIR
+
 
 _CONTAINER_BLOCKS = {"minecraft:chest", "minecraft:trapped_chest", "minecraft:barrel"}
 
@@ -26,11 +25,11 @@ def get_loot_tables():
     tables = []
     for p in sorted(LOOT_TABLES_DIR.rglob("*.json")):
         name = p.relative_to(LOOT_TABLES_DIR).with_suffix("").as_posix()
-        tables.append(f"mvs:{name}")
+        tables.append(f"{MOD_ID}:{name}")
     return tables
 
 
-def scan_containers(structures_dir: Path) -> dict:
+def scan_containers(structures_dir):
     """Scan all NBT files and return {rel_path: [(warn_type, x, y, z, block_id), ...]}"""
     results = defaultdict(list)
 
@@ -80,7 +79,7 @@ def scan_containers(structures_dir: Path) -> dict:
     return dict(results)
 
 
-def patch_nbt(nbt_path: Path, patches: dict) -> int:
+def patch_nbt(nbt_path, patches):
     """Apply {(x,y,z): loot_table} patches to an NBT structure file in place."""
     nbt = nbtlib.load(str(nbt_path))
     palette = nbt.get("palette", [])
@@ -202,7 +201,7 @@ def main():
 
         save_and_report(nbt_path, rel_path, patches)
 
-    print("All done! Run validate.bat to verify.")
+    print("All done! Run the validator to verify.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,42 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: ['**']
+  push:
+    branches: ['**']
+    tags-ignore: ['*.*.*-*.*.*']
+
+jobs:
+  validate:
+    name: Validate Structures
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mod project
+        uses: actions/checkout@v4
+        with:
+          path: project
+
+      - name: Checkout validator
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/moogs-structure-validator
+          ref: v1
+          path: validator
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install validator dependencies
+        run: pip install -r validator/requirements.txt
+
+      - name: Run validator
+        run: python validator/validator.py --config project/validator.json --project-root project
+
+      - name: Run NBT check
+        working-directory: project
+        run: |
+          pip install nbtlib
+          python scripts/nbt_check.py

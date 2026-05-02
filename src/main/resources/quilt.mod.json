@@ -31,7 +31,9 @@
         "mvs.kofi": "${mod_kofi}",
         "mvs.curseforge": "${mod_curseforge}",
         "mvs.modrinth": "${mod_modrinth}"
-      }
+      },
+      "parent": "moogs_structures",
+      "update_checker": true
     },
     "depends": [
       {

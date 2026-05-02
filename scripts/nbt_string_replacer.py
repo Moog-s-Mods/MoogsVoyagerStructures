@@ -1,10 +1,20 @@
-import nbtlib as nbt
-from pathlib import Path
-import collections.abc
-import sys
-import re
+"""
+Find-and-replace string values inside NBT files under the structures folder.
 
-# https://github.com/vberlier/nbtlib
+Uses a negative-lookahead so 'minecraft:chain' won't match 'minecraft:chainmail'.
+You can either overwrite files in place or write the modified copies into a
+version subfolder (e.g. '1_20_6/').
+
+Run from project root: python scripts/nbt_string_replacer.py
+"""
+import collections.abc
+import re
+import sys
+
+import nbtlib as nbt
+
+from _paths import STRUCTURES_DIR
+
 
 def get_user_inputs():
     print("=== NBT String Replacer ===\n")
@@ -59,35 +69,29 @@ def replace_strings(node, replacements, changed):
 
 
 def _replace(s, replacements):
-    """Apply all replacements to s. Returns the new string if changed, else None.
-    Uses a negative lookahead so 'minecraft:chain' won't match 'minecraft:chainmail'."""
+    """Apply all replacements to s. Returns the new string if changed, else None."""
     original = s
     for old, new in replacements.items():
-        # (?![a-zA-Z0-9_]) ensures the match isn't immediately followed by another identifier character
         s = re.sub(re.escape(old) + r'(?![a-zA-Z0-9_])', new, s)
     return s if s != original else None
 
 
 def main():
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent
-    structure_dir = project_root / "src" / "main" / "resources" / "data" / "mvs" / "structures"
-
-    if not structure_dir.exists():
-        print(f"ERROR: Structure directory not found:\n  {structure_dir}")
+    if not STRUCTURES_DIR.exists():
+        print(f"ERROR: Structure directory not found:\n  {STRUCTURES_DIR}")
         sys.exit(1)
 
     replacements, version = get_user_inputs()
-    output_base = structure_dir / version if version else structure_dir
+    output_base = STRUCTURES_DIR / version if version else STRUCTURES_DIR
 
-    print(f"\nScanning: {structure_dir}")
+    print(f"\nScanning: {STRUCTURES_DIR}")
     print(f"Output:   {'(in-place)' if not version else output_base}\n")
 
     saved = []
     skipped = []
 
-    for nbt_path in sorted(structure_dir.rglob("*.nbt")):
-        rel = nbt_path.relative_to(structure_dir)
+    for nbt_path in sorted(STRUCTURES_DIR.rglob("*.nbt")):
+        rel = nbt_path.relative_to(STRUCTURES_DIR)
 
         # Skip files already inside a version subfolder (first component starts with a digit)
         if rel.parts[0][0].isdigit():
@@ -97,7 +101,7 @@ def main():
         try:
             nbtfile = nbt.load(str(nbt_path))
         except Exception as e:
-            print(f"  [ERROR]   {rel} — {e}")
+            print(f"  [ERROR]   {rel} -- {e}")
             continue
         replace_strings(nbtfile, replacements, changed)
 

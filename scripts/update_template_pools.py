@@ -5,19 +5,22 @@ whose structure has a versioned NBT in the given version folder.
 For elements without a "locations" block, one is created alongside the existing "location".
 For elements that already have "locations", the new range is appended.
 
-Usage: python update_template_pools.py
+Edit VERSION_FOLDER and VERSION_RANGE below for the version you're publishing.
+Run from project root: python scripts/update_template_pools.py
 """
-
-from pathlib import Path
 import json
 import sys
 
-VERSION_FOLDER = "1_20_6"
-VERSION_RANGE  = "1.20-1.20.6"
-NAMESPACE      = "mvs"
+from _paths import MOD_ID, STRUCTURES_DIR, TEMPLATE_POOL_DIR
 
 
-def collect_versioned_paths(structure_dir: Path, version_folder: str) -> set[str]:
+# === EDIT THESE FOR THE VERSION YOU'RE TARGETING ===
+VERSION_FOLDER = "1_20_6"          # subfolder under structures/ that has the version-specific NBTs
+VERSION_RANGE  = "1.20-1.20.6"     # the version range key written into the pool JSON
+# ====================================================
+
+
+def collect_versioned_paths(structure_dir, version_folder):
     """Returns a set of base paths that have a versioned NBT, e.g. 'gallows', 'cathedral/base/base'."""
     versioned = set()
     version_dir = structure_dir / version_folder
@@ -30,12 +33,12 @@ def collect_versioned_paths(structure_dir: Path, version_folder: str) -> set[str
     return versioned
 
 
-def base_path_from_location(location: str, namespace: str) -> str | None:
+def base_path_from_location(location, namespace):
     """
     Strips the namespace and any leading version folder from a location string.
-    'mvs:gallows'                   -> 'gallows'
-    'mvs:1_21_11/small_tower_well'  -> 'small_tower_well'
-    'minecraft:empty'               -> None  (not our namespace)
+    '<ns>:gallows'                   -> 'gallows'
+    '<ns>:1_21_11/small_tower_well'  -> 'small_tower_well'
+    'minecraft:empty'                -> None  (not our namespace)
     """
     prefix = namespace + ":"
     if not location.startswith(prefix):
@@ -47,7 +50,7 @@ def base_path_from_location(location: str, namespace: str) -> str | None:
     return path
 
 
-def process_pool(json_path: Path, versioned_paths: set[str]) -> bool:
+def process_pool(json_path, versioned_paths):
     """Returns True if the file was modified."""
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -58,11 +61,11 @@ def process_pool(json_path: Path, versioned_paths: set[str]) -> bool:
         element = entry.get("element", {})
         location = element.get("location", "")
 
-        base = base_path_from_location(location, NAMESPACE)
+        base = base_path_from_location(location, MOD_ID)
         if base is None or base not in versioned_paths:
             continue
 
-        new_loc = f"{NAMESPACE}:{VERSION_FOLDER}/{base}"
+        new_loc = f"{MOD_ID}:{VERSION_FOLDER}/{base}"
 
         if "locations" not in element:
             element["locations"] = {}
@@ -82,19 +85,14 @@ def process_pool(json_path: Path, versioned_paths: set[str]) -> bool:
 
 
 def main():
-    script_dir   = Path(__file__).parent
-    project_root = script_dir.parent
-    structure_dir    = project_root / "src" / "main" / "resources" / "data" / "mvs" / "structures"
-    template_pool_dir = project_root / "src" / "main" / "resources" / "data" / "mvs" / "worldgen" / "template_pool"
-
-    versioned_paths = collect_versioned_paths(structure_dir, VERSION_FOLDER)
+    versioned_paths = collect_versioned_paths(STRUCTURES_DIR, VERSION_FOLDER)
     print(f"Found {len(versioned_paths)} structures with a '{VERSION_FOLDER}' variant.\n")
 
     updated = []
     skipped = []
 
-    for json_path in sorted(template_pool_dir.rglob("*.json")):
-        rel = json_path.relative_to(template_pool_dir)
+    for json_path in sorted(TEMPLATE_POOL_DIR.rglob("*.json")):
+        rel = json_path.relative_to(TEMPLATE_POOL_DIR)
         if process_pool(json_path, versioned_paths):
             updated.append(str(rel))
             print(f"  [UPDATED] {rel}")
