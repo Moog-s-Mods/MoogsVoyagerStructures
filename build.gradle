@@ -64,9 +64,10 @@ def changelogText = ''
 if (changeLogFile.exists()) {
     def fullText = changeLogFile.getText('UTF-8')
     // Match: ## [<version>] - YYYY-MM-DD\n then capture until next version, separator, or EOF
+    // \r?\n tolerates both LF and CRLF so the regex still matches when CHANGELOG.md is saved with Windows line endings.
     def quotedVersion = java.util.regex.Pattern.quote(version.toString())
     def pattern = java.util.regex.Pattern.compile(
-            '## \\[' + quotedVersion + '\\] - \\d{4}-\\d{2}-\\d{2}\\n(.*?)(?=\\n---|## \\[|\\z)',
+            '## \\[' + quotedVersion + '\\] - \\d{4}-\\d{2}-\\d{2}\\r?\\n(.*?)(?=\\r?\\n---|## \\[|\\z)',
             java.util.regex.Pattern.DOTALL
     )
     def matcher = pattern.matcher(fullText)
