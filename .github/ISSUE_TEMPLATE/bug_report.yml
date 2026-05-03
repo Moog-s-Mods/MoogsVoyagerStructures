@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a bug! Please fill out as much of this as you can - it makes diagnosing the issue much faster.
+        Thanks for reporting a bug! Please fill out as much of this as you can. It makes diagnosing the issue much faster.
 
   - type: input
     id: mc-version

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting an idea! All feedback is appreciated - describe your idea below and I'll take a look.
+        Thanks for suggesting an idea! All feedback is appreciated. Describe your idea below and I'll take a look.
 
   - type: textarea
     id: idea

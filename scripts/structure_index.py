@@ -1,6 +1,6 @@
 """
 Generate a STRUCTURES.md listing every structure with its biome tag(s) and a link
-to the start_pool. Doesn't include screenshots yet - those are TODO.
+to the start_pool. Doesn't include screenshots yet; those are TODO.
 
 Run from project root: python scripts/structure_index.py
 """

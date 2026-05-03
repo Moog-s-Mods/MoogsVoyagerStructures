@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Discord community
     url: https://discord.gg/S5nffJbuvA
-    about: For quick questions, modpack discussion, or general chat - please use Discord rather than opening an issue.
+    about: For quick questions, modpack discussion, or general chat, please use Discord rather than opening an issue.
   - name: Ko-fi
     url: https://ko-fi.com/finndog
     about: Support development with a one-time tip or monthly subscription.

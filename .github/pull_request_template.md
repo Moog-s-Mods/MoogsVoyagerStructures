@@ -20,7 +20,7 @@
 - [ ] If I changed loot tables, I verified containers in affected structures actually reference the right tables (`python scripts/fix_loot.py` if needed).
 - [ ] I added an entry to `CHANGELOG.md` under an unreleased version section.
 - [ ] The CI build passed locally (`./gradlew build`).
-- [ ] I have NOT redistributed any existing `.nbt` files outside this repo (they're All Rights Reserved - see `COPYING.md`).
+- [ ] I have NOT redistributed any existing `.nbt` files outside this repo (they're All Rights Reserved; see `COPYING.md`).
 
 ## Testing
 
