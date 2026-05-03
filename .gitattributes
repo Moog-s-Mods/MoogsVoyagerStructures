@@ -1,6 +1,9 @@
 # Enforce LF line endings for files that need to run on Linux/macOS
+# or get parsed by regexes that assume \n (CHANGELOG.md, gradle.properties)
 *.sh         text eol=lf
 *.py         text eol=lf
+*.md         text eol=lf
+*.properties text eol=lf
 gradlew      text eol=lf
 
 # Windows-only files keep CRLF

@@ -28,8 +28,9 @@ if not p.exists():
 
 content = p.read_text(encoding='utf-8')
 
-# Insert right after the first `# Changelog\n---` separator
-match = re.search(r'# Changelog\n+---\n+', content)
+# Insert right after the first `# Changelog\n---` separator.
+# \r?\n keeps the regex working when CHANGELOG.md is saved with Windows line endings.
+match = re.search(r'# Changelog(?:\r?\n)+---(?:\r?\n)+', content)
 if match:
     end = match.end()
     new_content = content[:end] + stub + content[end:]
