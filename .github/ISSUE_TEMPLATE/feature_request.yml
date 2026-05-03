@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest a new structure, loot table tweak, biome compatibility, or other improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an idea! All feedback is appreciated. Describe your idea below and I'll take a look.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's your idea?
+      description: A clear, concise description of what you'd like added or changed.
+      placeholder: "It would be cool if there was a structure that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why?
+      description: What problem does this solve, or what would it improve about the gameplay experience?
+      placeholder: "Currently, biome X feels empty because..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Other approaches that might solve the same problem.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References / inspiration
+      description: Links to images, other mods, real-world structures, etc. that inspire this idea.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I've searched existing issues for similar suggestions.
+          required: true
+        - label: This is a feature request, not a bug report.
+          required: true

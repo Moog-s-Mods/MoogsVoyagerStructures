@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
 Batch-patches loot tables onto all empty/hardcoded containers.
+
+NOTE: This script's `classify()` function contains MVS-specific business logic
+(cathedral -> cathedral_common, mineshaft -> mineshaft/common, etc.). If you copy
+this to another mod, you'll need to rewrite `classify()` for that mod's
+structure naming conventions.
+
 Run from project root: python scripts/batch_patch_loot.py
 """
-import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from scripts.fix_loot import scan_containers, patch_nbt
-
-PROJECT_ROOT = Path(__file__).parent.parent
-STRUCTURES_DIR = PROJECT_ROOT / "src" / "main" / "resources" / "data" / "mvs" / "structure"
+from _paths import MOD_ID, STRUCTURES_DIR
+from fix_loot import scan_containers, patch_nbt
 
 
 def classify(rel: str, containers: list) -> dict:
@@ -29,49 +31,49 @@ def classify(rel: str, containers: list) -> dict:
     # ── wells ─────────────────────────────────────────────────────────────
     if "small_tower_well" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:empty"
+            patches[(x, y, z)] = f"{MOD_ID}:empty"
         return patches
 
     # ── horse pen ─────────────────────────────────────────────────────────
     if rel == "horse_pen.nbt":
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:empty"
+            patches[(x, y, z)] = f"{MOD_ID}:empty"
         return patches
 
     # ── windmill ──────────────────────────────────────────────────────────
     if "small_windmill" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:empty"
+            patches[(x, y, z)] = f"{MOD_ID}:empty"
         return patches
 
     # ── cathedral ─────────────────────────────────────────────────────────
     if "cathedral" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:cathedral_common"
+            patches[(x, y, z)] = f"{MOD_ID}:cathedral_common"
         return patches
 
     # ── large warped tower ────────────────────────────────────────────────
     if "large_warped_tower" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:houses_uncommon"
+            patches[(x, y, z)] = f"{MOD_ID}:houses_uncommon"
         return patches
 
     # ── red tower ─────────────────────────────────────────────────────────
     if "red_tower" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:empty"
+            patches[(x, y, z)] = f"{MOD_ID}:empty"
         return patches
 
     # ── desert house ──────────────────────────────────────────────────────
     if "desert_house" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:houses_desert"
+            patches[(x, y, z)] = f"{MOD_ID}:houses_desert"
         return patches
 
     # ── outhouse ──────────────────────────────────────────────────────────
     if "out_house" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:houses_common"
+            patches[(x, y, z)] = f"{MOD_ID}:houses_common"
         return patches
 
     # ── houses ────────────────────────────────────────────────────────────
@@ -79,22 +81,22 @@ def classify(rel: str, containers: list) -> dict:
     stem = Path(rel).stem
     if stem in HOUSE_FILES or (rel.startswith("houses/") and stem in HOUSE_FILES):
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:houses_common"
+            patches[(x, y, z)] = f"{MOD_ID}:houses_common"
         return patches
 
     # warped_house not in the explicit list → default (barrels=empty, chests=general)
     if "warped_house" in rel:
         for _, x, y, z, bid in containers:
             if bid == "minecraft:chest":
-                patches[(x, y, z)] = "mvs:general"
+                patches[(x, y, z)] = f"{MOD_ID}:general"
             else:
-                patches[(x, y, z)] = "mvs:empty"
+                patches[(x, y, z)] = f"{MOD_ID}:empty"
         return patches
 
     # ── large carts ───────────────────────────────────────────────────────
     if rel.startswith("carts/") or "large_cart" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:large_carts"
+            patches[(x, y, z)] = f"{MOD_ID}:large_carts"
         return patches
 
     # ── mineshaft ─────────────────────────────────────────────────────────
@@ -102,7 +104,7 @@ def classify(rel: str, containers: list) -> dict:
         barrels = [(x, y, z) for _, x, y, z, bid in containers if bid == "minecraft:barrel"]
         barrels_sorted = sorted(barrels)
         barrel_loot = {
-            pos: ("mvs:mineshaft/common" if i % 10 == 0 else "mvs:empty")
+            pos: (f"{MOD_ID}:mineshaft/common" if i % 10 == 0 else f"{MOD_ID}:empty")
             for i, pos in enumerate(barrels_sorted)
         }
 
@@ -112,21 +114,21 @@ def classify(rel: str, containers: list) -> dict:
             if bid == "minecraft:barrel":
                 patches[(x, y, z)] = barrel_loot[(x, y, z)]
             elif bid == "minecraft:trapped_chest":
-                patches[(x, y, z)] = "mvs:mineshaft/rare"
+                patches[(x, y, z)] = f"{MOD_ID}:mineshaft/rare"
             elif bid == "minecraft:chest":
-                patches[(x, y, z)] = "mvs:mineshaft/uncommon" if dead_end else "mvs:mineshaft/common"
+                patches[(x, y, z)] = f"{MOD_ID}:mineshaft/uncommon" if dead_end else f"{MOD_ID}:mineshaft/common"
         return patches
 
     # ── oak pond ──────────────────────────────────────────────────────────
     if "small_oak_pond" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:pond"
+            patches[(x, y, z)] = f"{MOD_ID}:pond"
         return patches
 
     # ── end scraps ────────────────────────────────────────────────────────
     if "end_scraps" in rel:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:end_scraps"
+            patches[(x, y, z)] = f"{MOD_ID}:end_scraps"
         return patches
 
     # ── campsites / mine campsites / statue ruins ─────────────────────────
@@ -134,16 +136,16 @@ def classify(rel: str, containers: list) -> dict:
                  "small_horse_campsite", "statue_ruins"}
     if stem in ABANDONED:
         for _, x, y, z, _ in containers:
-            patches[(x, y, z)] = "mvs:abandoned"
+            patches[(x, y, z)] = f"{MOD_ID}:abandoned"
         return patches
 
     # ── default ───────────────────────────────────────────────────────────
     for _, x, y, z, bid in containers:
         if bid == "minecraft:chest":
-            patches[(x, y, z)] = "mvs:general"
+            patches[(x, y, z)] = f"{MOD_ID}:general"
         else:
-            patches[(x, y, z)] = "mvs:empty"
-    print(f"  [WARN] {rel} fell through to default — verify assignment")
+            patches[(x, y, z)] = f"{MOD_ID}:empty"
+    print(f"  [WARN] {rel} fell through to default - verify assignment")
     return patches
 
 
@@ -164,7 +166,7 @@ def main():
         patches = classify(rel, containers)
 
         if len(patches) != len(containers):
-            print(f"  [WARN] {rel}: {len(containers)} containers but {len(patches)} patches — some skipped?")
+            print(f"  [WARN] {rel}: {len(containers)} containers but {len(patches)} patches - some skipped?")
 
         saved = patch_nbt(nbt_path, patches)
         assignments = {}

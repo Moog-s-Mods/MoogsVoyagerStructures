@@ -1,0 +1,100 @@
+name: Bug report
+description: A structure isn't generating correctly, the mod is crashing, or something else is broken.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out as much of this as you can. It makes diagnosing the issue much faster.
+
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft version
+      description: e.g. 1.20.1, 1.21.5, 26.1.2
+      placeholder: "1.21.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod loader
+      options:
+        - Fabric
+        - Forge
+        - NeoForge
+        - Quilt
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version
+      description: The version of this mod you're running. Find it in the mod's filename or in Mod Menu.
+      placeholder: "5.0.9"
+    validations:
+      required: true
+
+  - type: input
+    id: structure-lib-version
+    attributes:
+      label: Moog's Structure Lib version
+      description: The version of moogs-structure-lib installed alongside this mod.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug. What did you do, what did you expect, what actually happened?
+      placeholder: "When I generate a new world with biome X, the structure Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: A numbered list of steps. The more specific, the better.
+      placeholder: |
+        1. Create new world with seed 1234
+        2. Travel to coordinates X, Z
+        3. Observe structure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash report or relevant log output
+      description: |
+        Paste your full `latest.log` or crash report here, or link to a paste service.
+        Wrap multi-line logs in triple-backtick fences.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other installed mods
+      description: List any other mods that might be relevant (worldgen, structure, terrain mods especially).
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I've searched existing issues for this bug.
+          required: true
+        - label: I'm running the latest version of this mod that supports my Minecraft version.
+          required: true
+        - label: I have Moog's Structure Lib installed.
+          required: true

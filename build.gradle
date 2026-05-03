@@ -5,6 +5,10 @@ plugins {
 
 group = "com.finndog"
 
+java {
+    withSourcesJar()
+}
+
 def modName = (project.findProperty('modName') ?: project.name) as String
 def mcVersion = project.findProperty('minecraftVersion') as String
 def modId = project.findProperty('modId') as String
@@ -19,6 +23,14 @@ def modCurseforge = project.findProperty('modCurseforge') as String
 def modModrinth = project.findProperty('modModrinth') as String
 def modReleases = project.findProperty('modReleases') as String
 def structureLibVersionRange = project.findProperty('structureLibVersionRange') as String
+
+// Extra MC versions outside the start/end range (e.g. 26.1.x post-1.21.11).
+// Maintained in gradle.properties as a comma-separated list so adding a new
+// version is a one-line change.
+def extraMcVersions = ((project.findProperty('publishExtraMcVersions') ?: '') as String)
+        .split(',')
+        .collect { it.trim() }
+        .findAll { it }
 
 repositories {
     mavenCentral()
@@ -52,8 +64,26 @@ tasks.named('jar') {
 }
 
 // Auto publishing configuration
+// Extract just the latest version's section from CHANGELOG.md so publish targets
+// (Modrinth, CurseForge, Discord) only receive that release's notes - not the full
+// historical changelog.
 def changeLogFile = rootProject.file('CHANGELOG.md')
-def changelogText = changeLogFile.exists() ? changeLogFile.getText('UTF-8') : ''
+def changelogText = ''
+if (changeLogFile.exists()) {
+    def fullText = changeLogFile.getText('UTF-8')
+    // \r?\n tolerates both LF and CRLF so the regex still matches when CHANGELOG.md is saved with Windows line endings.
+    def quotedVersion = java.util.regex.Pattern.quote(version.toString())
+    def pattern = java.util.regex.Pattern.compile(
+            '## \\[' + quotedVersion + '\\] - \\d{4}-\\d{2}-\\d{2}\\r?\\n(.*?)(?=\\r?\\n---|## \\[|\\z)',
+            java.util.regex.Pattern.DOTALL
+    )
+    def matcher = pattern.matcher(fullText)
+    if (matcher.find()) {
+        changelogText = matcher.group(1).trim()
+    } else {
+        changelogText = fullText
+    }
+}
 
 publishMods {
     file = tasks.named('jar').flatMap { it.archiveFile }
@@ -75,7 +105,7 @@ publishMods {
     maxRetries = 3
 
     // When dry run is enabled the release assets will be saved to the build directory for testing.
-    dryRun = false
+    dryRun = (project.findProperty('publishDryRun') ?: 'false').toString().toBoolean()
 
     modrinth {
         accessToken = providers.environmentVariable('MODRINTH_API_KEY')
@@ -85,9 +115,7 @@ publishMods {
             start = project.findProperty('publishMcStart')
             end = project.findProperty('publishMcEnd')
         }
-        minecraftVersions.add("26.1")
-        minecraftVersions.add("26.1.1")
-        minecraftVersions.add("26.1.2")
+        extraMcVersions.each { minecraftVersions.add(it) }
         requires {
             slug = "moogs-structure-lib"
         }
@@ -103,9 +131,7 @@ publishMods {
             start = project.findProperty('publishMcStart')
             end = project.findProperty('publishMcEnd')
         }
-        minecraftVersions.add("26.1")
-        minecraftVersions.add("26.1.1")
-        minecraftVersions.add("26.1.2")
+        extraMcVersions.each { minecraftVersions.add(it) }
         requires("moogs-structure-lib")
     }
 
@@ -113,28 +139,24 @@ publishMods {
         webhookUrl = providers.environmentVariable('DISCORD_WEBHOOK')
         dryRunWebhookUrl = providers.environmentVariable('DISCORD_WEBHOOK_DRY_RUN').orElse('')
         username = "Moog's Mods"
-        
+
         content = changelog.map { text ->
-            def changelogBody = text.replaceFirst(/(?i)^#\s*Changelog\s*\n?/, '')
-                                    .replaceFirst(/^\d+\.\d+\.\d+\s*\n?/, '')
-                                    .trim()
-            
             def prefix = project.findProperty('publishDisplayPrefix')
             def suffix = project.findProperty('publishDisplaySuffix')
             def mcStart = project.findProperty('publishMcStart')
             def mcEnd = project.findProperty('publishMcEnd')
-            def versionRange = mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd"
-            
+            def allVersions = extraMcVersions ? "$mcStart - $mcEnd, ${extraMcVersions.join(', ')}" : (mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd")
+
             """## 🎉 **${modName} ${project.version}** has been released!
-            
+
 **${prefix} ${project.version}-${mcVersion} ${suffix}**
-Versions - ${versionRange}
+Versions - ${allVersions}
 
 ### 📝 **Changelog:**
-${changelogBody}
+${text.trim()}
 """
         }
-        
+
         style {
             look = "MODERN"
             link = "EMBED"
@@ -148,3 +170,56 @@ ${changelogBody}
 tasks.named('publishMods').configure {
     dependsOn tasks.named('jar')
 }
+
+// Standalone Discord preview task. Posts the same release announcement that
+// publishMods would send, but to DISCORD_WEBHOOK_DRY_RUN, without touching
+// Modrinth or CurseForge. Run with:
+//   DISCORD_WEBHOOK_DRY_RUN=... ./gradlew discordPreview
+tasks.register('discordPreview') {
+    group = 'publishing'
+    description = 'POST a preview of the release announcement to DISCORD_WEBHOOK_DRY_RUN.'
+    doLast {
+        def webhookUrl = System.getenv('DISCORD_WEBHOOK_DRY_RUN')
+        if (!webhookUrl) {
+            throw new GradleException('DISCORD_WEBHOOK_DRY_RUN env var must be set.')
+        }
+        def prefix = project.findProperty('publishDisplayPrefix')
+        def suffix = project.findProperty('publishDisplaySuffix')
+        def mcStart = project.findProperty('publishMcStart')
+        def mcEnd = project.findProperty('publishMcEnd')
+        def allVersions = extraMcVersions ? "$mcStart - $mcEnd, ${extraMcVersions.join(', ')}" : (mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd")
+
+        def description = """## 🎉 **${modName} ${project.version}** has been released! [PREVIEW]
+
+**${prefix} ${project.version}-${mcVersion} ${suffix}**
+Versions - ${allVersions}
+
+### 📝 **Changelog:**
+${changelogText.trim()}
+"""
+
+        def colorHex = (project.findProperty('discordEmbedColor') ?: '#0f2b52').replace('#', '')
+        def colorInt = Integer.parseInt(colorHex, 16)
+        def thumb = project.findProperty('discordThumbnailUrl') as String
+        def avatarUrl = project.findProperty('discordAvatarUrl') as String
+
+        def embed = [title: "[PREVIEW] ${modName} ${project.version}", description: description, color: colorInt]
+        if (thumb) embed.thumbnail = [url: thumb]
+
+        def payload = [username: "Moog's Mods (preview)", avatar_url: avatarUrl, embeds: [embed]]
+        def json = groovy.json.JsonOutput.toJson(payload)
+
+        def conn = (HttpURLConnection) new URL(webhookUrl).openConnection()
+        conn.requestMethod = 'POST'
+        conn.doOutput = true
+        conn.setRequestProperty('Content-Type', 'application/json')
+        conn.outputStream.withWriter('UTF-8') { it.write(json) }
+        def code = conn.responseCode
+        if (code in 200..299) {
+            println "✓ Discord preview posted (HTTP ${code})"
+        } else {
+            throw new GradleException("Discord preview failed: HTTP ${code}: ${conn.errorStream?.text}")
+        }
+    }
+}
+
