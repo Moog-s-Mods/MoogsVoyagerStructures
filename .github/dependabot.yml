@@ -10,3 +10,8 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
+    ignore:
+      # Pin to v5 (last open-source line). v6 moved caching into a proprietary
+      # gradle-actions-caching component with new Terms of Use.
+      - dependency-name: "gradle/actions"
+        update-types: ["version-update:semver-major"]
