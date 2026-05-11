@@ -2,6 +2,13 @@
 
 ---
 
+## [5.0.10] - 2026-05-11
+
+### Changed
+removed spawn overrides from mineshaft structure
+
+---
+
 ## [5.0.9] - 2026-05-01
 
 ### Fixed
