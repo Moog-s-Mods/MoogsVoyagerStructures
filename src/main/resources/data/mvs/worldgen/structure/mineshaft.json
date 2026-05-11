@@ -18,22 +18,5 @@
     "mvs:mineshaft/corridor_overflow"
   ],
   "spawn_overrides": {
-    "monster": {
-      "bounding_box": "full",
-      "spawns": [
-        {
-          "type": "minecraft:bat",
-          "weight": 1,
-          "minCount": 3,
-          "maxCount": 7
-        },
-        {
-          "type": "minecraft:villager",
-          "weight": 3,
-          "minCount": 1,
-          "maxCount": 3
-        }
-      ]
-    }
   }
 }
