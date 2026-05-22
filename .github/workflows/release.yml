@@ -80,12 +80,24 @@ jobs:
       - name: Post Discord Banner
         shell: bash
         run: |
+          if [ -z "$DISCORD_WEBHOOK" ]; then
+            echo "DISCORD_WEBHOOK not set, skipping."
+            exit 0
+          fi
           BANNER_URL=$(grep 'discordThumbnailUrl=' gradle.properties | cut -d'=' -f2)
           ROLE_ID=$(grep 'discordRoleId=' gradle.properties | cut -d'=' -f2)
           AVATAR_URL=$(grep 'discordAvatarUrl=' gradle.properties | cut -d'=' -f2)
+          PING=$(grep 'discordPing=' gradle.properties | cut -d'=' -f2)
+          if [ "$PING" = "true" ]; then
+            CONTENT="<@&$ROLE_ID>\n$BANNER_URL"
+            ALLOWED="{\"parse\":[],\"roles\":[\"$ROLE_ID\"]}"
+          else
+            CONTENT="$BANNER_URL"
+            ALLOWED="{\"parse\":[]}"
+          fi
           curl -X POST "$DISCORD_WEBHOOK" \
             -H "Content-Type: application/json" \
-            -d "{\"username\":\"Moog's Mods\",\"avatar_url\":\"$AVATAR_URL\",\"content\":\"<@&$ROLE_ID>\\n$BANNER_URL\",\"allowed_mentions\":{\"parse\":[],\"roles\":[\"$ROLE_ID\"]}}"
+            -d "{\"username\":\"Moog's Mods\",\"avatar_url\":\"$AVATAR_URL\",\"content\":\"$CONTENT\",\"allowed_mentions\":$ALLOWED}"
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 

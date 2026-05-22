@@ -40,3 +40,9 @@ else:
 
 p.write_text(new_content, encoding='utf-8')
 print(f'✓ stubbed CHANGELOG.md with ## [{new_v}] - {today}')
+
+gp = Path('gradle.properties')
+if gp.exists():
+    gp_content = re.sub(r'^discordPing=.*$', 'discordPing=true', gp.read_text(encoding='utf-8'), flags=re.MULTILINE)
+    gp.write_text(gp_content, encoding='utf-8')
+    print('✓ reset discordPing=true')
