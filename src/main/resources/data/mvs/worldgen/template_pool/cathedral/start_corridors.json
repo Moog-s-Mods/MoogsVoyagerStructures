@@ -10,7 +10,8 @@
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_1",
         "locations": {
           "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_1",
-          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_1"
+          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_1",
+          "26.1-26.1.2": "mvs:1_21_9/cathedral/start_corridors/corridor_1"
         },
         "processors": "mvs:cathedral"
       }
@@ -23,7 +24,8 @@
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_2",
         "locations": {
           "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_2",
-          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_2"
+          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_2",
+          "26.1-26.1.2": "mvs:1_21_9/cathedral/start_corridors/corridor_2"
         },
         "processors": "mvs:cathedral"
       }
@@ -36,7 +38,8 @@
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_3",
         "locations": {
           "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_3",
-          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_3"
+          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_3",
+          "26.1-26.1.2": "mvs:1_21_9/cathedral/start_corridors/corridor_3"
         },
         "processors": "mvs:cathedral"
       }
@@ -49,7 +52,8 @@
         "location": "mvs:1_21_9/cathedral/start_corridors/corridor_4",
         "locations": {
           "1.21-1.21.8": "mvs:cathedral/start_corridors/corridor_4",
-          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_4"
+          "1.21.9-1.21.11": "mvs:1_21_9/cathedral/start_corridors/corridor_4",
+          "26.1-26.1.2": "mvs:1_21_9/cathedral/start_corridors/corridor_4"
         },
         "processors": "mvs:cathedral"
       }

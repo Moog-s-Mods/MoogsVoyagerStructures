@@ -10,7 +10,8 @@
         "location": "mvs:1_21_9/mineshaft/entrance",
         "locations": {
           "1.21-1.21.8": "mvs:mineshaft/entrance",
-          "1.21.9-1.21.11": "mvs:1_21_9/mineshaft/entrance"
+          "1.21.9-1.21.11": "mvs:1_21_9/mineshaft/entrance",
+          "26.1-26.1.2": "mvs:1_21_9/mineshaft/entrance"
         },
         "processors": "minecraft:empty"
       }
