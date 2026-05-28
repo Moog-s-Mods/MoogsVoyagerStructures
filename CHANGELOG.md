@@ -2,10 +2,11 @@
 
 ---
 
-## [5.0.13] - 2026-05-22
+## [5.0.13] - 2026-05-28
 
 ### Changed
 - Removed end scraps as they have been moved to MES
+- Removed grass blocks and dirt from lots of structures so they blend more in with various biomes
 
 ---
 
