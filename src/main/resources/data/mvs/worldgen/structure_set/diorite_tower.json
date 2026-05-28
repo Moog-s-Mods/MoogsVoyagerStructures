@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:diorite_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 583692147,
+    "spacing": 50,
+    "separation": 38
+  }
+}

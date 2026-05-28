@@ -9,8 +9,12 @@
 - Removed grass blocks and dirt from lots of structures so they blend more in with various biomes
 
 ### Added
-- Added: diorite_and_deepslate_house, diorite_tower, mud_brick_house_1, prismarine_house_1, prismarine_house_2
-
+- Added houses:
+    - diorite_and_deepslate_house
+    - diorite_tower
+    - mud_brick_house_1
+    - prismarine_house_1
+    - prismarine_house_2
 ---
 
 ## [5.0.6] - 2026-05-02
