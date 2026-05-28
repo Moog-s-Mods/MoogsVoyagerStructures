@@ -6,6 +6,10 @@
 
 ### Changed
 - Removed end scraps as they have been moved to MES
+- Removed grass blocks and dirt from lots of structures so they blend more in with various biomes
+
+### Added
+- Added: diorite_and_deepslate_house, diorite_tower, mud_brick_house_1, prismarine_house_1, prismarine_house_2
 
 ---
 
