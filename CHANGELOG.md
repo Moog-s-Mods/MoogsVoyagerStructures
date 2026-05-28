@@ -2,9 +2,10 @@
 
 ---
 
-## [5.0.7] - 2026-05-02
+## [5.0.7] - 2026-05-28
 
-_Pending. Update this header date and replace this line with the actual changes before tagging._
+### Changed
+- Removed end scraps as they have been moved to MES
 
 ---
 
