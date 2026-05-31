@@ -60,9 +60,11 @@ jobs:
         run: |
           set -eo pipefail
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew build buildDatapack
           echo "---- build/libs contents ----"
           ls -la build/libs/
+          echo "---- build/datapack contents ----"
+          ls -la build/datapack/
 
       - name: Extract Changelog
         id: changelog
@@ -106,6 +108,7 @@ jobs:
           body: ${{ steps.changelog.outputs.body }}
           files: |
             build/libs/*.jar
+            build/datapack/*.zip
           fail_on_unmatched_files: true
 
       - name: Bump patch version for next release
