@@ -1,0 +1,11 @@
+{
+  "processors": [
+    {
+      "processor_type": "moogs_structures:spawner_randomizing_processor",
+      "weighted_entities": [
+        { "entity": "minecraft:zombie", "weight": 1 },
+        { "entity": "minecraft:bogged", "weight": 1 }
+      ]
+    }
+  ]
+}

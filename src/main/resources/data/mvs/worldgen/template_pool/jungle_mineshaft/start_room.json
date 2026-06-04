@@ -1,0 +1,28 @@
+{
+  "name": "mvs:jungle_mineshaft/start_room",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "projection": "rigid",
+        "location": "mvs:jungle_mineshaft/start_room",
+        "processors": "mvs:jungle_mineshaft_spawner",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 9,
+          "kernel_distance": 7,
+          "top": "carve",
+          "bottom": "bury",
+          "bottom_offset": 1.0,
+          "padding": {
+            "x": 2,
+            "top": 2,
+            "bottom": 0,
+            "z": 2
+          }
+        }
+      }
+    }
+  ]
+}
