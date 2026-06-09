@@ -159,13 +159,12 @@ publishMods {
 
     // Config datapack publications -> separate Modrinth/CurseForge projects.
     // These inherit the shared changelog/version/type from above but override file,
-    // mod loader (datapack), project IDs and display name.
+    // project IDs and display name.
     modrinth("modrinthDatapack") {
         accessToken = providers.environmentVariable('MODRINTH_API_KEY')
         projectId = (project.findProperty('datapackModrinthProjectId') ?: '')
         file = tasks.named('buildDatapack').flatMap { it.archiveFile }
         displayName = "MVS Config Pack ${project.version}-${mcVersion}"
-        modLoaders.set(["datapack"])
         announcementTitle = "Download the Config Pack on Modrinth"
         minecraftVersionRange {
             start = project.findProperty('publishMcStart')
@@ -181,7 +180,6 @@ publishMods {
         projectId = (project.findProperty('datapackCurseforgeProjectId') ?: '')
         file = tasks.named('buildDatapack').flatMap { it.archiveFile }
         displayName = "MVS Config Pack ${project.version}-${mcVersion}"
-        modLoaders.set(["datapack"])
         announcementTitle = "Download the Config Pack on CurseForge"
         serverRequired = false
         minecraftVersionRange {
