@@ -7,7 +7,7 @@
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
         "projection": "rigid",
-        "location": "mvs:jungle_mineshaft/mineshaft_entrance",
+        "location": "mvs:jungle_mineshaft/start_room",
         "processors": "minecraft:empty",
         "enhanced_terrain_adaptation": {
           "kernel_size": 9,

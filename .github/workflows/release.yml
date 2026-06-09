@@ -108,7 +108,7 @@ jobs:
         run: |
           set -eo pipefail
           chmod +x gradlew
-          ./gradlew publishMods
+          ./gradlew publishMods -x publishCurseforgeDatapack -x publishModrinthDatapack
         env:
           MODRINTH_API_KEY: ${{ secrets.MODRINTH_API_KEY }}
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
@@ -142,3 +142,11 @@ jobs:
           git add gradle.properties CHANGELOG.md
           git commit -m "Post-release: bump ${OLD} → ${NEW} + stub CHANGELOG section"
           git push origin "$BRANCH"
+
+  config-pack:
+    name: Publish Config Pack
+    needs: release
+    uses: ./.github/workflows/config-pack.yml
+    with:
+      tag: ${{ github.ref_name }}
+    secrets: inherit
