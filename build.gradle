@@ -165,6 +165,7 @@ publishMods {
         projectId = (project.findProperty('datapackModrinthProjectId') ?: '')
         file = tasks.named('buildDatapack').flatMap { it.archiveFile }
         displayName = "MVS Config Pack ${project.version}-${mcVersion}"
+        modLoaders.set(["datapack"])
         announcementTitle = "Download the Config Pack on Modrinth"
         minecraftVersionRange {
             start = project.findProperty('publishMcStart')
