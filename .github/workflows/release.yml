@@ -15,6 +15,4 @@ jobs:
       validate: true
       configPack: 'curseforge modrinth'
     secrets:
-      MODRINTH_API_KEY: ${{ secrets.MODRINTH_API_KEY }}
-      CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
       WORKER_API_KEY: ${{ secrets.WORKER_API_KEY }}
