@@ -13,7 +13,7 @@ jobs:
     uses: FinnSetchell/release-actions/.github/workflows/release.yml@v1
     with:
       validate: true
-      configPackTasks: publishCurseforgeDatapack publishModrinthDatapack
+      configPack: 'curseforge modrinth'
     secrets:
       MODRINTH_API_KEY: ${{ secrets.MODRINTH_API_KEY }}
       CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
