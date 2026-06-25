@@ -189,39 +189,6 @@ publishMods {
         }
         requires("moogs-voyager-structures")
     }
-
-    discord {
-        webhookUrl = providers.environmentVariable('DISCORD_WEBHOOK')
-        dryRunWebhookUrl = providers.environmentVariable('DISCORD_WEBHOOK_DRY_RUN').orElse('')
-        username = "Moog's Mods"
-
-        // Keep the release announcement linking to the mod only, not the config datapack.
-        setPlatforms(publishMods.platforms.modrinth, publishMods.platforms.curseforge)
-
-        content = changelog.map { text ->
-            def prefix = project.findProperty('publishDisplayPrefix')
-            def suffix = project.findProperty('publishDisplaySuffix')
-            def mcStart = project.findProperty('publishMcStart')
-            def mcEnd = project.findProperty('publishMcEnd')
-            def versionRange = mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd"
-
-            """## 🎉 **${modName} ${project.version}** has been released!
-
-**${prefix} ${project.version}-${mcVersion} ${suffix}**
-Versions - ${versionRange}
-
-### 📝 **Changelog:**
-${text.trim()}
-"""
-        }
-
-        style {
-            look = "MODERN"
-            link = "EMBED"
-            color = (project.findProperty('discordEmbedColor') ?: '#0f2b52')
-            thumbnailUrl = project.findProperty('discordThumbnailUrl')
-        }
-    }
 }
 
 // Ensure the jar and config datapack are built before publishing
@@ -229,56 +196,3 @@ tasks.named('publishMods').configure {
     dependsOn tasks.named('jar')
     dependsOn tasks.named('buildDatapack')
 }
-
-// Standalone Discord preview task. Posts the same release announcement that
-// publishMods would send, but to DISCORD_WEBHOOK_DRY_RUN, without touching
-// Modrinth or CurseForge. Run with:
-//   DISCORD_WEBHOOK_DRY_RUN=... ./gradlew discordPreview
-tasks.register('discordPreview') {
-    group = 'publishing'
-    description = 'POST a preview of the release announcement to DISCORD_WEBHOOK_DRY_RUN.'
-    doLast {
-        def webhookUrl = System.getenv('DISCORD_WEBHOOK_DRY_RUN')
-        if (!webhookUrl) {
-            throw new GradleException('DISCORD_WEBHOOK_DRY_RUN env var must be set.')
-        }
-        def prefix = project.findProperty('publishDisplayPrefix')
-        def suffix = project.findProperty('publishDisplaySuffix')
-        def mcStart = project.findProperty('publishMcStart')
-        def mcEnd = project.findProperty('publishMcEnd')
-        def vRange = mcStart == mcEnd ? mcStart : "$mcStart - $mcEnd"
-
-        def description = """## 🎉 **${modName} ${project.version}** has been released! [PREVIEW]
-
-**${prefix} ${project.version}-${mcVersion} ${suffix}**
-Versions - ${vRange}
-
-### 📝 **Changelog:**
-${changelogText.trim()}
-"""
-
-        def colorHex = (project.findProperty('discordEmbedColor') ?: '#0f2b52').replace('#', '')
-        def colorInt = Integer.parseInt(colorHex, 16)
-        def thumb = project.findProperty('discordThumbnailUrl') as String
-        def avatarUrl = project.findProperty('discordAvatarUrl') as String
-
-        def embed = [title: "[PREVIEW] ${modName} ${project.version}", description: description, color: colorInt]
-        if (thumb) embed.thumbnail = [url: thumb]
-
-        def payload = [username: "Moog's Mods (preview)", avatar_url: avatarUrl, embeds: [embed]]
-        def json = groovy.json.JsonOutput.toJson(payload)
-
-        def conn = (HttpURLConnection) new URL(webhookUrl).openConnection()
-        conn.requestMethod = 'POST'
-        conn.doOutput = true
-        conn.setRequestProperty('Content-Type', 'application/json')
-        conn.outputStream.withWriter('UTF-8') { it.write(json) }
-        def code = conn.responseCode
-        if (code in 200..299) {
-            println "✓ Discord preview posted (HTTP ${code})"
-        } else {
-            throw new GradleException("Discord preview failed: HTTP ${code}: ${conn.errorStream?.text}")
-        }
-    }
-}
-
