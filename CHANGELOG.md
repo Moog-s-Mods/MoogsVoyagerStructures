@@ -5,7 +5,8 @@
 ## [5.0.7] - 2026-05-28
 
 ### Changed
-- Removed end scraps as they have been moved to MES
+- Removed mineshaft as it has been moved to MMR, [link](https://www.curseforge.com/minecraft/mc-mods/mmr-moogs-mineshafts-reimagined)
+- Removed end scraps and end wells as they have been moved to MES, [link](https://www.curseforge.com/minecraft/mc-mods/moogs-end-structures)
 - Removed grass blocks and dirt from lots of structures so they blend more in with various biomes
 
 ### Added
