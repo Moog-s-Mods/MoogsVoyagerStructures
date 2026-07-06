@@ -2,9 +2,14 @@
 
 ---
 
-## [5.0.8] - 2026-07-04
+## [5.0.8] - 2026-07-06
 
-_Pending. Update this header date and replace this line with the actual changes before tagging._
+### Fixed
+- Fixed crash when generating any of the new houses on 1.20.1 (diorite_and_deepslate_house, mud_brick_house_1, prismarine_house_1) - their sign block entities had bare empty `messages` list entries that the 1.20.1 sign codec parses as null, causing an NPE during chunk feature placement ([#85](https://github.com/Moog-s-Mods/MoogsVoyagerStructures/issues/85))
+- Converted written book items in mud_brick_house_1 and lecturn_garden from the 1.20.5+ `components` schema to the legacy `tag` schema so their pages, title, and author actually load on 1.20.x
+- Converted entity `attributes` list on strays, guardians, drowned, and the small_ship villager to the legacy `Attributes` schema so their custom health/speed/follow-range no longer silently drop on 1.20.x
+- Stripped 1.21.5+ `fall_distance` float from mobs in prismarine_house_2 and ocean_tower (silently ignored pre-1.21.5)
+- Fixed horse jump strength attribute id on horse_pen
 
 ---
 
