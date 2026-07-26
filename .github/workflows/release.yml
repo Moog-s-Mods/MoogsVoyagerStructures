@@ -3,16 +3,13 @@ name: Release
 on:
   push:
     tags:
-      - '*.*.*-*.*.*'
+      - '*.*.*-*'
+      - '*.*.*-alpha.*-*'
 
 permissions:
   contents: write
 
 jobs:
   release:
-    uses: FinnSetchell/release-actions/.github/workflows/release.yml@v1
-    with:
-      validate: true
-      configPack: 'curseforge modrinth'
-    secrets:
-      WORKER_API_KEY: ${{ secrets.WORKER_API_KEY }}
+    uses: FinnSetchell/release-actions/.github/workflows/release-v2.yml@v2
+    secrets: inherit

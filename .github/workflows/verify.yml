@@ -1,0 +1,21 @@
+name: Verify
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {type: string, required: true}
+      releaseId: {type: string, required: true}
+      runId: {type: string, required: true}
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify:
+    uses: FinnSetchell/release-actions/.github/workflows/verify-v2.yml@v2
+    with:
+      tag: ${{ inputs.tag }}
+      releaseId: ${{ inputs.releaseId }}
+      runId: ${{ inputs.runId }}
+    secrets: inherit

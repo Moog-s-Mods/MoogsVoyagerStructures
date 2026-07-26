@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'me.modmuss50.mod-publish-plugin' version '0.8.4'
 }
 
 group = "com.finndog"
@@ -9,20 +8,24 @@ java {
     withSourcesJar()
 }
 
-def modName = (project.findProperty('modName') ?: project.name) as String
-def mcVersion = project.findProperty('minecraftVersion') as String
-def modId = project.findProperty('modId') as String
-version = project.findProperty('modVersion') as String
-def modDescription = project.findProperty('modDescription') as String
-def modHomepage = project.findProperty('modHomepage') as String
-def modSources = project.findProperty('modSources') as String
-def modIssues = project.findProperty('modIssues') as String
-def modDiscord = project.findProperty('modDiscord') as String
-def modKofi = project.findProperty('modKofi') as String
-def modCurseforge = project.findProperty('modCurseforge') as String
-def modModrinth = project.findProperty('modModrinth') as String
-def modReleases = project.findProperty('modReleases') as String
-def structureLibVersionRange = project.findProperty('structureLibVersionRange') as String
+// gradle.properties is snake_case fleet-wide (release-actions docs/v2-contracts.md,
+// "Fleet conventions"). Publishing configuration lives in .github/moogs-publish.yml on
+// the repository's default branch — Gradle's only job here is `./gradlew build` +
+// `buildDatapack`.
+def modName = (project.findProperty('mod_name') ?: project.name) as String
+def mcVersion = project.findProperty('minecraft_version') as String
+def modId = project.findProperty('mod_id') as String
+version = project.findProperty('mod_version') as String
+def modDescription = project.findProperty('mod_description') as String
+def modHomepage = project.findProperty('mod_homepage') as String
+def modSources = project.findProperty('mod_sources') as String
+def modIssues = project.findProperty('mod_issues') as String
+def modDiscord = project.findProperty('mod_discord') as String
+def modKofi = project.findProperty('mod_kofi') as String
+def modCurseforge = project.findProperty('mod_curseforge') as String
+def modModrinth = project.findProperty('mod_modrinth') as String
+def modReleases = project.findProperty('mod_releases') as String
+def structureLibVersionRange = project.findProperty('structure_lib_version_range') as String
 
 repositories {
     mavenCentral()
@@ -51,8 +54,11 @@ tasks.processResources {
     filesMatching('pack.mcmeta') { expand(meta) }
 }
 
-tasks.named('jar') {
-    archiveFileName = "${modName}-${mcVersion}-${project.version}.jar"
+// Fleet-standard artifact filename: {ModName}-{loader}-{mc}-{version}. A universal jar has
+// no single loader, so `universal` fills the loader slot. Setting archivesName rather than
+// jar.archiveFileName keeps the sources jar on the same stem.
+base {
+    archivesName = "${modName}-universal-${mcVersion}"
 }
 
 // Config datapack
@@ -60,7 +66,9 @@ tasks.named('jar') {
 // zip so players can download it and fine-tune our structure settings. Installed on top
 // of the mod, it overrides whichever of the mod's settings they have changed. The icon
 // is reused as the datapack's pack.png.
-def datapackArchiveName = "${modName}-ConfigPack-${mcVersion}-${project.version}.zip"
+// `datapack` is the descriptor because it is the real Modrinth loader tag the config pack
+// publishes under. The mod-name prefix stays as-is: these are player-visible download names.
+def datapackArchiveName = "${modName}-datapack-${mcVersion}-${project.version}.zip"
 
 tasks.register('buildDatapack', Zip) {
     group = 'build'
@@ -82,117 +90,4 @@ tasks.register('buildDatapack', Zip) {
         includeEmptyDirs = false
         eachFile { it.path = 'pack.png' }
     }
-}
-
-// Auto publishing configuration
-// Extract just the latest version's section from CHANGELOG.md so publish targets
-// (Modrinth, CurseForge, Discord) only receive that release's notes - not the full
-// historical changelog.
-def changeLogFile = rootProject.file('CHANGELOG.md')
-def changelogText = ''
-if (changeLogFile.exists()) {
-    def fullText = changeLogFile.getText('UTF-8')
-    // Match: ## [<version>] - YYYY-MM-DD\n then capture until next version, separator, or EOF
-    // \r?\n tolerates both LF and CRLF so the regex still matches when CHANGELOG.md is saved with Windows line endings.
-    def quotedVersion = java.util.regex.Pattern.quote(version.toString())
-    def pattern = java.util.regex.Pattern.compile(
-            '## \\[' + quotedVersion + '\\] - \\d{4}-\\d{2}-\\d{2}\\r?\\n(.*?)(?=\\r?\\n---|## \\[|\\z)',
-            java.util.regex.Pattern.DOTALL
-    )
-    def matcher = pattern.matcher(fullText)
-    if (matcher.find()) {
-        changelogText = matcher.group(1).trim()
-    } else {
-        // Fallback: pass the full file. Means the section header didn't match
-        // version=${version} - check that CHANGELOG.md has a "## [${version}] - YYYY-MM-DD" entry.
-        changelogText = fullText
-    }
-}
-
-publishMods {
-    file = tasks.named('jar').flatMap { it.archiveFile }
-    changelog = changelogText
-
-    // Release metadata
-    version = project.version.toString()
-    type = STABLE
-    def displayPrefix = project.findProperty('publishDisplayPrefix')
-    def displaySuffix = project.findProperty('publishDisplaySuffix')
-    displayName = "${displayPrefix} ${project.version}-${mcVersion} ${displaySuffix}"
-
-
-    // Mod loaders are set per-publication below so the config datapack (loader "datapack")
-    // does not inherit the mod's fabric/forge/neoforge loaders.
-
-    maxRetries = 3
-
-    // When dry run is enabled the release assets will be saved to the build directory for testing.
-    dryRun = (project.findProperty('publishDryRun') ?: 'false').toString().toBoolean()
-
-    modrinth {
-        accessToken = providers.environmentVariable('MODRINTH_API_KEY')
-        projectId = (project.findProperty('modrinthProjectId') ?: '')
-        modLoaders.addAll("fabric", "forge", "neoforge")
-        announcementTitle = "<:modrinth:1132291566019563550> Download on Modrinth"
-        minecraftVersionRange {
-            start = project.findProperty('publishMcStart')
-            end = project.findProperty('publishMcEnd')
-        }
-        requires {
-            slug = "moogs-structure-lib"
-        }
-    }
-
-    curseforge {
-        accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
-        projectId = (project.findProperty('curseforgeProjectId') ?: '')
-        projectSlug = (project.findProperty('curseforgeProjectSlug') ?: '')
-        modLoaders.addAll("fabric", "forge", "neoforge")
-        announcementTitle = "<:curseforge:1132291568305459250> Download on CurseForge"
-        serverRequired = true
-        minecraftVersionRange {
-            start = project.findProperty('publishMcStart')
-            end = project.findProperty('publishMcEnd')
-        }
-        requires("moogs-structure-lib")
-    }
-
-    // Config datapack publications -> separate Modrinth/CurseForge projects.
-    // These inherit the shared changelog/version/type from above but override file,
-    // project IDs and display name.
-    modrinth("modrinthDatapack") {
-        accessToken = providers.environmentVariable('MODRINTH_API_KEY')
-        projectId = (project.findProperty('datapackModrinthProjectId') ?: '')
-        file = tasks.named('buildDatapack').flatMap { it.archiveFile }
-        displayName = "MVS Config Pack ${project.version}-${mcVersion}"
-        modLoaders.set(["datapack"])
-        announcementTitle = "Download the Config Pack on Modrinth"
-        minecraftVersionRange {
-            start = project.findProperty('publishMcStart')
-            end = project.findProperty('publishMcEnd')
-        }
-        requires {
-            slug = "moogs-voyager-structures"
-        }
-    }
-
-    curseforge("curseforgeDatapack") {
-        accessToken = providers.environmentVariable('CURSEFORGE_API_KEY')
-        projectId = (project.findProperty('datapackCurseforgeProjectId') ?: '')
-        file = tasks.named('buildDatapack').flatMap { it.archiveFile }
-        displayName = "MVS Config Pack ${project.version}-${mcVersion}"
-        announcementTitle = "Download the Config Pack on CurseForge"
-        serverRequired = false
-        minecraftVersionRange {
-            start = project.findProperty('publishMcStart')
-            end = project.findProperty('publishMcEnd')
-        }
-        requires("moogs-voyager-structures")
-    }
-}
-
-// Ensure the jar and config datapack are built before publishing
-tasks.named('publishMods').configure {
-    dependsOn tasks.named('jar')
-    dependsOn tasks.named('buildDatapack')
 }
