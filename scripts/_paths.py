@@ -20,9 +20,9 @@ def _read_mod_id() -> str:
         raise RuntimeError(f"gradle.properties not found at {props}")
     for raw in props.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
-        if line.startswith("modId="):
+        if line.startswith("mod_id="):
             return line.split("=", 1)[1].strip()
-    raise RuntimeError("modId= not found in gradle.properties")
+    raise RuntimeError("mod_id= not found in gradle.properties")
 
 
 MOD_ID = _read_mod_id()

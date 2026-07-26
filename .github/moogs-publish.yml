@@ -1,0 +1,39 @@
+# v2 publish manifest — Moog-s-Mods/MoogsVoyagerStructures
+# Lives on the DEFAULT branch (1.21-datapack) only; every publish branch reads it from here.
+# Schema per release-actions docs/v2-contracts.md.
+schema: 1
+mod:
+  id: mvs
+  displayName: "Moog's Voyager Structures"
+  environments: [Server]   # live-verified 2026-07-26: CF files carry Server; MR server_side=required, client_side=unsupported
+  name: MoogsVoyagerStructures
+  validate: true
+platforms:
+  curseforge: { projectId: 656977, slug: moogs-voyager-structures }   # CF /mods API 403 — verified via the public files endpoint
+  modrinth:   { projectId: OQAgZMH1, slug: moogs-voyager-structures } # live-verified 2026-07-26
+discord:
+  embedColor: "#0f2b52"
+  avatarUrl: "https://media.forgecdn.net/avatars/thumbnails/869/885/64/64/638285724433169131.png"
+  # Was in the discordThumbnailUrl slot in gradle.properties, but it is a wide header image
+  # -> semantically a banner. No square thumbnail exists for this mod.
+  bannerUrl: "https://www.bisecthosting.com/images/CF/MVS/BH_NU_HEADER.png"
+  pingDefault: true
+# Required dependencies (live-verified against the newest Modrinth version 2026-07-26).
+dependencies:
+  - { modrinth: 1oUDhxuy, curseforge: moogs-structure-lib, type: required }
+artifacts:
+  - type: universal-jar
+  - type: config-pack
+    platforms:
+      curseforge: { projectId: 732906 }    # live: MoogsVoyagerStructures-ConfigPack-*.zip
+      modrinth:   { projectId: kV5gBvz6 }  # live: slug mvs-moogs-voyager-structure-config-pack
+    includeAlpha: false
+targets:
+  - branch: 1.20-datapack
+    mc: { start: "1.20", end: "1.20.6" }
+    java: 21
+    displaySuffix: "[UNIVERSAL]"
+  - branch: 1.21-datapack
+    mc: { start: "1.21", end: "26.2" }   # fleet standard for universal 1.21 targets
+    java: 21
+    displaySuffix: "[UNIVERSAL]"

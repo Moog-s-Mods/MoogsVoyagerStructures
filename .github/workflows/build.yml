@@ -3,7 +3,8 @@ name: Build
 on:
   push:
     branches: ['**']
-    tags-ignore: ['*.*.*-*.*.*']
+    # Fleet-standard release tags (<X.Y.Z>-<mc>) are handled by release.yml.
+    tags-ignore: ['*.*.*-*', '*.*.*-alpha.*-*']
   pull_request:
     branches: ['**']
 
