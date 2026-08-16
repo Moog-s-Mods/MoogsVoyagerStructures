@@ -6,6 +6,9 @@
 
 _Pending. Update this header date and replace this line with the actual changes before tagging._
 
+### Fixed
+- Added back villagers to barn, large_cart_1, large_cart_2
+
 ---
 
 ## [5.0.14] - 2026-06-21
