@@ -8,6 +8,10 @@ _Pending. Update this header date and replace this line with the actual changes 
 
 ### Fixed
 - Added back villagers to barn, large_cart_1, large_cart_2
+- Split books and entity equipment at the 1.21.5 encoding boundary via `versioned_single_pool_element` for sunzi_gate, mud_brick_house_1, lecturn_garden, prismarine_house_2, and ocean_tower — book pages/title (JSON-string vs SNBT compound) and entity gear (`ArmorItems`/`HandItems` vs `equipment`) now use format-correct variants on either side of 1.21.5
+
+### Changed
+- Version-gated barn's `oxidized_lightning_rod` (added in 1.21.9) via `versioned_single_pool_element`; pre-1.21.9 versions get the unoxidized `lightning_rod` variant
 
 ---
 
