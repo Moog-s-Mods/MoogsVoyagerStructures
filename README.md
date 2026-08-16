@@ -1,75 +1,41 @@
 ![banner](https://www.bisecthosting.com/images/CF/MVS/BH_NU_HEADER.png)
 
----
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D8LKA5N)
 
-[![Discord](https://img.shields.io/discord/869218732650688543?color=0f2b52&label=DISCORD&style=for-the-badge)](https://discord.com/invite/S5nffJbuvA) [![](https://img.shields.io/badge/TOTAL-80%20STRUCTURES-0f2b52?style=for-the-badge)](https://github.com/FinnSetchell/MoogsVanillaStructuresV2/wiki) [![GitHub Sponsors](https://img.shields.io/github/sponsors/finnsetchell?color=0f2b52&style=for-the-badge)](https://github.com/sponsors/FinnSetchell) [![Twitter Follow](https://img.shields.io/twitter/follow/MoogsMods?color=0f2b52&style=for-the-badge)](https://twitter.com/MoogsMods)
-
-[![](https://img.shields.io/badge/My-projects-0f2b52?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects)
-
----
+[![Discord](https://img.shields.io/discord/869218732650688543?color=3e72b3&label=DISCORD&style=for-the-badge)](https://discord.com/invite/S5nffJbuvA) [![CurseForge projects](https://img.shields.io/badge/CurseForge-projects-3e72b3?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects) [![Modrinth projects](https://img.shields.io/badge/Modrinth-projects-3e72b3?style=for-the-badge&logo=modrinth)](https://modrinth.com/user/FinnDog_123) [![View Structures](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/c110cc09347a4f9f9de6c974f2fa35d8.png)](https://previews.moogsmods.com/voyager-structures/1.21.1/)
 
 ![Overview](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER1.png)
 
----
+This Mod works for Forge, Fabric, NeoForge, and Quilt! It can also be installed server-side only. Forge support was dropped after 1.20.4
 
-**FEEDBACK**
+### ABOUT
 
-Please comment any ideas you may have to improve this mod. Any and all feedback is greatly appreciated :)
+Moogs Voyager Structures transforms your Minecraft experience with dynamic and engaging new structures. Crafted using vanilla blocks and entities, these structures seamlessly integrate into the game, offering exciting loot, challenging enemies, and friendly villagers. Compatible with any modpack, this mod enhances your world while preserving the classic Minecraft feel. Dive into a world of adventure and discovery with Moogs Voyager Structures!
 
-**FORGE AND FABRIC**
+[![Browse every structure live in 3D](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/f8fe835413394a76b10a678afefea30f.png)](https://previews.moogsmods.com/voyager-structures/1.21.1/)
 
-Look for files marked with **\[FORGE\]** or **\[FABRIC\]**.   
-***Fabric** mods are marked with **BETA** so that they show up on the side, but they are actually **RELEASE's***
+### Config pack
 
-**ABOUT**
+Every aspect of the mod is customizeable using datapacks. A template with full instructions can be found [here](https://www.curseforge.com/minecraft/texture-packs/mvs-moogs-voyager-structure-config-pack)
 
-Moogs Voyager Structures brings life, fun and variety to your Minecraft world! Explore awesome new structures made with vanilla blocks and entities, and discover loot, enemies, and villagers along the way. This mod is compatible with any modpack and keeps the vanilla feel of the game!
-
-**Config pack**
-
-[link](https://www.curseforge.com/minecraft/texture-packs/mvs-moogs-voyager-structure-config-pack)
-
-A datapack you can use to configure the mod.
-
-**REQUIRED ON CLIENT AND SERVER**
-
-1. simply download the version you need
-2. then add it to your mods folder  
-   It does not require any settings to be changed for it and should work with all mods
-
----
-
-![features](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER2.png)![collage](https://imgur.com/I9lNEvl.png)
-
----
+![features](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER2.png) ![collage](https://i.imgur.com/epC7vBE.png)
 
 ![showcase](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER4.png)
 
----
+### VIDEOS
 
-**If you have any modpacks/videos using this mod that you want featured here, then message me on discord!**
+<span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/C6Mzy-1a7Ys" width="650" height="364" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span>
 
-**VIDEOS:**
+<div><span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/z0HMHeHAlZ4?wmode=transparent" width="320" height="180" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span><span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/8e1M7q9xczE?wmode=transparent" width="320" height="180" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span></div>
 
+<div><span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/umTiIV1mpJg?t=21s?wmode=transparent" width="320" height="180" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span><span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/twKJIl2pZpI?t=49s?wmode=transparent" width="320" height="180" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span></div>
 
+<div><span><span><span><span><span><span><span><iframe src="https://www.youtube.com/embed/R0MbDUuVNHU?t=420s?wmode=transparent" width="320" height="180" allowfullscreen="allowfullscreen"></iframe></span></span></span></span></span></span></span></div>
 
+### MODPACKS
 
+See all modpacks [here](https://www.modpackindex.com/modpack/finder?included_mods=37802).
 
-**MODPACKS**
+![banner](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER3.png) The best and fastest way to get replies is to join our [Discord server](https://discord.gg/S5nffJbuvA).
 
-see all modpacks [here](https://www.modpackindex.com/modpack/finder?included_mods=37802 "here")
-
----
-
-![](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER3.png)
-
----
-
-**The best and fastest way to get replies is to join our [discord server](https://discord.gg/S5nffJbuvA)**
-
-[**![discord](https://i.imgur.com/sfAmR3Y.png)**](https://discord.gg/S5nffJbuvA "discord invite")
-
----
-
-[![serverImage](https://i.imgur.com/kMtqORw.png)](https://moogsmodded.store.playerlands.com/ "serverShop")  
-[![BHsponser](https://www.bisecthosting.com/images/CF/MVS/BH_NU_PROMO.png)](https://bisecthosting.com/moogsmods)
+[![BHsponser](https://www.bisecthosting.com/images/CF/MVS/BH_NU_PROMO.png)](https://bisecthosting.com/moogsmods?r=cfmvs)
