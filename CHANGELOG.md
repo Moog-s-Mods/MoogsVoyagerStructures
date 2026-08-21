@@ -15,6 +15,7 @@ _Pending. Update this header date and replace this line with the actual changes 
 
 ### Added
 - Wired MSL config-screen previews via `mod_slug: voyager-structures` — MSL's Structures tab now shows an enabled Preview button for each MVS structure, opening `https://previews.moogsmods.com/voyager-structures/<mc>/<structure>`
+- `supported_formats: [48, 107]` in `pack.mcmeta` so the pack loads under the strict schema on MC 26.1.2+
 
 ---
 
