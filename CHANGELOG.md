@@ -13,6 +13,9 @@ _Pending. Update this header date and replace this line with the actual changes 
 ### Changed
 - Version-gated barn's `oxidized_lightning_rod` (added in 1.21.9) via `versioned_single_pool_element`; pre-1.21.9 versions get the unoxidized `lightning_rod` variant
 
+### Added
+- Wired MSL config-screen previews via `mod_slug: voyager-structures` — MSL's Structures tab now shows an enabled Preview button for each MVS structure, opening `https://previews.moogsmods.com/voyager-structures/<mc>/<structure>`
+
 ---
 
 ## [5.0.14] - 2026-06-21
