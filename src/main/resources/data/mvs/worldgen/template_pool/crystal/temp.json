@@ -5,10 +5,13 @@
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:crystal/base",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/crystal/base",
+        "locations": {
+          "1.21-26.2": "mvs:1_21_0/crystal/base"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
       }
     }
   ]

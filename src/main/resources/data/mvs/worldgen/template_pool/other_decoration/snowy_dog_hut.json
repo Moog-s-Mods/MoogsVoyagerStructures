@@ -5,10 +5,13 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:other_decoration/snowy_dog_hut",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/other_decoration/snowy_dog_hut",
+        "locations": {
+          "1.21-26.2": "mvs:1_21_0/other_decoration/snowy_dog_hut"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

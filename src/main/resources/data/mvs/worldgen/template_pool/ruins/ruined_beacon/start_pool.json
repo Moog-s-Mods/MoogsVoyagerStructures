@@ -5,15 +5,14 @@
     {
       "weight": 1,
       "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_9/ruins/ruined_beacon",
         "locations": {
-          "1.21-1.21.8": "mvs:ruins/ruined_beacon",
-          "1.21.9-1.21.11": "mvs:1_21_9/ruins/ruined_beacon",
-          "26.1-26.2": "mvs:1_21_9/ruins/ruined_beacon"
+          "1.21-1.21.8": "mvs:1_21_0/ruins/ruined_beacon",
+          "1.21.9-26.2": "mvs:1_21_9/ruins/ruined_beacon"
         },
         "processors": "mvs:tuff_to_iron",
-        "projection": "rigid",
-        "element_type": "moogs_structures:versioned_single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

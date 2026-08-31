@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:other_decoration/duck",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_9/other_decoration/duck",
+        "locations": {
+          "1.21-1.21.8": "mvs:1_21_0/other_decoration/duck",
+          "1.21.9-26.2": "mvs:1_21_9/other_decoration/duck"
+        },
         "processors": "mvs:stone_to_diamond",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

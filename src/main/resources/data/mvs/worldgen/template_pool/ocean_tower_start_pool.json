@@ -5,15 +5,13 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:1_21_5/ocean_tower",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/ocean_tower",
         "locations": {
-          "1.21-1.21.4": "mvs:ocean_tower",
-          "1.21.5-1.21.11": "mvs:1_21_5/ocean_tower",
-          "26.1-26.2": "mvs:1_21_5/ocean_tower"
+          "1.21-26.2": "mvs:1_21_0/ocean_tower"
         },
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "moogs_structures:versioned_single_pool_element"
+        "processors": "mvs:spawners/ocean",
+        "projection": "rigid"
       }
     }
   ]

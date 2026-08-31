@@ -5,15 +5,15 @@
     {
       "weight": 1,
       "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_9/gallows",
         "locations": {
-          "1.21-1.21.8": "mvs:gallows",
-          "1.21.9-1.21.11": "mvs:1_21_9/gallows",
-          "26.1-26.2": "mvs:1_21_9/gallows"
+          "1.21-1.21.4": "mvs:1_21_0/gallows",
+          "1.21.5-1.21.8": "mvs:1_21_5/gallows",
+          "1.21.9-26.2": "mvs:1_21_9/gallows"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "moogs_structures:versioned_single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

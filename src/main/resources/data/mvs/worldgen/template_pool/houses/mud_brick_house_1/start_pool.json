@@ -5,16 +5,15 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:1_21_9/houses/mud_brick_house_1",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
         "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_6/houses/mud_brick_house_1",
         "locations": {
-          "1.21-1.21.4": "mvs:houses/mud_brick_house_1",
-          "1.21.5-1.21.8": "mvs:1_21_5/houses/mud_brick_house_1",
-          "1.21.9-1.21.11": "mvs:1_21_9/houses/mud_brick_house_1",
-          "26.1-26.2": "mvs:1_21_9/houses/mud_brick_house_1"
-        }
+          "1.21-1.21.4": "mvs:1_21_0/houses/mud_brick_house_1",
+          "1.21.5": "mvs:1_21_5/houses/mud_brick_house_1",
+          "1.21.6-26.2": "mvs:1_21_6/houses/mud_brick_house_1"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
       }
     }
   ]

@@ -6,14 +6,14 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "projection": "rigid",
         "location": "mvs:1_21_9/houses/azelea_house",
         "locations": {
-          "1.21-1.21.8": "mvs:houses/azelea_house",
-          "1.21.9-1.21.11": "mvs:1_21_9/houses/azelea_house",
-          "26.1-26.2": "mvs:1_21_9/houses/azelea_house"
+          "1.21-1.21.3": "mvs:1_21_0/houses/azelea_house",
+          "1.21.4-1.21.8": "mvs:1_21_4/houses/azelea_house",
+          "1.21.9-26.2": "mvs:1_21_9/houses/azelea_house"
         },
-        "processors": "minecraft:empty"
+        "processors": "minecraft:empty",
+        "projection": "rigid"
       }
     }
   ]

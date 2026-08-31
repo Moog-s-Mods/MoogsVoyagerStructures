@@ -6,14 +6,13 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "projection": "rigid",
         "location": "mvs:1_21_9/nature/big_oak_tree",
         "locations": {
-          "1.21-1.21.8": "mvs:nature/big_oak_tree",
-          "1.21.9-1.21.11": "mvs:1_21_9/nature/big_oak_tree",
-          "26.1-26.2": "mvs:1_21_9/nature/big_oak_tree"
+          "1.21-1.21.8": "mvs:1_21_0/nature/big_oak_tree",
+          "1.21.9-26.2": "mvs:1_21_9/nature/big_oak_tree"
         },
-        "processors": "minecraft:empty"
+        "processors": "minecraft:empty",
+        "projection": "rigid"
       }
     }
   ]

@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:carts/medium_bamboo_cart",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_5/carts/medium_bamboo_cart",
+        "locations": {
+          "1.21-1.21.4": "mvs:1_21_0/carts/medium_bamboo_cart",
+          "1.21.5-26.2": "mvs:1_21_5/carts/medium_bamboo_cart"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

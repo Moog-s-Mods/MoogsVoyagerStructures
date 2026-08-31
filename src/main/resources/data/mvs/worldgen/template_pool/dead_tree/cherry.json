@@ -5,19 +5,25 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/cherry",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/dead_tree/cherry",
+        "locations": {
+          "1.21-26.2": "mvs:1_21_0/dead_tree/cherry"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/cherry_trunk",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/dead_tree/cherry_trunk",
+        "locations": {
+          "1.21-26.2": "mvs:1_21_0/dead_tree/cherry_trunk"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

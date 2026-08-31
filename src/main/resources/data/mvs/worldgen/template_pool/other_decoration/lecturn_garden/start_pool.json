@@ -5,15 +5,13 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:1_21_5/other_decoration/lecturn_garden",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/other_decoration/lecturn_garden",
         "locations": {
-          "1.21-1.21.4": "mvs:other_decoration/lecturn_garden",
-          "1.21.5-1.21.11": "mvs:1_21_5/other_decoration/lecturn_garden",
-          "26.1-26.2": "mvs:1_21_5/other_decoration/lecturn_garden"
+          "1.21-26.2": "mvs:1_21_0/other_decoration/lecturn_garden"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "moogs_structures:versioned_single_pool_element"
+        "projection": "rigid"
       }
     }
   ]
