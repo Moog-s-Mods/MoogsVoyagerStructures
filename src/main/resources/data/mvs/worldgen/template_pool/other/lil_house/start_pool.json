@@ -1,0 +1,20 @@
+{
+  "name": "mvs:lil_house/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/lil_house",
+        "locations": {
+          "1.20-1.20.2": "mvs:1_20_0/lil_house",
+          "1.20.3-1.20.4": "mvs:1_20_3/lil_house",
+          "1.20.5-1.20.6": "mvs:1_20_5/lil_house"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
