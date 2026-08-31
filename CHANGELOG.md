@@ -4,18 +4,32 @@
 
 ## [5.1.0] - 2026-08-31
 
-_Pending. Update this header date and replace this line with the actual changes before tagging._
+### Added
+- Proper loot for the Ocean Tower and the Red Tower
+- Golden apples, enchanted golden apples and iron blocks to rare chests
+- Loot to the small oak pond
+- More mobs across various structures
+- Preview buttons for every structure in the Moog's Structure Library config screen
 
 ### Fixed
-- Added back villagers to barn, large_cart_1, large_cart_2
-- Split books and entity equipment at the 1.21.5 encoding boundary via `versioned_single_pool_element` for sunzi_gate, mud_brick_house_1, lecturn_garden, prismarine_house_2, and ocean_tower — book pages/title (JSON-string vs SNBT compound) and entity gear (`ArmorItems`/`HandItems` vs `equipment`) now use format-correct variants on either side of 1.21.5
+- The small ship now generates on water as it should
+- The lil house, the second medium igloo and one cathedral corridor now generate
+- Spruce dead trees, desert wells and snowy wells now generate
+- Villagers are back in the barn and both large carts
+- Books in lecterns are readable again, and mobs no longer throw errors
+- The barn's lightning rod now looks right on older versions
+- The pack now loads on Minecraft 26.1.2 and newer
 
 ### Changed
-- Version-gated barn's `oxidized_lightning_rod` (added in 1.21.9) via `versioned_single_pool_element`; pre-1.21.9 versions get the unoxidized `lightning_rod` variant
-
-### Added
-- Wired MSL config-screen previews via `mod_slug: voyager-structures` — MSL's Structures tab now shows an enabled Preview button for each MVS structure, opening `https://previews.moogsmods.com/voyager-structures/<mc>/<structure>`
-- `supported_formats: [48, 107]` in `pack.mcmeta` so the pack loads under the strict schema on MC 26.1.2+
+- Mobs are placed by the jigsaw system now, so they vary from structure to structure instead of being identical every time.
+  - Villagers and wandering traders will always have fresh trades
+  - Mobs with variants will spawn as a random variant for example, foxes, dogs, sheep etc
+- Spawners fill themselves in when a structure generates, making them easily customisable through datapacks and more reliable across mc versions
+- Armour stands turn up wearing random armour
+- Rare chests hand out at most two diamond tools or armour pieces instead of loads
+- Grass blocks under structures swapped for structure voids so they blend into any biome
+- Both cherry trees are built from natural blocks only
+- Every structure has been rebuilt for each Minecraft version it supports, fixing a range of small visual and loading problems
 
 ---
 
