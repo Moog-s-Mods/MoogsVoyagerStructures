@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mvs:lil_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 418273905,
+    "spacing": 34,
+    "separation": 20
+  }
+}
