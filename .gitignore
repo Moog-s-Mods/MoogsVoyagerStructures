@@ -7,3 +7,6 @@ build/
 # Python bytecode caches from scripts/
 __pycache__/
 *.pyc
+
+# Gradle task list scratch files written by the IDE
+.gradle-tasks-*.txt
