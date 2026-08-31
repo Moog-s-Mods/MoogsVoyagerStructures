@@ -5,19 +5,25 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/oak",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_0/dead_tree/oak",
+        "locations": {
+          "1.20-1.20.6": "mvs:1_20_0/dead_tree/oak"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/oak_trunk",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_0/dead_tree/oak_trunk",
+        "locations": {
+          "1.20-1.20.6": "mvs:1_20_0/dead_tree/oak_trunk"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

@@ -5,19 +5,26 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/birch",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/dead_tree/birch",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/dead_tree/birch",
+          "1.20.5-1.20.6": "mvs:1_20_5/dead_tree/birch"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "mvs:dead_tree/birch_trunk",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_0/dead_tree/birch_trunk",
+        "locations": {
+          "1.20-1.20.6": "mvs:1_20_0/dead_tree/birch_trunk"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

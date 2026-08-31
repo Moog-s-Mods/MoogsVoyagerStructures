@@ -5,64 +5,92 @@
     {
       "weight": 8,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_1",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_1",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_1",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_1"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 12,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_2",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_2",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_2",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_2"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 3,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_3",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_3",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_3",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_3"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_4",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_4",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_4",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_4"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 10,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_7",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_7",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_7",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_7"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 12,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_8",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_8",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_8",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_8"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     },
     {
       "weight": 10,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/start_corridors/corridor_9",
-        "processors": "mvs:cathedral"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/start_corridors/corridor_9",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/start_corridors/corridor_9",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/start_corridors/corridor_9"
+        },
+        "processors": "mvs:cathedral",
+        "projection": "rigid"
       }
     }
   ]

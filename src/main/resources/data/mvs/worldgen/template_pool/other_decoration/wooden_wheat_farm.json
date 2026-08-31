@@ -5,12 +5,15 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:other_decoration/wooden_wheat_farm",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/other_decoration/wooden_wheat_farm",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/other_decoration/wooden_wheat_farm",
+          "1.20.5-1.20.6": "mvs:1_20_5/other_decoration/wooden_wheat_farm"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]
 }
-

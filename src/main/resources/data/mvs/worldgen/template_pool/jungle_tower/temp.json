@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:jungle_tower/base",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/jungle_tower/base",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/jungle_tower/base",
+          "1.20.5-1.20.6": "mvs:1_20_5/jungle_tower/base"
+        },
+        "processors": "mvs:spawners/skeleton",
+        "projection": "rigid"
       }
     }
   ]

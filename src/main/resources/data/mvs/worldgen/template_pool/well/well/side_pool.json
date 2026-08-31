@@ -5,19 +5,27 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:well/well_lower",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/well/well_lower",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/well/well_lower",
+          "1.20.5-1.20.6": "mvs:1_20_5/well/well_lower"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     },
     {
       "weight": 1,
       "element": {
-        "location": "mvs:well/well_lower_no_chest",
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/well/well_lower_no_chest",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/well/well_lower_no_chest",
+          "1.20.5-1.20.6": "mvs:1_20_5/well/well_lower_no_chest"
+        },
         "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "projection": "rigid"
       }
     }
   ]

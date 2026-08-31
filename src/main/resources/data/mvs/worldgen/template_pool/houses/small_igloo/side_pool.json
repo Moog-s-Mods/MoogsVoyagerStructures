@@ -5,10 +5,14 @@
     {
       "weight": 1,
       "element": {
-        "location": "mvs:houses/small_igloo_lower",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/houses/small_igloo_lower",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/houses/small_igloo_lower",
+          "1.20.5-1.20.6": "mvs:1_20_5/houses/small_igloo_lower"
+        },
+        "processors": "mvs:spawners/stray",
+        "projection": "rigid"
       }
     }
   ]
