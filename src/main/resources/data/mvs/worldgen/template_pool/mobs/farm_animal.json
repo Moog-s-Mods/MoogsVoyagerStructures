@@ -1,0 +1,48 @@
+{
+  "name": "mvs:mobs/farm_animal",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_5/mobs/cow",
+        "locations": {
+          "1.21-1.21.1": "mvs:1_21_0/mobs/cow",
+          "1.21.2-1.21.4": "mvs:1_21_2/mobs/cow",
+          "1.21.5-26.2": "mvs:1_21_5/mobs/cow"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_5/mobs/pig",
+        "locations": {
+          "1.21-1.21.1": "mvs:1_21_0/mobs/pig",
+          "1.21.2-1.21.4": "mvs:1_21_2/mobs/pig",
+          "1.21.5-26.2": "mvs:1_21_5/mobs/pig"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_5/mobs/sheep",
+        "locations": {
+          "1.21-1.21.1": "mvs:1_21_0/mobs/sheep",
+          "1.21.2-1.21.4": "mvs:1_21_2/mobs/sheep",
+          "1.21.5-26.2": "mvs:1_21_5/mobs/sheep"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

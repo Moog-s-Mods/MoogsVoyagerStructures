@@ -1,0 +1,20 @@
+{
+  "name": "mvs:mobs/villager",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_5/mobs/villager",
+        "locations": {
+          "1.21-1.21.1": "mvs:1_21_0/mobs/villager",
+          "1.21.2-1.21.4": "mvs:1_21_2/mobs/villager",
+          "1.21.5-26.2": "mvs:1_21_5/mobs/villager"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
