@@ -1,0 +1,32 @@
+{
+  "name": "mvs:mobs/horse_or_donkey",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/mobs/horse",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/mobs/horse",
+          "1.20.5-1.20.6": "mvs:1_20_5/mobs/horse"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/mobs/donkey",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/mobs/donkey",
+          "1.20.5-1.20.6": "mvs:1_20_5/mobs/donkey"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
