@@ -1,14 +1,18 @@
 {
-  "name": "any",
+  "name": "mvs:cathedral/temp",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "mvs:cathedral/base/base",
-        "processors": "minecraft:empty"
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/cathedral/base/base",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/cathedral/base/base",
+          "1.20.5-1.20.6": "mvs:1_20_5/cathedral/base/base"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
       }
     }
   ]
