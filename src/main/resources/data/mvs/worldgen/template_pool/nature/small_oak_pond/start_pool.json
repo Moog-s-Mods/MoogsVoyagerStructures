@@ -6,10 +6,9 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "location": "mvs:1_21_5/nature/small_oak_pond",
+        "location": "mvs:1_21_0/nature/small_oak_pond",
         "locations": {
-          "1.21-1.21.4": "mvs:1_21_0/nature/small_oak_pond",
-          "1.21.5-26.2": "mvs:1_21_5/nature/small_oak_pond"
+          "1.21-26.2": "mvs:1_21_0/nature/small_oak_pond"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
