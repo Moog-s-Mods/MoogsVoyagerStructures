@@ -47,6 +47,14 @@
     {
       "structure": "mvs:acacia_well",
       "weight": 1
+    },
+    {
+      "structure": "mvs:desert_well",
+      "weight": 1
+    },
+    {
+      "structure": "mvs:snowy_well",
+      "weight": 1
     }
   ],
   "placement": {
