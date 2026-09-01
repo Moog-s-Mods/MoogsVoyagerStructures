@@ -10,7 +10,7 @@
         "locations": {
           "1.21-26.2": "mvs:1_21_0/ocean_tower"
         },
-        "processors": "mvs:spawners/ocean",
+        "processors": "mvs:ocean_tower",
         "projection": "rigid"
       }
     }

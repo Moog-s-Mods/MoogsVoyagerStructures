@@ -18,6 +18,24 @@
       "max_nearby_entities": 6,
       "required_player_range": 16,
       "spawn_range": 4
+    },
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "minecraft:diamond_block",
+            "probability": 0.7
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:prismarine"
+          }
+        }
+      ]
     }
   ]
 }
