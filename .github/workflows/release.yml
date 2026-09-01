@@ -1,15 +1,49 @@
+# .github/workflows/release.yml (per publish branch)
+#
+# Checkout-composite caller shape (docs/v2-contracts.md, "Caller workflow
+# shape"). release-actions is PRIVATE and GitHub does not allow a public repo
+# to call a reusable workflow hosted in a private repo, so this caller
+# checks release-actions out with RELEASE_ACTIONS_TOKEN and runs its logic as
+# a LOCAL composite action instead of `uses: FinnSetchell/release-actions/...`.
+#
+# The trigger, tag globs, and concurrency group are UNCHANGED from the
+# reusable-workflow era — only the calling mechanism moved.
+
 name: Release
 
 on:
   push:
-    tags:
-      - '*.*.*-*'
-      - '*.*.*-alpha.*-*'
+    tags: ['*.*.*-*', '*.*.*-alpha.*-*']
 
 permissions:
   contents: write
 
 jobs:
   release:
-    uses: FinnSetchell/release-actions/.github/workflows/release-v2.yml@v2
-    secrets: inherit
+    name: Plan, build, review card
+    runs-on: ubuntu-latest
+    concurrency:
+      group: mods-release-${{ github.repository }}-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - name: Checkout mod at tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0   # full history + branches for the plan's branch sanity check
+
+      - name: Checkout release-actions
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/release-actions
+          ref: v2
+          path: .release-actions
+          # || github.token kept for resilience even though the fine-grained
+          # PAT is required while the repo is private — a public fallback
+          # costs nothing and self-heals if release-actions is ever opened up.
+          token: ${{ secrets.RELEASE_ACTIONS_TOKEN || github.token }}
+
+      - name: Release
+        uses: ./.release-actions/actions/release-plan
+        with:
+          worker_api_key: ${{ secrets.WORKER_API_KEY }}
