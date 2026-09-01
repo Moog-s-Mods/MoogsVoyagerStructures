@@ -24,7 +24,7 @@
     "environment": "*",
     "depends": {
       "fabric-resource-loader-v0": "*",
-      "moogs_structures": "*"
+      "moogs_structures": ">=3.0.0"
     },
     "custom": {
       "modmenu": {
