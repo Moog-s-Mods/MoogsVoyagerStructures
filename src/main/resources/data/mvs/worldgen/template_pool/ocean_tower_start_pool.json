@@ -12,7 +12,7 @@
           "1.20.3-1.20.4": "mvs:1_20_3/ocean_tower",
           "1.20.5-1.20.6": "mvs:1_20_5/ocean_tower"
         },
-        "processors": "mvs:spawners/ocean",
+        "processors": "mvs:ocean_tower",
         "projection": "rigid"
       }
     }
