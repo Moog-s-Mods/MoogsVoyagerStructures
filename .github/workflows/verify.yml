@@ -1,3 +1,11 @@
+# .github/workflows/verify.yml (per publish branch — the recheck entry point)
+#
+# Checkout-composite caller shape (docs/v2-contracts.md, "Caller workflow
+# shape"). Dispatched by the worker's cron job while a release sits in
+# CurseForge's approval queue (up to every 30 min, 24 h) — the
+# workflow_dispatch input set is a Discord-bot/worker CONTRACT and must not
+# change as part of this migration.
+
 name: Verify
 
 on:
@@ -13,9 +21,22 @@ permissions:
 
 jobs:
   verify:
-    uses: FinnSetchell/release-actions/.github/workflows/verify-v2.yml@v2
-    with:
-      tag: ${{ inputs.tag }}
-      releaseId: ${{ inputs.releaseId }}
-      runId: ${{ inputs.runId }}
-    secrets: inherit
+    name: Verify & notify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout release-actions
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/release-actions
+          ref: v2
+          path: .release-actions
+          token: ${{ secrets.RELEASE_ACTIONS_TOKEN || github.token }}
+
+      - name: Verify (recheck)
+        uses: ./.release-actions/actions/verify-recheck
+        with:
+          tag: ${{ inputs.tag }}
+          releaseId: ${{ inputs.releaseId }}
+          runId: ${{ inputs.runId }}
+          worker_api_key: ${{ secrets.WORKER_API_KEY }}
+          discord_alert_webhook: ${{ secrets.DISCORD_ALERT_WEBHOOK }}

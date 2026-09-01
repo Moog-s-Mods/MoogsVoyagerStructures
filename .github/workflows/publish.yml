@@ -1,3 +1,15 @@
+# .github/workflows/publish.yml (per publish branch)
+#
+# Checkout-composite caller shape (docs/v2-contracts.md, "Caller workflow
+# shape"). The workflow_dispatch input set is a Discord-bot CONTRACT — the
+# bot dispatches this workflow by filename with exactly these inputs — and
+# must not change as part of this migration.
+#
+# Two jobs, mirroring the old publish-v2.yml job graph 1:1: `publish` (the
+# reconcile + GitHub release) and `verify` (needs: publish, runs even if
+# publish failed, never if the run was cancelled). Each job does its own
+# checkout of release-actions since jobs do not share a workspace.
+
 name: Publish
 
 on:
@@ -19,14 +31,63 @@ permissions:
 
 jobs:
   publish:
-    uses: FinnSetchell/release-actions/.github/workflows/publish-v2.yml@v2
-    with:
-      tag: ${{ inputs.tag }}
-      releaseType: ${{ inputs.releaseType }}
-      releaseId: ${{ inputs.releaseId }}
-      platforms: ${{ inputs.platforms }}
-      silent: ${{ inputs.silent }}
-      ping: ${{ inputs.ping }}
-      planDigest: ${{ inputs.planDigest }}
-      dryRun: ${{ inputs.dryRun }}
-    secrets: inherit
+    name: Reconcile & publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    concurrency:
+      group: mods-publish-${{ github.repository }}
+      cancel-in-progress: false
+    steps:
+      - name: Checkout mod at tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+
+      - name: Checkout release-actions
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/release-actions
+          ref: v2
+          path: .release-actions
+          token: ${{ secrets.RELEASE_ACTIONS_TOKEN || github.token }}
+
+      - name: Publish
+        uses: ./.release-actions/actions/publish
+        with:
+          tag: ${{ inputs.tag }}
+          releaseType: ${{ inputs.releaseType }}
+          releaseId: ${{ inputs.releaseId }}
+          platforms: ${{ inputs.platforms }}
+          silent: ${{ inputs.silent }}
+          ping: ${{ inputs.ping }}
+          planDigest: ${{ inputs.planDigest }}
+          dryRun: ${{ inputs.dryRun }}
+          worker_api_key: ${{ secrets.WORKER_API_KEY }}
+          modrinth_api_key: ${{ secrets.MODRINTH_API_KEY }}
+          curseforge_api_key: ${{ secrets.CURSEFORGE_API_KEY }}
+
+  verify:
+    name: Verify & notify
+    needs: publish
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout release-actions
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/release-actions
+          ref: v2
+          path: .release-actions
+          token: ${{ secrets.RELEASE_ACTIONS_TOKEN || github.token }}
+
+      - name: Verify & notify
+        uses: ./.release-actions/actions/verify-publish
+        with:
+          tag: ${{ inputs.tag }}
+          releaseId: ${{ inputs.releaseId }}
+          dryRun: ${{ inputs.dryRun }}
+          silent: ${{ inputs.silent }}
+          publishResult: ${{ needs.publish.result }}
+          worker_api_key: ${{ secrets.WORKER_API_KEY }}
+          discord_alert_webhook: ${{ secrets.DISCORD_ALERT_WEBHOOK }}
