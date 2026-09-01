@@ -15,7 +15,10 @@
 - The small ship now generates on water as it should
 - The lil house, the second medium igloo and one cathedral corridor now generate
 - Spruce dead trees, desert wells and snowy wells now generate
-- Villagers are back in the barn and both large carts
+- Villagers are back in the barn, and every cart now carries a wandering trader
+- Bees now stay at the bee dome instead of flying off the moment it generates
+- Chests and barrels that were handing out the same fixed items now roll random loot again
+- The Red Tower is far easier to find
 - Books in lecterns are readable again, and mobs no longer throw errors
 - The barn's lightning rod now looks right on older versions
 - The pack now loads on Minecraft 26.1.2 and newer
@@ -27,6 +30,7 @@
 - Spawners fill themselves in when a structure generates, making them easily customisable through datapacks and more reliable across mc versions
 - Armour stands turn up wearing random armour
 - Rare chests hand out at most two diamond tools or armour pieces instead of loads
+- The Ocean Tower is mostly prismarine now, with diamond blocks left as the rare highlight
 - Grass blocks under structures swapped for structure voids so they blend into any biome
 - Both cherry trees are built from natural blocks only
 - Every structure has been rebuilt for each Minecraft version it supports, fixing a range of small visual and loading problems
