@@ -11,7 +11,7 @@
   "cannot_spawn_in_liquid": false,
   "project_start_to_heightmap": "OCEAN_FLOOR_WG",
   "terrain_height_radius_check": 1,
-  "allowed_terrain_height_range": 6,
+  "allowed_terrain_height_range": 12,
   "biomes": "#c:is_deep_ocean",
   "valid_biome_radius_check": 2,
   "burying_type": "LOWEST_CORNER",
