@@ -31,6 +31,7 @@
 - Armour stands turn up wearing random armour
 - Rare chests hand out at most two diamond tools or armour pieces instead of loads
 - The Ocean Tower is mostly prismarine now, with diamond blocks left as the rare highlight
+- The Ocean Tower now sits partially buried instead of on top of terrain.
 - Grass blocks under structures swapped for structure voids so they blend into any biome
 - Both cherry trees are built from natural blocks only
 - Every structure has been rebuilt for each Minecraft version it supports, fixing a range of small visual and loading problems
