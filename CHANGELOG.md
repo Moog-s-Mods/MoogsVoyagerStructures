@@ -38,7 +38,6 @@
   - Villagers and wandering traders will always have fresh trades
   - Mobs with variants will spawn as a random variant for example, foxes, dogs, sheep etc
 - Spawners fill themselves in when a structure generates, making them easily customisable through datapacks and more reliable across mc versions
-- Armour stands turn up wearing random armour
 - Rare chests hand out at most two diamond tools or armour pieces instead of loads
 - The Ocean Tower is mostly prismarine now, with diamond blocks left as the rare highlight
 - The Ocean Tower now sits partially buried instead of on top of terrain.
