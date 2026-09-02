@@ -2,6 +2,16 @@
 
 ---
 
+## [5.1.1] - 2026-09-02
+
+### Fixed
+- The Ocean Tower no longer crashes the game as it generates
+
+### Changed
+- The Ocean Tower now turns up in any ocean rather than only the deep ocean, and guardians defend it
+
+---
+
 ## [5.1.0] - 2026-08-31
 
 ### Added

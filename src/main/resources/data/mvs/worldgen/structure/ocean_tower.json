@@ -2,20 +2,33 @@
   "type": "moogs_structures:moogs_structures_generic_jigsaw_structure",
   "start_pool": "mvs:ocean_tower_start_pool",
   "size": 1,
-  "step": "underground_structures",
-  "spawn_overrides": {},
+  "project_start_to_heightmap": "OCEAN_FLOOR_WG",
+  "terrain_height_radius_check": 2,
+  "allowed_terrain_height_range": 5,
+  "valid_biome_radius_check": 4,
+  "y_allowance": {
+    "min_y_allowed": 0,
+    "max_y_allowed": 41
+  },
+  "biomes": "#c:is_ocean",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "burying_type": "AVERAGE_LAND",
+  "cannot_spawn_in_liquid": false,
   "start_height": {
     "absolute": 0
   },
-  "terrain_adaptation": "none",
-  "cannot_spawn_in_liquid": false,
-  "project_start_to_heightmap": "OCEAN_FLOOR_WG",
-  "terrain_height_radius_check": 1,
-  "allowed_terrain_height_range": 12,
-  "biomes": "#c:is_deep_ocean",
-  "valid_biome_radius_check": 2,
-  "burying_type": "LOWEST_CORNER",
-  "y_allowance": {
-    "max_y_allowed": 25
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:guardian",
+          "weight": 10,
+          "minCount": 2,
+          "maxCount": 6
+        }
+      ]
+    }
   }
 }
