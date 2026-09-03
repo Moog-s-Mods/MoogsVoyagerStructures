@@ -1,0 +1,41 @@
+name: Sync issues to Trello
+
+on:
+  issues:
+    types: [opened, edited, reopened, closed, deleted]
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    concurrency:
+      group: issue-to-trello-${{ github.repository }}-${{ github.event.issue.number }}
+      cancel-in-progress: false
+    steps:
+      - name: Checkout release-actions
+        uses: actions/checkout@v4
+        with:
+          repository: FinnSetchell/release-actions
+          ref: issue-to-trello-v1
+          path: .release-actions
+          token: ${{ secrets.RELEASE_ACTIONS_TOKEN || github.token }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync issue to Trello
+        env:
+          TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
+          TRELLO_API_TOKEN: ${{ secrets.TRELLO_API_TOKEN }}
+          TRELLO_LIST_ID: "68a72f63ee06b05b03a8494b"
+          INCLUDE_BODY: "true"
+          EVENT_ACTION: ${{ github.event.action }}
+          ISSUE_JSON: ${{ toJSON(github.event.issue) }}
+          REPO_FULL: ${{ github.repository }}
+        run: node .release-actions/actions/issue-to-trello/sync.mjs
