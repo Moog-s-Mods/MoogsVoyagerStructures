@@ -9,7 +9,7 @@
         "location": "mvs:1_21_9/houses/desert_house",
         "locations": {
           "1.21-1.21.8": "mvs:1_21_0/houses/desert_house",
-          "1.21.9-26.2": "mvs:1_21_9/houses/desert_house"
+          "1.21.9-26.3": "mvs:1_21_9/houses/desert_house"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

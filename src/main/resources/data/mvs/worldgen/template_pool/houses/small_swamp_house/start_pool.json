@@ -9,7 +9,7 @@
         "location": "mvs:1_21_4/houses/small_swamp_house",
         "locations": {
           "1.21-1.21.3": "mvs:1_21_0/houses/small_swamp_house",
-          "1.21.4-26.2": "mvs:1_21_4/houses/small_swamp_house"
+          "1.21.4-26.3": "mvs:1_21_4/houses/small_swamp_house"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

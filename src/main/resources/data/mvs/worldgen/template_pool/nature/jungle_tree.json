@@ -8,7 +8,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/nature/medium_jungle_tree",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/nature/medium_jungle_tree"
+          "1.21-26.3": "mvs:1_21_0/nature/medium_jungle_tree"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

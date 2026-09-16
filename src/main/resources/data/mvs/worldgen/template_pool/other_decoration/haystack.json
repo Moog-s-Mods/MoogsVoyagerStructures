@@ -9,7 +9,7 @@
         "location": "mvs:1_21_5/other_decoration/haystack",
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/other_decoration/haystack",
-          "1.21.5-26.2": "mvs:1_21_5/other_decoration/haystack"
+          "1.21.5-26.3": "mvs:1_21_5/other_decoration/haystack"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -21,7 +21,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/other_decoration/small_haystack",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/other_decoration/small_haystack"
+          "1.21-26.3": "mvs:1_21_0/other_decoration/small_haystack"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

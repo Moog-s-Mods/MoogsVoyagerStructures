@@ -9,7 +9,7 @@
         "location": "mvs:1_21_9/small_ship",
         "locations": {
           "1.21-1.21.8": "mvs:1_21_0/small_ship",
-          "1.21.9-26.2": "mvs:1_21_9/small_ship"
+          "1.21.9-26.3": "mvs:1_21_9/small_ship"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

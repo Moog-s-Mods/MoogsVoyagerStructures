@@ -8,7 +8,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/well/well_lower",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/well/well_lower"
+          "1.21-26.3": "mvs:1_21_0/well/well_lower"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -20,7 +20,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/well/well_lower_no_chest",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/well/well_lower_no_chest"
+          "1.21-26.3": "mvs:1_21_0/well/well_lower_no_chest"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

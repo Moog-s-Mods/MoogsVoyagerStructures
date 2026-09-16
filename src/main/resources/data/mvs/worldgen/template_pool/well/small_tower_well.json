@@ -10,7 +10,7 @@
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/small_tower_well",
           "1.21.5-1.21.8": "mvs:1_21_5/small_tower_well",
-          "1.21.9-26.2": "mvs:1_21_9/small_tower_well"
+          "1.21.9-26.3": "mvs:1_21_9/small_tower_well"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

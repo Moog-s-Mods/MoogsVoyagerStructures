@@ -9,7 +9,7 @@
         "location": "mvs:1_21_5/houses/small_igloo",
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/houses/small_igloo",
-          "1.21.5-26.2": "mvs:1_21_5/houses/small_igloo"
+          "1.21.5-26.3": "mvs:1_21_5/houses/small_igloo"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

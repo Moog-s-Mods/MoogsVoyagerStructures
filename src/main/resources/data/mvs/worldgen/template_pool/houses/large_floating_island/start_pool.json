@@ -10,7 +10,7 @@
         "locations": {
           "1.21-1.21.3": "mvs:1_21_0/houses/large_floating_island",
           "1.21.4-1.21.8": "mvs:1_21_4/houses/large_floating_island",
-          "1.21.9-26.2": "mvs:1_21_9/houses/large_floating_island"
+          "1.21.9-26.3": "mvs:1_21_9/houses/large_floating_island"
         },
         "processors": "mvs:blue_to_water",
         "projection": "rigid"

@@ -12,7 +12,7 @@
           "1.21.4": "mvs:1_21_4/houses/diorite_tower",
           "1.21.5": "mvs:1_21_5/houses/diorite_tower",
           "1.21.6-1.21.8": "mvs:1_21_6/houses/diorite_tower",
-          "1.21.9-26.2": "mvs:1_21_9/houses/diorite_tower"
+          "1.21.9-26.3": "mvs:1_21_9/houses/diorite_tower"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

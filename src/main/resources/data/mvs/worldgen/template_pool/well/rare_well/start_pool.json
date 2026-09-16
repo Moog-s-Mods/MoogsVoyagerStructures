@@ -9,7 +9,7 @@
         "location": "mvs:1_21_9/well/rare_well/rare_well_upper",
         "locations": {
           "1.21-1.21.8": "mvs:1_21_0/well/rare_well/rare_well_upper",
-          "1.21.9-26.2": "mvs:1_21_9/well/rare_well/rare_well_upper"
+          "1.21.9-26.3": "mvs:1_21_9/well/rare_well/rare_well_upper"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

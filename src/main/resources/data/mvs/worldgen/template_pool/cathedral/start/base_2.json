@@ -9,7 +9,7 @@
         "location": "mvs:1_21_9/cathedral/base/bottom",
         "locations": {
           "1.21-1.21.8": "mvs:1_21_0/cathedral/base/bottom",
-          "1.21.9-26.2": "mvs:1_21_9/cathedral/base/bottom"
+          "1.21.9-26.3": "mvs:1_21_9/cathedral/base/bottom"
         },
         "processors": "mvs:spawners/zombie",
         "projection": "rigid"

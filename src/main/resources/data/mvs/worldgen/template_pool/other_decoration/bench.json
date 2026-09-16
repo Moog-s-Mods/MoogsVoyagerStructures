@@ -9,7 +9,7 @@
         "location": "mvs:1_21_5/other_decoration/large_bench",
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/other_decoration/large_bench",
-          "1.21.5-26.2": "mvs:1_21_5/other_decoration/large_bench"
+          "1.21.5-26.3": "mvs:1_21_5/other_decoration/large_bench"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -22,7 +22,7 @@
         "location": "mvs:1_21_5/other_decoration/medium_bench",
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/other_decoration/medium_bench",
-          "1.21.5-26.2": "mvs:1_21_5/other_decoration/medium_bench"
+          "1.21.5-26.3": "mvs:1_21_5/other_decoration/medium_bench"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -34,7 +34,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/other_decoration/small_bench_1",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/other_decoration/small_bench_1"
+          "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_1"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -46,7 +46,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/other_decoration/small_bench_2",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/other_decoration/small_bench_2"
+          "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_2"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -58,7 +58,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/other_decoration/small_bench_3",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/other_decoration/small_bench_3"
+          "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_3"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

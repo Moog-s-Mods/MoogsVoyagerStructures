@@ -8,7 +8,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/nature/long_oak_pathway",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/nature/long_oak_pathway"
+          "1.21-26.3": "mvs:1_21_0/nature/long_oak_pathway"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -20,7 +20,7 @@
         "element_type": "moogs_structures:versioned_single_pool_element",
         "location": "mvs:1_21_0/nature/short_oak_pathway",
         "locations": {
-          "1.21-26.2": "mvs:1_21_0/nature/short_oak_pathway"
+          "1.21-26.3": "mvs:1_21_0/nature/short_oak_pathway"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"

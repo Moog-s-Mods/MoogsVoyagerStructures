@@ -10,7 +10,7 @@
         "locations": {
           "1.21-1.21.1": "mvs:1_21_0/mobs/pillager_captain",
           "1.21.2-1.21.4": "mvs:1_21_2/mobs/pillager_captain",
-          "1.21.5-26.2": "mvs:1_21_5/mobs/pillager_captain"
+          "1.21.5-26.3": "mvs:1_21_5/mobs/pillager_captain"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
