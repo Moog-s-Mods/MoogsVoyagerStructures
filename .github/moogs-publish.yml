@@ -34,6 +34,6 @@ targets:
     java: 21
     displaySuffix: "[UNIVERSAL]"
   - branch: 1.21-datapack
-    mc: { start: "1.21", end: "26.2" }   # fleet standard for universal 1.21 targets
+    mc: { start: "1.21", end: "26.3" }   # fleet standard for universal 1.21 targets
     java: 21
     displaySuffix: "[UNIVERSAL]"
