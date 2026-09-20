@@ -2,7 +2,7 @@
 
 [![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D8LKA5N)
 
-[![Discord](https://img.shields.io/discord/869218732650688543?color=3e72b3&label=DISCORD&style=for-the-badge)](https://discord.com/invite/S5nffJbuvA) [![CurseForge projects](https://img.shields.io/badge/CurseForge-projects-3e72b3?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects) [![Modrinth projects](https://img.shields.io/badge/Modrinth-projects-3e72b3?style=for-the-badge&logo=modrinth)](https://modrinth.com/user/FinnDog_123) [![View Structures](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/c110cc09347a4f9f9de6c974f2fa35d8.png)](https://previews.moogsmods.com/voyager-structures/1.21.1/)
+[![Discord](https://img.shields.io/discord/869218732650688543?color=3e72b3&label=DISCORD&style=for-the-badge)](https://moogsmods.com/discord?r=readme-mvs) [![CurseForge projects](https://img.shields.io/badge/CurseForge-projects-3e72b3?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/members/finndog_123/projects) [![Modrinth projects](https://img.shields.io/badge/Modrinth-projects-3e72b3?style=for-the-badge&logo=modrinth)](https://modrinth.com/user/FinnDog_123) [![View Structures](https://pub-24a4e0e7ea8544a5b6f73c3a23512589.r2.dev/images/c110cc09347a4f9f9de6c974f2fa35d8.png)](https://previews.moogsmods.com/voyager-structures/1.21.1/)
 
 ![Overview](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER1.png)
 
@@ -36,6 +36,6 @@ Every aspect of the mod is customizeable using datapacks. A template with full i
 
 See all modpacks [here](https://www.modpackindex.com/modpack/finder?included_mods=37802).
 
-![banner](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER3.png) The best and fastest way to get replies is to join our [Discord server](https://discord.gg/S5nffJbuvA).
+![banner](https://www.bisecthosting.com/images/CF/MVS/BH_NU_BANNER3.png) The best and fastest way to get replies is to join our [Discord server](https://moogsmods.com/discord?r=readme-mvs).
 
 [![BHsponser](https://www.bisecthosting.com/images/CF/MVS/BH_NU_PROMO.png)](https://bisecthosting.com/moogsmods?r=cfmvs)
