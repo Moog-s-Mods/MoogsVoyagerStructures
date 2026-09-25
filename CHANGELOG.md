@@ -2,6 +2,13 @@
 
 ---
 
+## [5.1.3] - 2026-09-25
+
+### Fixed
+- Structures no longer cluster right around world spawn
+
+---
+
 ## [5.1.2] - 2026-09-17
 
 ### Added
