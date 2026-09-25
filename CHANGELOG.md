@@ -6,6 +6,9 @@
 
 ### Fixed
 - Structures no longer cluster right around world spawn
+- Villagers now pick up food, so they can restock and breed
+- Chests and barrels roll fresh loot in every world instead of the same items each time
+- A few chests in the cathedral that always spawned empty now have loot
 
 ---
 
