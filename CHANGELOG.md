@@ -2,6 +2,13 @@
 
 ---
 
+## [5.1.4]
+
+### Fixed
+- Enchanted loot in some chests can now roll treasure enchantments such as Mending, as it does on newer versions
+
+---
+
 ## [5.1.3] - 2026-09-25
 
 ### Fixed
