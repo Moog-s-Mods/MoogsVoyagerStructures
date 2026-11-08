@@ -43,7 +43,7 @@
       },
       {
         "id": "moogs_structures",
-        "versions": "*"
+        "versions": ">=3.0.0"
       }
     ]
   }
