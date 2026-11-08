@@ -180,8 +180,7 @@
           "name": "minecraft:book",
           "functions": [
             {
-              "function": "minecraft:enchant_randomly",
-              "options": "#minecraft:on_random_loot"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         }
