@@ -22,7 +22,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -38,7 +47,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 5
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -54,7 +72,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -70,7 +97,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -94,7 +130,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -110,7 +155,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            },
+            "add": false
+          }
         }
       ]
     }

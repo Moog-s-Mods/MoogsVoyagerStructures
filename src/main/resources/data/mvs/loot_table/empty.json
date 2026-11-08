@@ -21,7 +21,14 @@
                   "max": 2
                 }
               }
-            ]
+            ],
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": {
+                    "min": 1,
+                    "max": 2
+                }
+            }
           },
           {
             "type": "minecraft:item",
@@ -35,7 +42,14 @@
                   "max": 2
                 }
               }
-            ]
+            ],
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": {
+                    "min": 1,
+                    "max": 2
+                }
+            }
           }
         ]
       }

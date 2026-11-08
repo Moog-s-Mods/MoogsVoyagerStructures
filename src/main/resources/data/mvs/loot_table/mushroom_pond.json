@@ -51,7 +51,14 @@
                   "max": 2
                 }
               }
-            ]
+            ],
+            "modifier": {
+                "type": "minecraft:set_count",
+                "count": {
+                    "min": 0,
+                    "max": 2
+                }
+            }
           }
         ]
       }

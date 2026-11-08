@@ -23,7 +23,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -39,7 +48,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -60,7 +78,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 5
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -76,7 +103,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 3,
+              "max": 5
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -92,7 +128,16 @@
               },
               "add": false
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 7
+            },
+            "add": false
+          }
         },
         {
           "type": "minecraft:item",
@@ -121,7 +166,13 @@
               "levels": 20,
               "treasure": true
             }
-          ]
+          ],
+          "modifier": {
+            "type": "minecraft:enchant_with_levels",
+            "options": "#minecraft:on_random_loot",
+            "levels": 20,
+            "treasure": true
+          }
         }
       ]
     }
