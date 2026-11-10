@@ -1,5 +1,5 @@
 
-modLoader = 'javafml'
+modLoader = 'lowcodefml'
 loaderVersion = '[1,)'
 license = 'GNU Lesser General Public License v3.0'
 showAsResourcePack = false
