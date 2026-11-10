@@ -7,6 +7,7 @@
 ### Fixed
 - Enchanted loot in some chests can now roll treasure enchantments such as Mending, as it does on newer versions
 - The enchanted iron shovel in rare chests now rolls the same enchantment levels as on newer versions
+- Fixed the mod not loading on NeoForge 1.20.5
 
 ---
 
