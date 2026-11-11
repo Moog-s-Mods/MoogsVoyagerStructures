@@ -19,10 +19,11 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "location": "mvs:1_21_5/other_decoration/medium_bench",
+        "location": "mvs:26_3_0/other_decoration/medium_bench",
         "locations": {
           "1.21-1.21.4": "mvs:1_21_0/other_decoration/medium_bench",
-          "1.21.5-26.3": "mvs:1_21_5/other_decoration/medium_bench"
+          "1.21.5-26.2": "mvs:1_21_5/other_decoration/medium_bench",
+          "26.3": "mvs:26_3_0/other_decoration/medium_bench"
         },
         "processors": "minecraft:empty",
         "projection": "rigid"
