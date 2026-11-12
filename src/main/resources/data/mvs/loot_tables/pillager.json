@@ -226,6 +226,38 @@
           ]
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_red_tower_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.pillager_map",
+                "fallback": "Pillager Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 5
+        }
+      ]
     }
   ],
   "random_sequence": "minecraft:chests/pillager_outpost"

@@ -5,5 +5,15 @@
   "mvs.releases": "GitHub Releases",
   "mvs.kofi": "Ko-fi",
   "mvs.curseforge": "CurseForge",
-  "mvs.modrinth": "Modrinth"
+  "mvs.modrinth": "Modrinth",
+  "filled_map.mvs.cathedral_map": "Cathedral Map",
+  "filled_map.mvs.crystal_map": "Crystal Map",
+  "filled_map.mvs.jungle_tower_map": "Jungle Tower Map",
+  "filled_map.mvs.red_tower_map": "Red Tower Map",
+  "filled_map.mvs.floating_islands_map": "Floating Islands Map",
+  "filled_map.mvs.cartographer_s_tower_map": "Cartographer's Tower Map",
+  "filled_map.mvs.treasure_hunter_s_map": "Treasure Hunter's Map",
+  "filled_map.mvs.pillager_map": "Pillager Map",
+  "filled_map.mvs.fisherman_s_chart": "Fisherman's Chart",
+  "filled_map.mvs.large_floating_island_map": "Large Floating Island Map"
 }
