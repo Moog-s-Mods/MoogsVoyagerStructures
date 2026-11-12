@@ -1,0 +1,6 @@
+{
+  "values": [
+    "minecraft:desert",
+    { "id": "#c:is_desert", "required": false }
+  ]
+}

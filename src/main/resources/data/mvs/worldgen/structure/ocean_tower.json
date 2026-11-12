@@ -10,7 +10,7 @@
     "min_y_allowed": 0,
     "max_y_allowed": 41
   },
-  "biomes": "#c:is_ocean",
+  "biomes": "#mvs:is_ocean",
   "step": "surface_structures",
   "terrain_adaptation": "none",
   "burying_type": "AVERAGE_LAND",
