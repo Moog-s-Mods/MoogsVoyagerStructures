@@ -155,6 +155,304 @@
           }
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_cathedral_maps",
+              "decoration": "mansion",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.cathedral_map",
+                "fallback": "Cathedral Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:woodland_mansion_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_cathedral_maps",
+              "decoration": "mansion",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.cathedral_map",
+                "fallback": "Cathedral Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_crystal_maps",
+              "decoration": "red_x",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.crystal_map",
+                "fallback": "Crystal Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:buried_treasure_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_crystal_maps",
+              "decoration": "red_x",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.crystal_map",
+                "fallback": "Crystal Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_jungle_tower_maps",
+              "decoration": "jungle_temple",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.jungle_tower_map",
+                "fallback": "Jungle Tower Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:jungle_pyramid_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_jungle_tower_maps",
+              "decoration": "jungle_temple",
+              "zoom": 2,
+              "search_radius": 2,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.jungle_tower_map",
+                "fallback": "Jungle Tower Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_red_tower_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.red_tower_map",
+                "fallback": "Red Tower Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:woodland_mansion_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_red_tower_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.red_tower_map",
+                "fallback": "Red Tower Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_floating_islands_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.floating_islands_map",
+                "fallback": "Floating Islands Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:buried_treasure_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_floating_islands_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.floating_islands_map",
+                "fallback": "Floating Islands Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map"
+        }
+      ]
     }
   ]
 }

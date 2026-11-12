@@ -90,6 +90,71 @@
           "name": "minecraft:compass"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_cartographer_tower_maps",
+              "decoration": "village_plains",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.cartographer_s_tower_map",
+                "fallback": "Cartographer's Tower Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:plains_village_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_cartographer_tower_maps",
+              "decoration": "village_plains",
+              "zoom": 2,
+              "search_radius": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.cartographer_s_tower_map",
+                "fallback": "Cartographer's Tower Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 7
+        }
+      ]
     }
   ]
 }

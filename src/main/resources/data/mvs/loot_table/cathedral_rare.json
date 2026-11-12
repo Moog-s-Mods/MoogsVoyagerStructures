@@ -187,6 +187,71 @@
           }
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_large_floating_island_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 4,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.large_floating_island_map",
+                "fallback": "Large Floating Island Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:buried_treasure_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_large_floating_island_maps",
+              "decoration": "target_x",
+              "zoom": 2,
+              "search_radius": 4,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.large_floating_island_map",
+                "fallback": "Large Floating Island Map"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 7
+        }
+      ]
     }
   ]
 }

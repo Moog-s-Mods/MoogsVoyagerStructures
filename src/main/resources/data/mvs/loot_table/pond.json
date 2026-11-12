@@ -117,6 +117,71 @@
           "name": "minecraft:fishing_rod"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "mvs:on_ocean_tower_maps",
+              "decoration": "monument",
+              "zoom": 2,
+              "search_radius": 6,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.fisherman_s_chart",
+                "fallback": "Fisherman's Chart"
+              },
+              "target": "item_name"
+            }
+          ],
+          "modifier": [
+            {
+              "type": "minecraft:set_item",
+              "item": "minecraft:ocean_monument_map"
+            },
+            {
+              "type": "minecraft:exploration_map",
+              "destination": "#mvs:on_ocean_tower_maps",
+              "decoration": "monument",
+              "zoom": 2,
+              "search_radius": 6,
+              "skip_existing_chunks": false
+            },
+            {
+              "type": "minecraft:filtered",
+              "item_filter": {
+                "predicates": {
+                  "minecraft:map_id": {}
+                }
+              },
+              "on_fail": {
+                "type": "minecraft:discard"
+              }
+            },
+            {
+              "type": "minecraft:set_name",
+              "name": {
+                "translate": "filled_map.mvs.fisherman_s_chart",
+                "fallback": "Fisherman's Chart"
+              },
+              "target": "item_name"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 5
+        }
+      ]
     }
   ]
 }
