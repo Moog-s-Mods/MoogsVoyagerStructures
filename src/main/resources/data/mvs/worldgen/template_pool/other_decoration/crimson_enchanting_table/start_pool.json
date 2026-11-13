@@ -10,7 +10,7 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/other_decoration/crimson_enchanting_table"
         },
-        "processors": "minecraft:empty",
+        "processors": "mvs:follow_floor",
         "projection": "rigid"
       }
     }
