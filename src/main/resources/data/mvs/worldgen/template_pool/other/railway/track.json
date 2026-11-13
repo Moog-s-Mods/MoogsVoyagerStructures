@@ -34,7 +34,7 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/railway/corner_left"
         },
-        "processors": "minecraft:empty",
+        "processors": "mvs:railway_corner",
         "projection": "rigid"
       }
     },
@@ -46,7 +46,7 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/railway/corner_right"
         },
-        "processors": "minecraft:empty",
+        "processors": "mvs:railway_corner",
         "projection": "rigid"
       }
     }
