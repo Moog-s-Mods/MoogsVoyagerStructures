@@ -12,7 +12,7 @@
           "1.20.5-1.20.6": "mvs:1_20_5/other_decoration/haystack"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "terrain_matching"
       }
     },
     {
@@ -25,7 +25,7 @@
           "1.20.5-1.20.6": "mvs:1_20_5/other_decoration/small_haystack"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "terrain_matching"
       }
     }
   ]
