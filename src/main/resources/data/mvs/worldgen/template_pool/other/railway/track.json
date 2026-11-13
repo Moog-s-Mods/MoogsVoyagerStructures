@@ -39,7 +39,7 @@
           "1.20-1.20.4": "mvs:1_20_0/railway/corner_left",
           "1.20.5-1.20.6": "mvs:1_20_5/railway/corner_left"
         },
-        "processors": "minecraft:empty",
+        "processors": "mvs:railway_corner",
         "projection": "rigid"
       }
     },
@@ -52,7 +52,7 @@
           "1.20-1.20.4": "mvs:1_20_0/railway/corner_right",
           "1.20.5-1.20.6": "mvs:1_20_5/railway/corner_right"
         },
-        "processors": "minecraft:empty",
+        "processors": "mvs:railway_corner",
         "projection": "rigid"
       }
     }
