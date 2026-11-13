@@ -1,0 +1,60 @@
+{
+  "name": "mvs:other/railway/track",
+  "fallback": "mvs:other/railway/track_end",
+  "elements": [
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/railway/straight_16",
+        "locations": {
+          "1.20-1.20.2": "mvs:1_20_0/railway/straight_16",
+          "1.20.3-1.20.4": "mvs:1_20_3/railway/straight_16",
+          "1.20.5-1.20.6": "mvs:1_20_5/railway/straight_16"
+        },
+        "processors": "mvs:railway_track",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/railway/straight_8",
+        "locations": {
+          "1.20-1.20.2": "mvs:1_20_0/railway/straight_8",
+          "1.20.3-1.20.4": "mvs:1_20_3/railway/straight_8",
+          "1.20.5-1.20.6": "mvs:1_20_5/railway/straight_8"
+        },
+        "processors": "mvs:railway_track",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/railway/corner_left",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/railway/corner_left",
+          "1.20.5-1.20.6": "mvs:1_20_5/railway/corner_left"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_20_5/railway/corner_right",
+        "locations": {
+          "1.20-1.20.4": "mvs:1_20_0/railway/corner_right",
+          "1.20.5-1.20.6": "mvs:1_20_5/railway/corner_right"
+        },
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
