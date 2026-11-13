@@ -1,0 +1,7 @@
+{
+  "processors": [
+    {
+      "processor_type": "moogs_structures:follow_floor_processor"
+    }
+  ]
+}
