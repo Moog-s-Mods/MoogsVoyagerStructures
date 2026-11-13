@@ -1,0 +1,30 @@
+{
+  "name": "mvs:other/railway/track_end",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/railway/end_buffer",
+        "locations": {
+          "1.21-26.3": "mvs:1_21_0/railway/end_buffer"
+        },
+        "processors": "mvs:railway_track",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "moogs_structures:versioned_single_pool_element",
+        "location": "mvs:1_21_0/railway/end_torn",
+        "locations": {
+          "1.21-26.3": "mvs:1_21_0/railway/end_torn"
+        },
+        "processors": "mvs:railway_track",
+        "projection": "terrain_matching"
+      }
+    }
+  ]
+}

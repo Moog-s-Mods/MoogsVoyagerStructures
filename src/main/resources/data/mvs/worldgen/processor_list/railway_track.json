@@ -1,0 +1,7 @@
+{
+  "processors": [
+    {
+      "processor_type": "moogs_structures:rail_slope_processor"
+    }
+  ]
+}
