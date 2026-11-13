@@ -11,7 +11,7 @@
           "1.21-26.3": "mvs:1_21_0/dead_tree/acacia"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "terrain_matching"
       }
     },
     {
@@ -23,7 +23,7 @@
           "1.21-26.3": "mvs:1_21_0/dead_tree/acacia_trunk"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "terrain_matching"
       }
     }
   ]

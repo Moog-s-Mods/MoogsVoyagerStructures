@@ -12,7 +12,7 @@
           "1.21.5-26.3": "mvs:1_21_5/other_decoration/small_horse_campsite"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "terrain_matching"
       }
     }
   ]
