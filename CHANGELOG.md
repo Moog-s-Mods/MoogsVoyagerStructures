@@ -4,8 +4,19 @@
 
 ## [5.1.4]
 
+### Added
+- Chests can hold maps that lead to the rarest Voyager structures
+  - The Cartographer Tower's map chests can hold maps to the Cathedral, the Crystal, the Jungle Tower, the Red Tower and the Floating Islands
+  - Book chests in houses can hold a map to the Cartographer Tower
+  - Rich houses can hold a map to the Crystal, pillager chests one to the Red Tower, ponds one to the Ocean Tower, the Ocean Tower's treasure one to the Jungle Tower, and the Cathedral's rare chests one to the Large Floating Island
+- The Cartographer Tower's map chest now always holds a blank map
+
 ### Fixed
 - Chests on Minecraft 26.3 now give full stacks and enchanted items, the same as on older versions
+- Most structures now generate on Forge for Minecraft 1.21 and on early Forge builds for 1.21.1
+
+### Changed
+- The floating island, the large warped tower and the benches now have themed loot
 
 ---
 
