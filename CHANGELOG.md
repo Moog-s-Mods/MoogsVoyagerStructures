@@ -4,10 +4,19 @@
 
 ## [5.1.4]
 
+### Added
+- Chests can hold maps that lead to the rarest Voyager structures
+  - The Cartographer Tower's map chests can hold maps to the Cathedral, the Crystal, the Jungle Tower, the Red Tower and the Floating Islands
+  - Book chests in houses can hold a map to the Cartographer Tower
+  - Rich houses can hold a map to the Crystal, pillager chests one to the Red Tower, ponds one to the Ocean Tower, the Ocean Tower's treasure one to the Jungle Tower, and the Cathedral's rare chests one to the Large Floating Island
+
 ### Fixed
 - Enchanted loot in some chests can now roll treasure enchantments such as Mending, as it does on newer versions
 - The enchanted iron shovel in rare chests now rolls the same enchantment levels as on newer versions
 - Fixed the mod not loading on NeoForge 1.20.5
+
+### Changed
+- The floating island, the large warped tower and the benches now have themed loot
 
 ---
 
