@@ -7,6 +7,7 @@
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
+  "burying_type": "LOWEST_CORNER",
   "start_height": {
     "absolute": 0
   },
