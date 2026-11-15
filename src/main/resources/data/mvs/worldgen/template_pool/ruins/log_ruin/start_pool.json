@@ -11,7 +11,32 @@
           "1.21-26.3": "mvs:1_21_0/ruins/log_ruin"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 24,
+          "kernel_distance": 16,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "columns": [
+            {
+              "x": [
+                6,
+                24
+              ],
+              "z": [
+                6,
+                23
+              ]
+            }
+          ],
+          "outside_follows_ground": true
+        }
       }
     }
   ]
