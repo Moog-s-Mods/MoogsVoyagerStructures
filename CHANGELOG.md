@@ -16,6 +16,7 @@
 - Most structures now generate on Forge for Minecraft 1.21 and on early Forge builds for 1.21.1
 
 ### Changed
+- Now requires Moog's Structure Lib 4.0.0 or newer
 - The floating island, the large warped tower and the benches now have themed loot
 
 ---
