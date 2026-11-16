@@ -11,7 +11,24 @@
           "1.20-1.20.6": "mvs:1_20_0/nature/medium_acacia_tree"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 24,
+          "kernel_distance": 16,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "footprint": {
+            "layers": 3,
+            "blocks": "#minecraft:logs",
+            "margin": 1
+          }
+        }
       }
     },
     {
@@ -23,7 +40,24 @@
           "1.20-1.20.6": "mvs:1_20_0/nature/small_acacia_tree"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 24,
+          "kernel_distance": 16,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "footprint": {
+            "layers": 3,
+            "blocks": "#minecraft:logs",
+            "margin": 1
+          }
+        }
       }
     }
   ]

@@ -10,8 +10,36 @@
         "locations": {
           "1.20-1.20.6": "mvs:1_20_0/nature/medium_spruce_tree"
         },
-        "processors": "minecraft:empty",
-        "projection": "rigid"
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 24,
+          "kernel_distance": 16,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "footprint": {
+            "layers": 3,
+            "blocks": "#minecraft:logs",
+            "margin": 1
+          }
+        }
       }
     },
     {
@@ -22,8 +50,36 @@
         "locations": {
           "1.20-1.20.6": "mvs:1_20_0/nature/small_spruce_tree"
         },
-        "processors": "minecraft:empty",
-        "projection": "rigid"
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 24,
+          "kernel_distance": 16,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "footprint": {
+            "layers": 3,
+            "blocks": "#minecraft:logs",
+            "margin": 1
+          }
+        }
       }
     }
   ]
