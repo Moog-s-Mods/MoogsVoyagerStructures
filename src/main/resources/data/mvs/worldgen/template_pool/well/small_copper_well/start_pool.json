@@ -12,7 +12,32 @@
           "1.21.9-26.3": "mvs:1_21_9/well/small_copper_well"
         },
         "processors": "minecraft:empty",
-        "projection": "rigid"
+        "projection": "rigid",
+        "enhanced_terrain_adaptation": {
+          "kernel_size": 12,
+          "kernel_distance": 8,
+          "top": "carve",
+          "bottom": "bury",
+          "band": {
+            "bottom": 1,
+            "top": 1
+          }
+        },
+        "adaptation_area": {
+          "columns": [
+            {
+              "x": [
+                1,
+                5
+              ],
+              "z": [
+                1,
+                5
+              ]
+            }
+          ],
+          "outside_follows_ground": true
+        }
       }
     }
   ]
