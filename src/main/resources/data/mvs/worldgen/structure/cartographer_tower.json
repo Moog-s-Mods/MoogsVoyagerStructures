@@ -8,6 +8,7 @@
   "allowed_terrain_height_range": 4,
   "biomes": "#mvs:is_overworld",
   "cannot_spawn_in_liquid": true,
+  "max_footprint_in_liquid": 0.25,
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
