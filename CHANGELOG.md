@@ -18,6 +18,7 @@
 - Paths and small decorations now follow the ground instead of hanging off cliffs
 - The crimson enchanting table now looks the same on every version
 - The second medium igloo now spawns in the same snowy places as the other igloos and never on water
+- Rocks, wells, ponds, lanterns and other small open structures no longer erase parts of structures they overlap
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
