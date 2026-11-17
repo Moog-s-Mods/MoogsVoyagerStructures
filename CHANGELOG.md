@@ -14,6 +14,8 @@
 ### Fixed
 - Chests on Minecraft 26.3 now give full stacks and enchanted items, the same as on older versions
 - Most structures now generate on Forge for Minecraft 1.21 and on early Forge builds for 1.21.1
+- Paths and small decorations now follow the ground instead of hanging off cliffs
+- The crimson enchanting table now looks the same on every version
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
