@@ -20,6 +20,7 @@
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
 - The floating island, the large warped tower and the benches now have themed loot
+- Warped houses are a little more common
 
 ---
 
