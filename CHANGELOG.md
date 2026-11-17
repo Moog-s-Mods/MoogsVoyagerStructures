@@ -17,6 +17,7 @@
 - The Ocean Tower no longer generates in shallow water, as on newer versions
 - Paths and small decorations now follow the ground instead of hanging off cliffs
 - The crimson enchanting table now looks the same on every version
+- The second medium igloo now spawns in the same snowy places as the other igloos and never on water
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
