@@ -6,10 +6,9 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "location": "mvs:1_20_5/dead_tree/acacia",
+        "location": "mvs:1_20_0/dead_tree/acacia",
         "locations": {
-          "1.20-1.20.4": "mvs:1_20_0/dead_tree/acacia",
-          "1.20.5-1.20.6": "mvs:1_20_5/dead_tree/acacia"
+          "1.20-1.20.6": "mvs:1_20_0/dead_tree/acacia"
         },
         "processors": "minecraft:empty",
         "projection": "terrain_matching"
@@ -19,10 +18,9 @@
       "weight": 1,
       "element": {
         "element_type": "moogs_structures:versioned_single_pool_element",
-        "location": "mvs:1_20_5/dead_tree/acacia_trunk",
+        "location": "mvs:1_20_0/dead_tree/acacia_trunk",
         "locations": {
-          "1.20-1.20.4": "mvs:1_20_0/dead_tree/acacia_trunk",
-          "1.20.5-1.20.6": "mvs:1_20_5/dead_tree/acacia_trunk"
+          "1.20-1.20.6": "mvs:1_20_0/dead_tree/acacia_trunk"
         },
         "processors": "minecraft:empty",
         "projection": "terrain_matching"
