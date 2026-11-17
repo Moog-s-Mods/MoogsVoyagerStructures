@@ -19,6 +19,8 @@
 - The crimson enchanting table now looks the same on every version
 - The second medium igloo now spawns in the same snowy places as the other igloos and never on water
 - Rocks, wells, ponds, lanterns and other small open structures no longer erase parts of structures they overlap
+- Large buildings and ruins no longer hang out over rivers and lakes
+- The bamboo cart no longer generates on water
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
