@@ -544,5 +544,5 @@
       ]
     }
   ],
-  "random_sequence": "minecraft:chests/end_city_treasure"
+  "random_sequence": "mvs:rare"
 }
