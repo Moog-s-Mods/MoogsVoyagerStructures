@@ -2,6 +2,14 @@
   "processors": [
     {
       "processor_type": "moogs_structures:follow_floor_processor"
+    },
+    {
+      "processor_type": "minecraft:block_ignore",
+      "blocks": [
+        {
+          "Name": "minecraft:air"
+        }
+      ]
     }
   ]
 }

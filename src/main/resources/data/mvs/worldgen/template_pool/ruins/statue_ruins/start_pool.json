@@ -11,7 +11,18 @@
           "1.20-1.20.4": "mvs:1_20_0/ruins/statue_ruins",
           "1.20.5-1.20.6": "mvs:1_20_5/ruins/statue_ruins"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid",
         "enhanced_terrain_adaptation": {
           "kernel_size": 12,

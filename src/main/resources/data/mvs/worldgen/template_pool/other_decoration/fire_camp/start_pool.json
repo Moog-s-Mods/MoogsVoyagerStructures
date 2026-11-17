@@ -11,7 +11,18 @@
           "1.20-1.20.4": "mvs:1_20_0/other_decoration/fire_camp",
           "1.20.5-1.20.6": "mvs:1_20_5/other_decoration/fire_camp"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "terrain_matching"
       }
     }

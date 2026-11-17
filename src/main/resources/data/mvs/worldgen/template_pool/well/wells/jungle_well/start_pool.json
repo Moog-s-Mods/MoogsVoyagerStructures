@@ -10,7 +10,18 @@
         "locations": {
           "1.20-1.20.6": "mvs:1_20_0/well/wells/jungle_well"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     }
