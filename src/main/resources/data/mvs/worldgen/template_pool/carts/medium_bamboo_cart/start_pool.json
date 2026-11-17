@@ -11,7 +11,18 @@
           "1.21-1.21.4": "mvs:1_21_0/carts/medium_bamboo_cart",
           "1.21.5-26.3": "mvs:1_21_5/carts/medium_bamboo_cart"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     }

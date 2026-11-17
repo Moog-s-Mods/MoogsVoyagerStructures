@@ -10,7 +10,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/medium_stone_rock"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -22,7 +33,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/medium_stone_rock_2"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -34,7 +56,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/small_stone_rock"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -46,7 +79,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/small_stone_rock_2"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -58,7 +102,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/small_granite_rock"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -70,7 +125,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/nature/small_diorite_rock"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     }

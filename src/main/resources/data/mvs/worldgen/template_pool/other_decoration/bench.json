@@ -11,7 +11,18 @@
           "1.21-1.21.4": "mvs:1_21_0/other_decoration/large_bench",
           "1.21.5-26.3": "mvs:1_21_5/other_decoration/large_bench"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -25,7 +36,18 @@
           "1.21.5-26.2": "mvs:1_21_5/other_decoration/medium_bench",
           "26.3": "mvs:26_3_0/other_decoration/medium_bench"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -37,7 +59,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_1"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -49,7 +82,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_2"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     },
@@ -61,7 +105,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/other_decoration/small_bench_3"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     }

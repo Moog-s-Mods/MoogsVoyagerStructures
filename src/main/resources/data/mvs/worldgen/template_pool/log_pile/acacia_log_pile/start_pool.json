@@ -10,7 +10,18 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/log_pile/acacia_log_pile"
         },
-        "processors": "minecraft:empty",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:air"
+                }
+              ]
+            }
+          ]
+        },
         "projection": "rigid"
       }
     }
