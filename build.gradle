@@ -48,6 +48,11 @@ tasks.processResources {
             'mod_releases': modReleases,
             'structure_lib_version_range': structureLibVersionRange,
     ]
+    // Version and the other metadata values are expand() inputs, not file inputs, so
+    // Gradle cannot see them change. Without this, bumping mod_version leaves the
+    // previously expanded fabric.mod.json / mods.toml in place and the jar ships the
+    // OLD version string under a NEW file name.
+    inputs.properties(meta)
     filesMatching('fabric.mod.json') { expand(meta) }
     filesMatching('quilt.mod.json') { expand(meta) }
     filesMatching('META-INF/*.toml') { expand(meta) }
