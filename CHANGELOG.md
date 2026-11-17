@@ -15,6 +15,8 @@
 - The enchanted iron shovel in rare chests now rolls the same enchantment levels as on newer versions
 - Fixed the mod not loading on NeoForge 1.20.5
 - The Ocean Tower no longer generates in shallow water, as on newer versions
+- Paths and small decorations now follow the ground instead of hanging off cliffs
+- The crimson enchanting table now looks the same on every version
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
