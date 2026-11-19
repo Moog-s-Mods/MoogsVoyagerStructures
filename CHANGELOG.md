@@ -19,6 +19,7 @@
 - Rocks, wells, ponds, lanterns and other small open structures no longer erase parts of structures they overlap
 - Large buildings and ruins no longer hang out over rivers and lakes
 - The bamboo cart no longer generates on water
+- Chests that couldn't be opened because of a block above them now open
 
 ### Changed
 - Now requires Moog's Structure Lib 4.0.0 or newer
