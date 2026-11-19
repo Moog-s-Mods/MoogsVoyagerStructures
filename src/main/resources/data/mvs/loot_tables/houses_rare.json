@@ -136,7 +136,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_crystal_maps",
               "decoration": "red_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
