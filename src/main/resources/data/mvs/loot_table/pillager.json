@@ -325,7 +325,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_red_tower_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },
@@ -347,7 +347,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_red_tower_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },

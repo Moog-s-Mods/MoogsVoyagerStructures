@@ -168,7 +168,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_cathedral_maps",
               "decoration": "mansion",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -190,7 +190,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_cathedral_maps",
               "decoration": "mansion",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -224,7 +224,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_crystal_maps",
               "decoration": "red_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -246,7 +246,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_crystal_maps",
               "decoration": "red_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -280,7 +280,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_jungle_tower_maps",
               "decoration": "jungle_temple",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -302,7 +302,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_jungle_tower_maps",
               "decoration": "jungle_temple",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -336,7 +336,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_red_tower_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },
@@ -358,7 +358,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_red_tower_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },
@@ -392,7 +392,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_floating_islands_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },
@@ -414,7 +414,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_floating_islands_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 3,
               "skip_existing_chunks": false
             },

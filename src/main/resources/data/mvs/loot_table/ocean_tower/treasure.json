@@ -244,7 +244,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_jungle_tower_maps",
               "decoration": "jungle_temple",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },
@@ -266,7 +266,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_jungle_tower_maps",
               "decoration": "jungle_temple",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 2,
               "skip_existing_chunks": false
             },

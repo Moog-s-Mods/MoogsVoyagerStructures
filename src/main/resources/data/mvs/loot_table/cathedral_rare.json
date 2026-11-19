@@ -200,7 +200,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_large_floating_island_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 4,
               "skip_existing_chunks": false
             },
@@ -222,7 +222,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_large_floating_island_maps",
               "decoration": "target_x",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 4,
               "skip_existing_chunks": false
             },

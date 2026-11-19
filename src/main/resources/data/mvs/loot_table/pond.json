@@ -130,7 +130,7 @@
               "function": "minecraft:exploration_map",
               "destination": "mvs:on_ocean_tower_maps",
               "decoration": "monument",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 6,
               "skip_existing_chunks": false
             },
@@ -152,7 +152,7 @@
               "type": "minecraft:exploration_map",
               "destination": "#mvs:on_ocean_tower_maps",
               "decoration": "monument",
-              "zoom": 2,
+              "zoom": 3,
               "search_radius": 6,
               "skip_existing_chunks": false
             },
