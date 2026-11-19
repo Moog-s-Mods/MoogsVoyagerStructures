@@ -11,18 +11,7 @@
           "1.20-1.20.4": "mvs:1_20_0/crystal/base",
           "1.20.5-1.20.6": "mvs:1_20_5/crystal/base"
         },
-        "processors": {
-          "processors": [
-            {
-              "processor_type": "minecraft:block_ignore",
-              "blocks": [
-                {
-                  "Name": "minecraft:air"
-                }
-              ]
-            }
-          ]
-        },
+        "processors": "minecraft:empty",
         "projection": "rigid"
       }
     }
