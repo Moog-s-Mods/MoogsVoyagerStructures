@@ -10,18 +10,7 @@
         "locations": {
           "1.21-26.3": "mvs:1_21_0/crystal/base"
         },
-        "processors": {
-          "processors": [
-            {
-              "processor_type": "minecraft:block_ignore",
-              "blocks": [
-                {
-                  "Name": "minecraft:air"
-                }
-              ]
-            }
-          ]
-        },
+        "processors": "minecraft:empty",
         "projection": "rigid"
       }
     }
